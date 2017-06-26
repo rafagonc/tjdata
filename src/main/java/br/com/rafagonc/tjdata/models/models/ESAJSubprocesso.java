@@ -1,6 +1,6 @@
 package br.com.rafagonc.tjdata.models.models;
 
-import br.com.rafagonc.esaj.crawler.utils.ESAJUtils;
+import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
 /**
