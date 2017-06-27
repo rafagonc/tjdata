@@ -3,28 +3,54 @@ package br.com.rafagonc.tjdata.models.models;
 import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by rafagonc on 15/06/17.
  */
+@Entity
 public class ESAJDadosProcesso implements Serializable {
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
+    private Long id;
+
+    @Column(nullable = true)
     private String processo;
+
+    @Column(nullable = true)
     private String classe;
+
+    @Column(nullable = true)
     private String assunto;
+
+    @Column(nullable = true)
     private String distribuicao;
     private String controle;
+
+    @Column(nullable = true)
     private String juiz;
+
+    @Column(nullable = true)
     private String relator;
+
+    @Column(nullable = true)
     private String valor;
+
+    @Column(nullable = true)
     private String area;
+
+    @Column(nullable = true)
     private String origem;
+
+    @Column(nullable = true)
     private String numerosDeOrigem;
+
+    @Column(nullable = true)
     private String volumeApenso;
 
     public ESAJDadosProcesso(Element table) {
-//        .child(1).child(0).child(0).child(0).child(0).child(0).text();
         this.processo = ESAJUtils.getTextoFromDado("Processo:",table);
         this.classe = ESAJUtils.getTextoFromDado("Classe:",table);
         this.area = ESAJUtils.getTextoFromDado("Área",table);
@@ -37,6 +63,9 @@ public class ESAJDadosProcesso implements Serializable {
         this.distribuicao = ESAJUtils.getTextoFromDado("Distribuição:",table);
         this.controle = ESAJUtils.getTextoFromDado("Controle:",table);
         this.valor = ESAJUtils.getTextoFromDado("Valor da ação:",table);
+    }
+
+    public ESAJDadosProcesso() {
     }
 
     public String getProcesso() {

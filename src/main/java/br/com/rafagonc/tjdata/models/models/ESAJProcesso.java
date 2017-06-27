@@ -1,18 +1,37 @@
 package br.com.rafagonc.tjdata.models.models;
 
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by rafagonc on 15/06/17.
  */
+@Entity
 public class ESAJProcesso {
 
-    private List<ESAJMovimentacao> movimentacoes;
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
+    private Long id;
+
+    @Embedded
     private ESAJDadosProcesso dadosProcessos;
+
+    @OneToMany( targetEntity=ESAJMovimentacao.class )
+    private List<ESAJMovimentacao> movimentacoes;
+
+    @OneToMany( targetEntity=ESAJPartesProcesso.class )
     private List<ESAJPartesProcesso> partesProcessos;
+
+    @OneToMany( targetEntity=ESAJPeticaoDiversa.class )
     private List<ESAJPeticaoDiversa> peticaoDiversas;
+
+    @OneToMany( targetEntity=ESAJJulgamento.class )
     private List<ESAJJulgamento> julgamentos;
+
+    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class )
     private List<ESAJComposicaoJulgamento> composicaoJulgamento;
+
+    @OneToMany( targetEntity=ESAJSubprocesso.class )
     private List<ESAJSubprocesso> subprocessos;
 
     public ESAJProcesso(List<ESAJMovimentacao> movimentacoes, ESAJDadosProcesso dadosProcessos, List<ESAJPartesProcesso> partesProcessos, List<ESAJPeticaoDiversa> peticaoDiversas) {
@@ -20,6 +39,9 @@ public class ESAJProcesso {
         this.dadosProcessos = dadosProcessos;
         this.partesProcessos = partesProcessos;
         this.peticaoDiversas = peticaoDiversas;
+    }
+
+    public ESAJProcesso() {
     }
 
     public List<ESAJMovimentacao> getMovimentacoes() {

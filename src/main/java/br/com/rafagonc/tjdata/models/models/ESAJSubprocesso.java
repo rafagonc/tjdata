@@ -3,17 +3,30 @@ package br.com.rafagonc.tjdata.models.models;
 import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
+import javax.persistence.*;
+
 /**
  * Created by rafagonc on 25/06/17.
  */
+@Entity
 public class ESAJSubprocesso {
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
+    private Long id;
+
+    @Column(nullable = true)
     private String recebido;
+
+    @Column(nullable = true)
     private String classe;
 
     public ESAJSubprocesso(Element tr) {
         this.recebido = ESAJUtils.normalize(tr.child(0).toString());
         this.classe = ESAJUtils.normalize(tr.child(1).toString());
+    }
+
+    public ESAJSubprocesso() {
     }
 
     public String getRecebido() {

@@ -3,17 +3,30 @@ package br.com.rafagonc.tjdata.models.models;
 import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
+import javax.persistence.*;
+
 /**
  * Created by rafagonc on 25/06/17.
  */
+@Entity
 public class ESAJComposicaoJulgamento {
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
+    private Long id;
+
+    @Column(nullable = true)
     private String participacao;
+
+    @Column(nullable = true)
     private String magistrado;
 
     public ESAJComposicaoJulgamento(Element tr) {
         this.participacao = ESAJUtils.normalize(tr.child(0).toString().replace("&nbsp;"," "));
         this.magistrado = ESAJUtils.normalize(tr.child(1).toString().replace("&nbsp;"," "));
+    }
+
+    public ESAJComposicaoJulgamento() {
     }
 
     public String getParticipacao() {

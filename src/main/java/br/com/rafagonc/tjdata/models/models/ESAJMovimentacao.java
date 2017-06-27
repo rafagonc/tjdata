@@ -3,20 +3,37 @@ package br.com.rafagonc.tjdata.models.models;
 import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
+import javax.persistence.*;
+
 /**
  * Created by rafagonc on 15/06/17.
  */
+@Entity
 public class ESAJMovimentacao {
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
+    private Long id;
+
+    @Column(nullable = true)
     private String text;
+
+    @Column(nullable = true)
     private String action;
+
+    @Column(nullable = true)
     private String date;
+
+    @ManyToOne
+    private ESAJProcesso processo;
 
     public ESAJMovimentacao(Element tr) {
         this.text = ESAJUtils.getTextoWithIndex(tr, 2);
         this.date = ESAJUtils.getTextoWithIndex(tr, 0);
         this.action = ESAJUtils.getTextoWithIndex(tr, 1);
+    }
 
+    public ESAJMovimentacao() {
     }
 
     public String getText() {
@@ -29,6 +46,10 @@ public class ESAJMovimentacao {
 
     public String getDate() {
         return date;
+    }
+
+    public ESAJProcesso getProcesso() {
+        return processo;
     }
 
     @Override

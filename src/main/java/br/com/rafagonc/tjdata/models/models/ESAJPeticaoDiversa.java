@@ -3,19 +3,31 @@ package br.com.rafagonc.tjdata.models.models;
 import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by rafagonc on 15/06/17.
  */
+@Entity
 public class ESAJPeticaoDiversa implements Serializable {
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
+    private Long id;
+
+    @Column(nullable = true)
     private String date;
+
+    @Column(nullable = true)
     private String type;
 
     public ESAJPeticaoDiversa(Element tr) {
         this.date = ESAJUtils.normalize(tr.child(0).toString());
         this.type = ESAJUtils.normalize(tr.child(1).toString());
+    }
+
+    public ESAJPeticaoDiversa() {
     }
 
     public String getDate() {

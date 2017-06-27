@@ -3,19 +3,31 @@ package br.com.rafagonc.tjdata.models.models;
 import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by rafagonc on 15/06/17.
  */
+@Entity
 public class ESAJPartesProcesso implements Serializable {
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
+    private Long id;
+
+    @Column(nullable = true)
     private String titulo;
+
+    @Column(nullable = true)
     private String advogados;
 
     public ESAJPartesProcesso(Element tr) {
         this.advogados = ESAJUtils.getTextoWithIndex(tr,1);
         this.titulo = ESAJUtils.getTextoWithIndex(tr,0);
+    }
+
+    public ESAJPartesProcesso() {
     }
 
     public String getTitulo() {
