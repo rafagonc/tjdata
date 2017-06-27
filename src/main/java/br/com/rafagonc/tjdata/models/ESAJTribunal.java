@@ -1,4 +1,4 @@
-package br.com.rafagonc.tjdata.models.models;
+package br.com.rafagonc.tjdata.models;
 
 /**
  * Created by rafagonc on 18/06/17.

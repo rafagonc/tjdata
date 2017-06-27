@@ -1,4 +1,4 @@
-package br.com.rafagonc.tjdata.models.models.utils;
+package br.com.rafagonc.tjdata.utils;
 
 import org.jsoup.nodes.Element;
 

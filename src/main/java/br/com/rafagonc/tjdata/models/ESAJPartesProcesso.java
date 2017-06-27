@@ -1,6 +1,6 @@
-package br.com.rafagonc.tjdata.models.models;
+package br.com.rafagonc.tjdata.models;
 
-import br.com.rafagonc.tjdata.models.models.utils.ESAJUtils;
+import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
 import javax.persistence.*;

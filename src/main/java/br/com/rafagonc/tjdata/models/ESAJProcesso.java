@@ -1,4 +1,4 @@
-package br.com.rafagonc.tjdata.models.models;
+package br.com.rafagonc.tjdata.models;
 
 import javax.persistence.*;
 import java.util.List;
