@@ -97,7 +97,8 @@ public class ESAJDadosProcesso implements Serializable {
     }
 
     public ESAJGrau getGrau() {
-        return ESAJUtils.normalize(this.processo.replaceAll("[a-zA-Z]*]","")).substring(ESAJUtils.normalize(this.processo.replaceAll("[a-zA-Z]*]","")).length() - 4).equals("0000") ? ESAJGrau.Segundo : ESAJGrau.Primeiro;
+        String processoLimpo = ESAJUtils.normalize(this.processo.replaceAll("([a-zA-Z]*]|\\s)",""));
+        return processoLimpo.substring(processoLimpo.length() - 4).equals("0000") ? ESAJGrau.Segundo : ESAJGrau.Primeiro;
     }
 
     public String getRelator() {
