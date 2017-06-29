@@ -1,5 +1,6 @@
 import br.com.rafagonc.tjdata.database.TJDATA;
 import br.com.rafagonc.tjdata.database.TJDATAWorker;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.EntityManager;
 
@@ -12,7 +13,7 @@ public class Test {
     public void testDatabaseConnection() throws Exception {
         TJDATA.start(new TJDATAWorker() {
             @Override
-            public void work(EntityManager em) {
+            public void work(EntityManager em, JpaRepository processoRepo) {
 
             }
         });

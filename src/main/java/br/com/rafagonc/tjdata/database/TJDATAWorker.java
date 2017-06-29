@@ -1,5 +1,8 @@
 package br.com.rafagonc.tjdata.database;
 
+import br.com.rafagonc.tjdata.models.ESAJProcesso;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import javax.persistence.EntityManager;
 
 /**
@@ -7,6 +10,6 @@ import javax.persistence.EntityManager;
  */
 public interface TJDATAWorker {
 
-    void work(EntityManager em);
+    void work(EntityManager em, JpaRepository<ESAJProcesso, Long> processoRepository);
 
 }
