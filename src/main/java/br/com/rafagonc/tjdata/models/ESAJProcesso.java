@@ -13,25 +13,25 @@ public class ESAJProcesso {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = {CascadeType.ALL})
     private ESAJDadosProcesso dadosProcessos;
 
-    @OneToMany( targetEntity=ESAJMovimentacao.class )
+    @OneToMany( targetEntity=ESAJMovimentacao.class, cascade = {CascadeType.ALL} )
     private List<ESAJMovimentacao> movimentacoes;
 
-    @OneToMany( targetEntity=ESAJPartesProcesso.class )
+    @OneToMany( targetEntity=ESAJPartesProcesso.class, cascade = {CascadeType.ALL} )
     private List<ESAJPartesProcesso> partesProcessos;
 
-    @OneToMany( targetEntity=ESAJPeticaoDiversa.class )
+    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, cascade = {CascadeType.ALL} )
     private List<ESAJPeticaoDiversa> peticaoDiversas;
 
-    @OneToMany( targetEntity=ESAJJulgamento.class )
+    @OneToMany( targetEntity=ESAJJulgamento.class, cascade = {CascadeType.ALL} )
     private List<ESAJJulgamento> julgamentos;
 
-    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class )
+    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, cascade = {CascadeType.ALL} )
     private List<ESAJComposicaoJulgamento> composicaoJulgamento;
 
-    @OneToMany( targetEntity=ESAJSubprocesso.class )
+    @OneToMany( targetEntity=ESAJSubprocesso.class, cascade = {CascadeType.ALL} )
     private List<ESAJSubprocesso> subprocessos;
 
     public ESAJProcesso(List<ESAJMovimentacao> movimentacoes, ESAJDadosProcesso dadosProcessos, List<ESAJPartesProcesso> partesProcessos, List<ESAJPeticaoDiversa> peticaoDiversas) {
