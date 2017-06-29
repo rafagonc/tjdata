@@ -13,7 +13,7 @@ public class ESAJProcesso {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private ESAJDadosProcesso dadosProcessos;
 
     @OneToMany( targetEntity=ESAJMovimentacao.class )
