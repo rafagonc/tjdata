@@ -15,13 +15,13 @@ public class ESAJMovimentacao {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String text;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String action;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String date;
 
     @ManyToOne

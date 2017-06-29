@@ -15,10 +15,10 @@ public class ESAJComposicaoJulgamento {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String participacao;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String magistrado;
 
     public ESAJComposicaoJulgamento(Element tr) {

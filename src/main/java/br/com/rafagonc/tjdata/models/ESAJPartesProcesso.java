@@ -16,10 +16,10 @@ public class ESAJPartesProcesso implements Serializable {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String titulo;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String advogados;
 
     public ESAJPartesProcesso(Element tr) {

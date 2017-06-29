@@ -16,10 +16,10 @@ public class ESAJPeticaoDiversa implements Serializable {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String date;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String type;
 
     public ESAJPeticaoDiversa(Element tr) {

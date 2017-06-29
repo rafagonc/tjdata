@@ -15,10 +15,10 @@ public class ESAJSubprocesso {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String recebido;
 
-    @Column(nullable = true)
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
 
     public ESAJSubprocesso(Element tr) {
