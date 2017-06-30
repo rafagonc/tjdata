@@ -15,7 +15,7 @@ import javax.persistence.Persistence;
  */
 public class TJDATA {
 
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     public TJDATA(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -28,7 +28,6 @@ public class TJDATA {
     public static TJDATA start(TJDATAWorker worker) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tj");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-
         TJDATA tjdata = new TJDATA(entityManager);
         Session session = entityManager.unwrap(Session.class);
         Transaction transaction = session.beginTransaction();
@@ -40,11 +39,13 @@ public class TJDATA {
     }
 
     public void work(TJDATAWorker worker) {
-        Session session = entityManager.unwrap(Session.class);
-        Transaction transaction = session.beginTransaction();
-        transaction.setTimeout(5);
-        worker.work(getDatabase());
-        transaction.commit();
+        synchronized (entityManager) {
+            Session session = entityManager.unwrap(Session.class);
+            Transaction transaction = session.beginTransaction();
+            transaction.setTimeout(5);
+            worker.work(getDatabase());
+            transaction.commit();
+        }
     }
 
     private ESAJDatabase getDatabase() {
