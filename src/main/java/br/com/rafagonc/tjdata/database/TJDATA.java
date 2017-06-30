@@ -1,10 +1,10 @@
 package br.com.rafagonc.tjdata.database;
 
-import br.com.rafagonc.tjdata.models.ESAJProcesso;
+import br.com.rafagonc.tjdata.repositories.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+import org.springframework.data.repository.core.support.RepositoryFactorySupport;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -16,7 +16,6 @@ import javax.persistence.Persistence;
 public class TJDATA {
 
     private EntityManager entityManager;
-    private JpaRepository<ESAJProcesso, Long> processoRepo;
 
     public TJDATA(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -29,15 +28,14 @@ public class TJDATA {
     public static TJDATA start(TJDATAWorker worker) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tj");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
+
         TJDATA tjdata = new TJDATA(entityManager);
-        JpaRepository<ESAJProcesso, Long> processoRepository = new SimpleJpaRepository<ESAJProcesso, Long>(ESAJProcesso.class, entityManager);
         Session session = entityManager.unwrap(Session.class);
         Transaction transaction = session.beginTransaction();
         if (worker!=null) {
-            worker.work(entityManager, processoRepository);
+            worker.work(tjdata.getDatabase());
         }
         transaction.commit();;
-        tjdata.processoRepo = processoRepository;
         return tjdata;
     }
 
@@ -45,8 +43,22 @@ public class TJDATA {
         Session session = entityManager.unwrap(Session.class);
         Transaction transaction = session.beginTransaction();
         transaction.setTimeout(5);
-        worker.work(entityManager, this.processoRepo);
-        transaction.commit();;
+        worker.work(getDatabase());
+        transaction.commit();
+    }
+
+    private ESAJDatabase getDatabase() {
+        RepositoryFactorySupport repositoryFactorySupport = new JpaRepositoryFactory(entityManager);
+        ESAJProcessoRepository processoRepository = repositoryFactorySupport.getRepository(ESAJProcessoRepository.class);
+        ESAJPartesProcessoRepository partesProcessoRepository = repositoryFactorySupport.getRepository(ESAJPartesProcessoRepository.class);
+        ESAJDadosProcessoRepository dadosProcessoRepository = repositoryFactorySupport.getRepository(ESAJDadosProcessoRepository.class);
+        ESAJPeticaoDiversaRepository peticaoDiversaRepository = repositoryFactorySupport.getRepository(ESAJPeticaoDiversaRepository.class);
+        ESAJMovimentacaoRepository movimentacaoRepository = repositoryFactorySupport.getRepository(ESAJMovimentacaoRepository.class);
+        ESAJJulgamentoRepository julgamentoRepository = repositoryFactorySupport.getRepository(ESAJJulgamentoRepository.class);
+        ESAJSubprocessoRepository subprocessoRepository = repositoryFactorySupport.getRepository(ESAJSubprocessoRepository.class);
+        ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository = repositoryFactorySupport.getRepository(ESAJComposicaoJulgamentoRepository.class);
+        ESAJDatabase database = new ESAJDatabase(processoRepository, movimentacaoRepository, partesProcessoRepository, julgamentoRepository, dadosProcessoRepository, composicaoJulgamentoRepository, subprocessoRepository, peticaoDiversaRepository);
+        return database;
     }
 
 
