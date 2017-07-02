@@ -33,6 +33,10 @@ public class ESAJJulgamento {
     public ESAJJulgamento() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getData() {
         return data;
     }

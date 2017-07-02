@@ -15,9 +15,20 @@ public class ESAJDatabase {
     private ESAJDadosProcessoRepository dadosProcessoRepository;
     private ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository;
     private ESAJSubprocessoRepository subprocessoRepository;
+    private ESAJDocumentoRepository documentoRepository;
+    private ESAJAcaoRepository acaoRepository;
     private ESAJPeticaoDiversaRepository peticoesDiversasRepository;
 
-    public ESAJDatabase(ESAJProcessoRepository processoRepository, ESAJMovimentacaoRepository movimentacaoRepository, ESAJPartesProcessoRepository partesProcessoRepository, ESAJJulgamentoRepository julgamentoRepository, ESAJDadosProcessoRepository dadosProcessoRepository, ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository, ESAJSubprocessoRepository subprocessoRepository, ESAJPeticaoDiversaRepository peticoesDiversasRepository) {
+    public ESAJDatabase(ESAJProcessoRepository processoRepository,
+                        ESAJMovimentacaoRepository movimentacaoRepository,
+                        ESAJPartesProcessoRepository partesProcessoRepository,
+                        ESAJJulgamentoRepository julgamentoRepository,
+                        ESAJDadosProcessoRepository dadosProcessoRepository,
+                        ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository,
+                        ESAJSubprocessoRepository subprocessoRepository,
+                        ESAJPeticaoDiversaRepository peticoesDiversasRepository,
+                        ESAJAcaoRepository acaoRepository,
+                        ESAJDocumentoRepository documentoRepository) {
         this.processoRepository = processoRepository;
         this.movimentacaoRepository = movimentacaoRepository;
         this.partesProcessoRepository = partesProcessoRepository;
@@ -26,53 +37,26 @@ public class ESAJDatabase {
         this.composicaoJulgamentoRepository = composicaoJulgamentoRepository;
         this.subprocessoRepository = subprocessoRepository;
         this.peticoesDiversasRepository = peticoesDiversasRepository;
+        this.documentoRepository = documentoRepository;
+        this.acaoRepository = acaoRepository;
     }
 
     public boolean save(ESAJProcesso processo) {
         try {
-            if (processo.getDadosProcessos() != null) {
-                this.dadosProcessoRepository.save(processo.getDadosProcessos());
-            }
-
-            if (processo.getPartesProcessos() != null) {
-                for (ESAJPartesProcesso partesProcesso: processo.getPartesProcessos()) {
-                    this.partesProcessoRepository.save(partesProcesso);
-                }
-            }
-
+            if (processo.getDadosProcessos() != null) this.dadosProcessoRepository.save(processo.getDadosProcessos());
+            if (processo.getPartesProcessos() != null) this.partesProcessoRepository.save(processo.getPartesProcessos());
             if (processo.getMovimentacoes() != null) {
-                for (ESAJMovimentacao movimentacao: processo.getMovimentacoes()) {
-                    this.movimentacaoRepository.save(movimentacao);
+                for (ESAJMovimentacao movimentacoes : processo.getMovimentacoes()) {
+                    this.documentoRepository.save(movimentacoes.getDocumentos());
                 }
+                this.movimentacaoRepository.save(processo.getMovimentacoes());
             }
-
-            if (processo.getPeticaoDiversas() != null) {
-                for (ESAJPeticaoDiversa peticaoDiversa: processo.getPeticaoDiversas()) {
-                    this.peticoesDiversasRepository.save(peticaoDiversa);
-                }
-            }
-
-            if (processo.getComposicaoJulgamento() != null) {
-                for (ESAJComposicaoJulgamento composicao: processo.getComposicaoJulgamento()) {
-                    this.composicaoJulgamentoRepository.save(composicao);
-                }
-            }
-
-            if (processo.getJulgamentos() != null) {
-                for (ESAJJulgamento julgamento : processo.getJulgamentos()) {
-                    this.julgamentoRepository.save(julgamento);
-                }
-            }
-
-            if (processo.getSubprocessos() != null) {
-                for (ESAJSubprocesso subprocesso: processo.getSubprocessos()) {
-                    this.subprocessoRepository.save(subprocesso);
-                }
-            }
-
+            if (processo.getPeticaoDiversas() != null) this.peticoesDiversasRepository.save(processo.getPeticaoDiversas());
+            if (processo.getComposicaoJulgamento() != null) this.composicaoJulgamentoRepository.save(processo.getComposicaoJulgamento());
+            if (processo.getJulgamentos() != null) this.julgamentoRepository.save(processo.getJulgamentos());
+            if (processo.getSubprocessos() != null) this.subprocessoRepository.save(processo.getSubprocessos());
             processoRepository.save(processo);
             return true;
-
         } catch (Exception e) {
             e.printStackTrace();
             return false;
@@ -109,5 +93,13 @@ public class ESAJDatabase {
 
     public ESAJPeticaoDiversaRepository getPeticoesDiversasRepository() {
         return peticoesDiversasRepository;
+    }
+
+    public ESAJDocumentoRepository getDocumentoRepository() {
+        return documentoRepository;
+    }
+
+    public ESAJAcaoRepository getAcaoRepository() {
+        return acaoRepository;
     }
 }

@@ -29,6 +29,10 @@ public class ESAJComposicaoJulgamento {
     public ESAJComposicaoJulgamento() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getParticipacao() {
         return participacao;
     }

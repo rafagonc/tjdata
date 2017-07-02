@@ -17,25 +17,29 @@ public class ESAJPeticaoDiversa implements Serializable {
     private Long id;
 
     @Column(nullable = true, columnDefinition = "TEXT")
-    private String date;
+    private String data;
 
     @Column(nullable = true, columnDefinition = "TEXT")
-    private String type;
+    private String tipo;
 
     public ESAJPeticaoDiversa(Element tr) {
-        this.date = ESAJUtils.normalize(tr.child(0).toString());
-        this.type = ESAJUtils.normalize(tr.child(1).toString());
+        this.data = ESAJUtils.normalize(tr.child(0).toString());
+        this.tipo = ESAJUtils.normalize(tr.child(1).toString());
     }
 
     public ESAJPeticaoDiversa() {
     }
 
-    public String getDate() {
-        return date;
+    public Long getId() {
+        return id;
     }
 
-    public String getType() {
-        return type;
+    public String getData() {
+        return data;
+    }
+
+    public String getTipo() {
+        return tipo;
     }
 
     @Override
@@ -45,15 +49,15 @@ public class ESAJPeticaoDiversa implements Serializable {
 
         ESAJPeticaoDiversa that = (ESAJPeticaoDiversa) o;
 
-        if (date != null ? !date.equals(that.date) : that.date != null) return false;
-        return type != null ? type.equals(that.type) : that.type == null;
+        if (data != null ? !data.equals(that.data) : that.data != null) return false;
+        return tipo != null ? tipo.equals(that.tipo) : that.tipo == null;
 
     }
 
     @Override
     public int hashCode() {
-        int result = date != null ? date.hashCode() : 0;
-        result = 31 * result + (type != null ? type.hashCode() : 0);
+        int result = data != null ? data.hashCode() : 0;
+        result = 31 * result + (tipo != null ? tipo.hashCode() : 0);
         return result;
     }
 }

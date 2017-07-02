@@ -52,6 +52,12 @@ public class ESAJDadosProcesso implements Serializable {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String volumeApenso;
 
+    @Column(nullable = true, columnDefinition = "TEXT")
+    private String incidente;
+
+    @Column(nullable = true, columnDefinition = "TEXT")
+    private String processoPrincipal;
+
     public ESAJDadosProcesso(Element table) {
         this.processo = ESAJUtils.getTextoFromDado("Processo:",table);
         this.classe = ESAJUtils.getTextoFromDado("Classe:",table);
@@ -65,9 +71,15 @@ public class ESAJDadosProcesso implements Serializable {
         this.distribuicao = ESAJUtils.getTextoFromDado("Distribuição:",table);
         this.controle = ESAJUtils.getTextoFromDado("Controle:",table);
         this.valor = ESAJUtils.getTextoFromDado("Valor da ação:",table);
+        this.incidente = ESAJUtils.getTextoFromDado("Incidente:",table);
+        this.processoPrincipal = ESAJUtils.getTextoFromDado("Processo principal:",table);
     }
 
     public ESAJDadosProcesso() {
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getProcesso() {

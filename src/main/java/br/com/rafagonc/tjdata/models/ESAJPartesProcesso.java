@@ -30,6 +30,10 @@ public class ESAJPartesProcesso implements Serializable {
     public ESAJPartesProcesso() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getTitulo() {
         return titulo;
     }

@@ -2,8 +2,11 @@ package br.com.rafagonc.tjdata.models;
 
 import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by rafagonc on 15/06/17.
@@ -16,37 +19,56 @@ public class ESAJMovimentacao {
     private Long id;
 
     @Column(nullable = true, columnDefinition = "TEXT")
-    private String text;
+    private String texto;
 
     @Column(nullable = true, columnDefinition = "TEXT")
-    private String action;
+    private String acao;
 
     @Column(nullable = true, columnDefinition = "TEXT")
-    private String date;
+    private String data;
 
     @ManyToOne
     private ESAJProcesso processo;
 
+    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.ALL)
+    private List<ESAJDocumento> documentos;
+
     public ESAJMovimentacao(Element tr) {
-        this.text = ESAJUtils.getTextoWithIndex(tr, 2);
-        this.date = ESAJUtils.getTextoWithIndex(tr, 0);
-        this.action = ESAJUtils.getTextoWithIndex(tr, 1);
+        Elements linkElements = tr.getElementsByTag("a");
+        HashSet<ESAJDocumento> docs = new HashSet<ESAJDocumento>();
+        for (Element el : linkElements) {
+            if (el.ownText().length() > 0) {
+                docs.add(new ESAJDocumento(el.ownText(),el.attr("href")));
+            }
+        }
+        this.texto = ESAJUtils.getTextoWithIndex(tr, 2);
+        this.data = ESAJUtils.getTextoWithIndex(tr, 0);
+        this.acao = ESAJUtils.getTextoWithIndex(tr, 1);
     }
 
     public ESAJMovimentacao() {
     }
 
-    public String getText() {
-        return text;
+    public Long getId() {
+        return id;
     }
 
-    public String getAction() {
-        return action;
+    public String getTexto() {
+        return texto;
     }
 
-    public String getDate() {
-        return date;
+    public String getAcao() {
+        return acao;
     }
+
+    public String getData() {
+        return data;
+    }
+
+    public List<ESAJDocumento> getDocumentos() {
+        return documentos;
+    }
+
 
     public ESAJProcesso getProcesso() {
         return processo;
@@ -59,17 +81,17 @@ public class ESAJMovimentacao {
 
         ESAJMovimentacao that = (ESAJMovimentacao) o;
 
-        if (text != null ? !text.equals(that.text) : that.text != null) return false;
-        if (action != null ? !action.equals(that.action) : that.action != null) return false;
-        return date != null ? date.equals(that.date) : that.date == null;
+        if (texto != null ? !texto.equals(that.texto) : that.texto != null) return false;
+        if (acao != null ? !acao.equals(that.acao) : that.acao != null) return false;
+        return data != null ? data.equals(that.data) : that.data == null;
 
     }
 
     @Override
     public int hashCode() {
-        int result = text != null ? text.hashCode() : 0;
-        result = 31 * result + (action != null ? action.hashCode() : 0);
-        result = 31 * result + (date != null ? date.hashCode() : 0);
+        int result = texto != null ? texto.hashCode() : 0;
+        result = 31 * result + (acao != null ? acao.hashCode() : 0);
+        result = 31 * result + (data != null ? data.hashCode() : 0);
         return result;
     }
 }

@@ -42,14 +42,31 @@ public class ESAJProcesso {
     @BatchSize(size = 20)
     private List<ESAJSubprocesso> subprocessos;
 
-    public ESAJProcesso(List<ESAJMovimentacao> movimentacoes, ESAJDadosProcesso dadosProcessos, List<ESAJPartesProcesso> partesProcessos, List<ESAJPeticaoDiversa> peticaoDiversas) {
+    @OneToMany( targetEntity=ESAJAcao.class, cascade = {CascadeType.ALL} )
+    @BatchSize(size = 20)
+    private List<ESAJAcao> acoes;
+
+    public ESAJProcesso(ESAJDadosProcesso dadosProcessos,
+                        List<ESAJMovimentacao> movimentacoes,
+                        List<ESAJPartesProcesso> partesProcessos,
+                        List<ESAJPeticaoDiversa> peticaoDiversas,
+                        List<ESAJAcao> acoes) {
         this.movimentacoes = movimentacoes;
         this.dadosProcessos = dadosProcessos;
         this.partesProcessos = partesProcessos;
         this.peticaoDiversas = peticaoDiversas;
+        this.acoes = acoes;
     }
 
     public ESAJProcesso() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public List<ESAJAcao> getAcoes() {
+        return acoes;
     }
 
     public List<ESAJMovimentacao> getMovimentacoes() {
@@ -92,6 +109,7 @@ public class ESAJProcesso {
         this.julgamentos = julgamentos;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -99,9 +117,10 @@ public class ESAJProcesso {
 
         ESAJProcesso processo = (ESAJProcesso) o;
 
-        if (movimentacoes != null ? !movimentacoes.equals(processo.movimentacoes) : processo.movimentacoes != null)
-            return false;
+        if (id != null ? !id.equals(processo.id) : processo.id != null) return false;
         if (dadosProcessos != null ? !dadosProcessos.equals(processo.dadosProcessos) : processo.dadosProcessos != null)
+            return false;
+        if (movimentacoes != null ? !movimentacoes.equals(processo.movimentacoes) : processo.movimentacoes != null)
             return false;
         if (partesProcessos != null ? !partesProcessos.equals(processo.partesProcessos) : processo.partesProcessos != null)
             return false;
@@ -111,24 +130,32 @@ public class ESAJProcesso {
             return false;
         if (composicaoJulgamento != null ? !composicaoJulgamento.equals(processo.composicaoJulgamento) : processo.composicaoJulgamento != null)
             return false;
-        return subprocessos != null ? subprocessos.equals(processo.subprocessos) : processo.subprocessos == null;
+        if (subprocessos != null ? !subprocessos.equals(processo.subprocessos) : processo.subprocessos != null)
+            return false;
+        return acoes != null ? acoes.equals(processo.acoes) : processo.acoes == null;
 
-    }
-
-    @Override
-    public String toString() {
-        return "ESAJProcesso{"+ this.dadosProcessos.getProcesso() +"}";
     }
 
     @Override
     public int hashCode() {
-        int result = movimentacoes != null ? movimentacoes.hashCode() : 0;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (dadosProcessos != null ? dadosProcessos.hashCode() : 0);
+        result = 31 * result + (movimentacoes != null ? movimentacoes.hashCode() : 0);
         result = 31 * result + (partesProcessos != null ? partesProcessos.hashCode() : 0);
         result = 31 * result + (peticaoDiversas != null ? peticaoDiversas.hashCode() : 0);
         result = 31 * result + (julgamentos != null ? julgamentos.hashCode() : 0);
         result = 31 * result + (composicaoJulgamento != null ? composicaoJulgamento.hashCode() : 0);
         result = 31 * result + (subprocessos != null ? subprocessos.hashCode() : 0);
+        result = 31 * result + (acoes != null ? acoes.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "ESAJProcesso{"+ this.dadosProcessos.getProcesso() +
+                "\n movimentações -> " + this.movimentacoes.size() +
+                "\n partes -> " + this.partesProcessos.size() +
+                "\n peticoes" + this.peticaoDiversas.size() +
+                "\n acoes" + this.acoes.size();
     }
 }

@@ -13,22 +13,22 @@ import javax.persistence.Persistence;
 /**
  * Created by rafagonc on 27/06/17.
  */
-public class TJDATA {
+public class ESAJDatabaseManager {
 
     private final EntityManager entityManager;
 
-    public TJDATA(EntityManager entityManager) {
+    public ESAJDatabaseManager(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
-    public static TJDATA start() {
-        return TJDATA.start(null);
+    public static ESAJDatabaseManager start() {
+        return ESAJDatabaseManager.start(null);
     }
 
-    public static TJDATA start(TJDATAWorker worker) {
+    public static ESAJDatabaseManager start(ESAJDatabaseWorker worker) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tj");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        TJDATA tjdata = new TJDATA(entityManager);
+        ESAJDatabaseManager tjdata = new ESAJDatabaseManager(entityManager);
         Session session = entityManager.unwrap(Session.class);
         Transaction transaction = session.beginTransaction();
         if (worker!=null) {
@@ -38,7 +38,7 @@ public class TJDATA {
         return tjdata;
     }
 
-    public void work(TJDATAWorker worker) {
+    public void work(ESAJDatabaseWorker worker) {
         synchronized (entityManager) {
             Session session = entityManager.unwrap(Session.class);
             Transaction transaction = session.beginTransaction();
@@ -58,7 +58,18 @@ public class TJDATA {
         ESAJJulgamentoRepository julgamentoRepository = repositoryFactorySupport.getRepository(ESAJJulgamentoRepository.class);
         ESAJSubprocessoRepository subprocessoRepository = repositoryFactorySupport.getRepository(ESAJSubprocessoRepository.class);
         ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository = repositoryFactorySupport.getRepository(ESAJComposicaoJulgamentoRepository.class);
-        ESAJDatabase database = new ESAJDatabase(processoRepository, movimentacaoRepository, partesProcessoRepository, julgamentoRepository, dadosProcessoRepository, composicaoJulgamentoRepository, subprocessoRepository, peticaoDiversaRepository);
+        ESAJDocumentoRepository documentoRepository = repositoryFactorySupport.getRepository(ESAJDocumentoRepository.class);
+        ESAJAcaoRepository acaoRepository = repositoryFactorySupport.getRepository(ESAJAcaoRepository.class);
+        ESAJDatabase database = new ESAJDatabase(processoRepository,
+                movimentacaoRepository,
+                partesProcessoRepository,
+                julgamentoRepository,
+                dadosProcessoRepository,
+                composicaoJulgamentoRepository,
+                subprocessoRepository,
+                peticaoDiversaRepository,
+                acaoRepository,
+                documentoRepository);
         return database;
     }
 

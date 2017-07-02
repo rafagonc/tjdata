@@ -2,14 +2,15 @@ package br.com.rafagonc.tjdata.models;
 
 import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import javax.persistence.*;
 
 /**
- * Created by rafagonc on 25/06/17.
+ * Created by rafagonc on 01/07/17.
  */
 @Entity
-public class ESAJSubprocesso {
+public class ESAJAcao {
 
     @Id
     @GeneratedValue( strategy= GenerationType.AUTO )
@@ -21,12 +22,18 @@ public class ESAJSubprocesso {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
 
-    public ESAJSubprocesso(Element tr) {
-        this.recebido = ESAJUtils.normalize(tr.child(0).toString());
-        this.classe = ESAJUtils.normalize(tr.child(1).toString());
-    }
+    @Column(nullable = true, columnDefinition = "TEXT")
+    private String link;
 
-    public ESAJSubprocesso() {
+    public ESAJAcao(Element tr) {
+        Elements linkElements = tr.getElementsByTag("a");
+        for (Element el : linkElements) {
+            if (el.ownText().length() > 0) {
+                this.classe = el.ownText();
+                this.link = el.attr("href");
+            }
+        }
+        this.recebido = ESAJUtils.normalize(tr.child(0).toString());
     }
 
     public Long getId() {
@@ -46,10 +53,10 @@ public class ESAJSubprocesso {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ESAJSubprocesso that = (ESAJSubprocesso) o;
+        ESAJAcao esajAcao = (ESAJAcao) o;
 
-        if (recebido != null ? !recebido.equals(that.recebido) : that.recebido != null) return false;
-        return classe != null ? classe.equals(that.classe) : that.classe == null;
+        if (recebido != null ? !recebido.equals(esajAcao.recebido) : esajAcao.recebido != null) return false;
+        return classe != null ? classe.equals(esajAcao.classe) : esajAcao.classe == null;
 
     }
 
