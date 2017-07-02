@@ -155,7 +155,7 @@ public class ESAJProcesso {
         return "ESAJProcesso{"+ this.dadosProcessos.getProcesso() +
                 "\n movimentações -> " + this.movimentacoes.size() +
                 "\n partes -> " + this.partesProcessos.size() +
-                "\n peticoes" + this.peticaoDiversas.size() +
-                "\n acoes" + this.acoes.size();
+                "\n peticoes -> " + this.peticaoDiversas.size() +
+                "\n acoes -> " + this.acoes.size() + "\n}";
     }
 }
