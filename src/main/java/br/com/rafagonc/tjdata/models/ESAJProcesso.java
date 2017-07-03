@@ -46,6 +46,9 @@ public class ESAJProcesso {
     @BatchSize(size = 20)
     private List<ESAJAcao> acoes;
 
+    @Column(nullable = false)
+    private Boolean terminado;
+
     public ESAJProcesso(ESAJDadosProcesso dadosProcessos,
                         List<ESAJMovimentacao> movimentacoes,
                         List<ESAJPartesProcesso> partesProcessos,
@@ -56,6 +59,7 @@ public class ESAJProcesso {
         this.partesProcessos = partesProcessos;
         this.peticaoDiversas = peticaoDiversas;
         this.acoes = acoes;
+        this.terminado = this.dadosProcessos.getProcesso().contains("Julgado") || this.dadosProcessos.getProcesso().contains("Extinto") || this.dadosProcessos.getAssunto().contains("Arquivado");
     }
 
     public ESAJProcesso() {
