@@ -15,7 +15,7 @@ public class ESAJProcesso {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String numero;
 
     @OneToOne(cascade = {CascadeType.ALL})
@@ -161,7 +161,7 @@ public class ESAJProcesso {
 
     @Override
     public String toString() {
-        return "ESAJProcesso{"+ this.dadosProcessos.getProcesso() +
+        return "ESAJProcesso{"+ this.numero +
                 "\n movimentações -> " + this.movimentacoes.size() +
                 "\n partes -> " + this.partesProcessos.size() +
                 "\n peticoes -> " + this.peticaoDiversas.size() +

@@ -2,6 +2,8 @@ package br.com.rafagonc.tjdata.repositories;
 
 import br.com.rafagonc.tjdata.models.ESAJProcesso;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,4 +11,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ESAJProcessoRepository extends JpaRepository<ESAJProcesso, Long> {
+
+    @Query("SELECT p FROM ESAJProcesso p WHERE p.numero LIKE :n")
+    ESAJProcesso getProcessoNumero(@Param("n") String numero);
+
 }
