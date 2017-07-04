@@ -15,6 +15,9 @@ public class ESAJProcesso {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
+    @Column(nullable = false)
+    private String numero;
+
     @OneToOne(cascade = {CascadeType.ALL})
     private ESAJDadosProcesso dadosProcessos;
 
@@ -49,11 +52,13 @@ public class ESAJProcesso {
     @Column(nullable = false)
     private Boolean terminado;
 
-    public ESAJProcesso(ESAJDadosProcesso dadosProcessos,
+    public ESAJProcesso(String numero,
+                        ESAJDadosProcesso dadosProcessos,
                         List<ESAJMovimentacao> movimentacoes,
                         List<ESAJPartesProcesso> partesProcessos,
                         List<ESAJPeticaoDiversa> peticaoDiversas,
                         List<ESAJAcao> acoes) {
+        this.numero = numero;
         this.movimentacoes = movimentacoes;
         this.dadosProcessos = dadosProcessos;
         this.partesProcessos = partesProcessos;
