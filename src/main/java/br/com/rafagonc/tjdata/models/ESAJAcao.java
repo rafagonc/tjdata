@@ -36,6 +36,9 @@ public class ESAJAcao {
         this.recebido = ESAJUtils.normalize(tr.child(0).toString());
     }
 
+    public ESAJAcao() {
+    }
+
     public Long getId() {
         return id;
     }
