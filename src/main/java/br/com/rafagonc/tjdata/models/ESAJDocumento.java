@@ -18,6 +18,9 @@ public class ESAJDocumento {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String link;
 
+    @ManyToOne
+    private ESAJMovimentacao processo;
+
     public ESAJDocumento(String nome, String link) {
         this.nome = nome;
         this.link = link;
@@ -25,9 +28,6 @@ public class ESAJDocumento {
 
     public ESAJDocumento() {
     }
-
-    @ManyToOne
-    private ESAJMovimentacao processo;
 
     public Long getId() {
         return id;

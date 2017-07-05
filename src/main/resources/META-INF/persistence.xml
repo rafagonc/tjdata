@@ -5,16 +5,16 @@
 
  <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
- <class>import br.com.rafagonc.tjdata.models.ESAJProcesso</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJPartesProcesso</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJMovimentacao</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJPeticaoDiversa</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJDadosProcesso</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJComposicaoJulgamento</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJJulgamento</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJSubprocesso</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJApensosVinculados</class>
- <class>import br.com.rafagonc.tjdata.models.ESAJNumeroPrimeiraInstancia</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJProcesso</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJPartesProcesso</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJMovimentacao</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJPeticaoDiversa</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJDadosProcesso</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJComposicaoJulgamento</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJJulgamento</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJSubprocesso</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJApensosVinculados</class>
+ <class>br.com.rafagonc.tjdata.models.ESAJNumeroPrimeiraInstancia</class>
 
  <properties>
   <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />

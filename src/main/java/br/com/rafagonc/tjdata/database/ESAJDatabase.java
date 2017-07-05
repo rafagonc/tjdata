@@ -3,6 +3,8 @@ package br.com.rafagonc.tjdata.database;
 import br.com.rafagonc.tjdata.models.*;
 import br.com.rafagonc.tjdata.repositories.*;
 
+import javax.transaction.Transactional;
+
 /**
  * Created by rafagonc on 30/06/17.
  */
@@ -41,6 +43,7 @@ public class ESAJDatabase {
         this.acaoRepository = acaoRepository;
     }
 
+    @Transactional
     public boolean save(ESAJProcesso processo) {
         try {
             if (processo.getDadosProcessos() != null) this.dadosProcessoRepository.save(processo.getDadosProcessos());
