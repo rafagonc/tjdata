@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa2642b1-de1a-435e-8a35-7790915629cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tjdata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,22 +31,35 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#ESAJProcesso#1;class#ESAJProcesso#0" expanded="false" />
+                <element signature="e#2492#2493#0" expanded="false" />
+                <element signature="e#2517#2518#0" expanded="false" />
+                <element signature="e#2557#2558#0" expanded="false" />
+                <element signature="e#2585#2586#0" expanded="false" />
+                <element signature="e#2641#2642#0" expanded="false" />
+                <element signature="e#2677#2678#0" expanded="false" />
+                <element signature="e#2729#2730#0" expanded="false" />
+                <element signature="e#2766#2767#0" expanded="false" />
+                <element signature="e#2826#2827#0" expanded="false" />
+                <element signature="e#2864#2865#0" expanded="false" />
+                <element signature="e#2924#2925#0" expanded="false" />
+                <element signature="e#2962#2963#0" expanded="false" />
+                <element signature="e#3016#3017#0" expanded="false" />
+                <element signature="e#3051#3052#0" expanded="false" />
+                <element signature="e#3122#3123#0" expanded="false" />
+                <element signature="e#3170#3171#0" expanded="false" />
+                <element signature="e#3241#3242#0" expanded="false" />
+                <element signature="e#3284#3285#0" expanded="false" />
                 <element signature="method#setComposicaoJulgamento#0;class#ESAJProcesso#0" expanded="false" />
+                <element signature="e#3496#3497#0" expanded="false" />
+                <element signature="e#3530#3531#0" expanded="false" />
+                <element signature="e#3598#3599#0" expanded="false" />
+                <element signature="e#3644#3645#0" expanded="false" />
                 <element signature="method#equals#0;class#ESAJProcesso#0" expanded="false" />
                 <element signature="method#hashCode#0;class#ESAJProcesso#0" expanded="false" />
                 <marker date="1499144048000" expanded="true" signature="417:462" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ESAJPeticaoDiversaRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJPeticaoDiversaRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -56,7 +69,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +81,27 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3610#3611#0" expanded="false" />
+                <element signature="e#3651#3652#0" expanded="false" />
+                <element signature="e#3720#3721#0" expanded="false" />
+                <element signature="e#3765#3766#0" expanded="false" />
+                <element signature="e#3838#3839#0" expanded="false" />
+                <element signature="e#3885#3886#0" expanded="false" />
+                <element signature="e#3950#3951#0" expanded="false" />
+                <element signature="e#3993#3994#0" expanded="false" />
+                <element signature="e#4064#4065#0" expanded="false" />
+                <element signature="e#4110#4111#0" expanded="false" />
+                <element signature="e#4315#4316#0" expanded="false" />
+                <element signature="e#4359#4360#0" expanded="false" />
+                <element signature="e#4434#4435#0" expanded="false" />
+                <element signature="e#4483#4484#0" expanded="false" />
+                <element signature="e#4546#4547#0" expanded="false" />
+                <element signature="e#4588#4589#0" expanded="false" />
+                <element signature="e#4641#4642#0" expanded="false" />
+                <element signature="e#4678#4679#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,16 +111,32 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#626#627#0" expanded="false" />
+                <element signature="e#676#677#0" expanded="false" />
+                <element signature="e#725#726#0" expanded="false" />
+                <element signature="e#779#780#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <file leaf-file-name="ESAJAcao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5227882">
-              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.9689441">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,8 +148,17 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
-                <element signature="e#1414#1415#0" expanded="true" />
-                <element signature="e#1439#1440#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1471#1472#0" expanded="false" />
+                <element signature="e#1499#1500#0" expanded="false" />
+                <element signature="e#1530#1531#0" expanded="false" />
+                <element signature="e#1557#1558#0" expanded="false" />
+                <element signature="e#1588#1589#0" expanded="false" />
+                <element signature="e#1615#1616#0" expanded="false" />
+                <element signature="e#1665#1666#0" expanded="false" />
+                <element signature="e#1698#1699#0" expanded="false" />
+                <element signature="e#1740#1741#0" expanded="false" />
+                <element signature="e#1771#1772#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -109,7 +169,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-              <folding />
+              <folding>
+                <element signature="e#625#626#0" expanded="false" />
+                <element signature="e#650#651#0" expanded="false" />
+                <element signature="e#681#682#0" expanded="false" />
+                <element signature="e#708#709#0" expanded="false" />
+                <element signature="e#739#740#0" expanded="false" />
+                <element signature="e#766#767#0" expanded="false" />
+                <element signature="e#1096#1097#0" expanded="false" />
+                <element signature="e#1134#1135#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +188,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/database/TJDATAWorker.java" />
         <option value="$PROJECT_DIR$/src/test/java/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/database/TJDATA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJComposicaoJulgamento.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJDadosProcesso.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJJulgamento.java" />
@@ -199,6 +269,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJDocumento.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/database/ESAJDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java" />
       </list>
     </option>
   </component>
@@ -271,8 +342,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -479,7 +550,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -876,9 +947,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_testDatabaseConnection - 2017.06.30 at 14h 03m 02s.xml">
-      <configuration name="Test.testDatabaseConnection" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Test_testDatabaseConnection - 2017.06.30 at 15h 18m 07s.xml">
       <configuration name="Test.testDatabaseConnection" configurationId="JUnit" />
     </history-entry>
@@ -906,33 +974,36 @@
     <history-entry file="Test_testDatabaseConnection - 2017.07.05 at 02h 47m 56s.xml">
       <configuration name="Test.testDatabaseConnection" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Test_testDatabaseConnection - 2017.07.05 at 03h 25m 42s.xml">
+      <configuration name="Test.testDatabaseConnection" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2938053" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26283187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -972,9 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding>
-            <marker date="1499141846000" expanded="true" signature="2157:2574" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1065,9 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1499141846000" expanded="true" signature="2157:2574" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1124,22 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#987#988#0" expanded="false" />
-            <element signature="e#1012#1013#0" expanded="false" />
-            <element signature="e#1047#1048#0" expanded="false" />
-            <element signature="e#1078#1079#0" expanded="false" />
-            <element signature="e#1111#1112#0" expanded="false" />
-            <element signature="e#1140#1141#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,9 +1325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-          <folding>
-            <marker date="1499141846000" expanded="true" signature="2157:2574" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,7 +1332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,7 +1339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,7 +1353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,7 +1360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1327,8 +1368,31 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#ESAJProcesso#1;class#ESAJProcesso#0" expanded="false" />
+            <element signature="e#2492#2493#0" expanded="false" />
+            <element signature="e#2517#2518#0" expanded="false" />
+            <element signature="e#2557#2558#0" expanded="false" />
+            <element signature="e#2585#2586#0" expanded="false" />
+            <element signature="e#2641#2642#0" expanded="false" />
+            <element signature="e#2677#2678#0" expanded="false" />
+            <element signature="e#2729#2730#0" expanded="false" />
+            <element signature="e#2766#2767#0" expanded="false" />
+            <element signature="e#2826#2827#0" expanded="false" />
+            <element signature="e#2864#2865#0" expanded="false" />
+            <element signature="e#2924#2925#0" expanded="false" />
+            <element signature="e#2962#2963#0" expanded="false" />
+            <element signature="e#3016#3017#0" expanded="false" />
+            <element signature="e#3051#3052#0" expanded="false" />
+            <element signature="e#3122#3123#0" expanded="false" />
+            <element signature="e#3170#3171#0" expanded="false" />
+            <element signature="e#3241#3242#0" expanded="false" />
+            <element signature="e#3284#3285#0" expanded="false" />
             <element signature="method#setComposicaoJulgamento#0;class#ESAJProcesso#0" expanded="false" />
+            <element signature="e#3496#3497#0" expanded="false" />
+            <element signature="e#3530#3531#0" expanded="false" />
+            <element signature="e#3598#3599#0" expanded="false" />
+            <element signature="e#3644#3645#0" expanded="false" />
             <element signature="method#equals#0;class#ESAJProcesso#0" expanded="false" />
             <element signature="method#hashCode#0;class#ESAJProcesso#0" expanded="false" />
             <marker date="1499144048000" expanded="true" signature="417:462" placeholder="..." />
@@ -1336,19 +1400,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJSubprocessoRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJProcessoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/database/ESAJDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="55" />
-          <folding />
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3610#3611#0" expanded="false" />
+            <element signature="e#3651#3652#0" expanded="false" />
+            <element signature="e#3720#3721#0" expanded="false" />
+            <element signature="e#3765#3766#0" expanded="false" />
+            <element signature="e#3838#3839#0" expanded="false" />
+            <element signature="e#3885#3886#0" expanded="false" />
+            <element signature="e#3950#3951#0" expanded="false" />
+            <element signature="e#3993#3994#0" expanded="false" />
+            <element signature="e#4064#4065#0" expanded="false" />
+            <element signature="e#4110#4111#0" expanded="false" />
+            <element signature="e#4315#4316#0" expanded="false" />
+            <element signature="e#4359#4360#0" expanded="false" />
+            <element signature="e#4434#4435#0" expanded="false" />
+            <element signature="e#4483#4484#0" expanded="false" />
+            <element signature="e#4546#4547#0" expanded="false" />
+            <element signature="e#4588#4589#0" expanded="false" />
+            <element signature="e#4641#4642#0" expanded="false" />
+            <element signature="e#4678#4679#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1356,6 +1442,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#626#627#0" expanded="false" />
+            <element signature="e#676#677#0" expanded="false" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9689441">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1365,8 +1473,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
-            <element signature="e#1414#1415#0" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1471#1472#0" expanded="false" />
+            <element signature="e#1499#1500#0" expanded="false" />
+            <element signature="e#1530#1531#0" expanded="false" />
+            <element signature="e#1557#1558#0" expanded="false" />
+            <element signature="e#1588#1589#0" expanded="false" />
+            <element signature="e#1615#1616#0" expanded="false" />
+            <element signature="e#1665#1666#0" expanded="false" />
+            <element signature="e#1698#1699#0" expanded="false" />
+            <element signature="e#1740#1741#0" expanded="false" />
+            <element signature="e#1771#1772#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1375,30 +1492,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#625#626#0" expanded="false" />
+            <element signature="e#650#651#0" expanded="false" />
+            <element signature="e#681#682#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#739#740#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="e#1096#1097#0" expanded="false" />
+            <element signature="e#1134#1135#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/database/ESAJDatabase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJSubprocessoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-          <folding />
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJProcessoRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5227882">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="55" />
           <folding />
         </state>
       </provider>
