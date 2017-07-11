@@ -5,7 +5,7 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created by rafagonc on 15/06/17.
@@ -27,47 +27,47 @@ public class ESAJProcesso {
     @OneToMany( targetEntity=ESAJMovimentacao.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
     @Fetch(FetchMode.JOIN)
-    private List<ESAJMovimentacao> movimentacoes;
+    private Set<ESAJMovimentacao> movimentacoes;
 
     @OneToMany( targetEntity=ESAJPartesProcesso.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
     @Fetch(FetchMode.JOIN)
-    private List<ESAJPartesProcesso> partesProcessos;
+    private Set<ESAJPartesProcesso> partesProcessos;
 
     @OneToMany( targetEntity=ESAJPeticaoDiversa.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
     @Fetch(FetchMode.JOIN)
-    private List<ESAJPeticaoDiversa> peticaoDiversas;
+    private Set<ESAJPeticaoDiversa> peticaoDiversas;
 
     @OneToMany( targetEntity=ESAJJulgamento.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
     @Fetch(FetchMode.JOIN)
-    private List<ESAJJulgamento> julgamentos;
+    private Set<ESAJJulgamento> julgamentos;
 
     @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
     @Fetch(FetchMode.JOIN)
-    private List<ESAJComposicaoJulgamento> composicaoJulgamento;
+    private Set<ESAJComposicaoJulgamento> composicaoJulgamento;
 
     @OneToMany( targetEntity=ESAJSubprocesso.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
     @Fetch(FetchMode.JOIN)
-    private List<ESAJSubprocesso> subprocessos;
+    private Set<ESAJSubprocesso> subprocessos;
 
     @OneToMany( targetEntity=ESAJAcao.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
     @Fetch(FetchMode.JOIN)
-    private List<ESAJAcao> acoes;
+    private Set<ESAJAcao> acoes;
 
     @Column(nullable = false)
     private Boolean terminado;
 
     public ESAJProcesso(String numero,
                         ESAJDadosProcesso dadosProcessos,
-                        List<ESAJMovimentacao> movimentacoes,
-                        List<ESAJPartesProcesso> partesProcessos,
-                        List<ESAJPeticaoDiversa> peticaoDiversas,
-                        List<ESAJAcao> acoes) {
+                        Set<ESAJMovimentacao> movimentacoes,
+                        Set<ESAJPartesProcesso> partesProcessos,
+                        Set<ESAJPeticaoDiversa> peticaoDiversas,
+                        Set<ESAJAcao> acoes) {
         this.numero = numero;
         this.movimentacoes = movimentacoes;
         this.dadosProcessos = dadosProcessos;
@@ -84,11 +84,11 @@ public class ESAJProcesso {
         return id;
     }
 
-    public List<ESAJAcao> getAcoes() {
+    public Set<ESAJAcao> getAcoes() {
         return acoes;
     }
 
-    public List<ESAJMovimentacao> getMovimentacoes() {
+    public Set<ESAJMovimentacao> getMovimentacoes() {
         return movimentacoes;
     }
 
@@ -96,35 +96,35 @@ public class ESAJProcesso {
         return dadosProcessos;
     }
 
-    public List<ESAJPartesProcesso> getPartesProcessos() {
+    public Set<ESAJPartesProcesso> getPartesProcessos() {
         return partesProcessos;
     }
 
-    public List<ESAJPeticaoDiversa> getPeticaoDiversas() {
+    public Set<ESAJPeticaoDiversa> getPeticaoDiversas() {
         return peticaoDiversas;
     }
 
-    public List<ESAJSubprocesso> getSubprocessos() {
+    public Set<ESAJSubprocesso> getSubprocessos() {
         return subprocessos;
     }
 
-    public void setSubprocessos(List<ESAJSubprocesso> subprocessos) {
+    public void setSubprocessos(Set<ESAJSubprocesso> subprocessos) {
         this.subprocessos = subprocessos;
     }
 
-    public List<ESAJComposicaoJulgamento> getComposicaoJulgamento() {
+    public Set<ESAJComposicaoJulgamento> getComposicaoJulgamento() {
         return composicaoJulgamento;
     }
 
-    public void setComposicaoJulgamento(List<ESAJComposicaoJulgamento> composicaoJulgamento) {
+    public void setComposicaoJulgamento(Set<ESAJComposicaoJulgamento> composicaoJulgamento) {
         this.composicaoJulgamento = composicaoJulgamento;
     }
 
-    public List<ESAJJulgamento> getJulgamentos() {
+    public Set<ESAJJulgamento> getJulgamentos() {
         return julgamentos;
     }
 
-    public void setJulgamentos(List<ESAJJulgamento> julgamentos) {
+    public void setJulgamentos(Set<ESAJJulgamento> julgamentos) {
         this.julgamentos = julgamentos;
     }
 
