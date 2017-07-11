@@ -1,6 +1,8 @@
 package br.com.rafagonc.tjdata.models;
 
 import br.com.rafagonc.tjdata.utils.ESAJUtils;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -31,6 +33,7 @@ public class ESAJMovimentacao {
     private ESAJProcesso processo;
 
     @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.ALL)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJDocumento> documentos;
 
     public ESAJMovimentacao(Element tr) {

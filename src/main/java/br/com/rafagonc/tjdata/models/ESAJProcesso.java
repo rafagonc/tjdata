@@ -1,6 +1,8 @@
 package br.com.rafagonc.tjdata.models;
 
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.util.List;
@@ -19,34 +21,42 @@ public class ESAJProcesso {
     private String numero;
 
     @OneToOne(cascade = {CascadeType.ALL})
+    @Fetch(FetchMode.JOIN)
     private ESAJDadosProcesso dadosProcessos;
 
     @OneToMany( targetEntity=ESAJMovimentacao.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJMovimentacao> movimentacoes;
 
     @OneToMany( targetEntity=ESAJPartesProcesso.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJPartesProcesso> partesProcessos;
 
     @OneToMany( targetEntity=ESAJPeticaoDiversa.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJPeticaoDiversa> peticaoDiversas;
 
     @OneToMany( targetEntity=ESAJJulgamento.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJJulgamento> julgamentos;
 
     @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJComposicaoJulgamento> composicaoJulgamento;
 
     @OneToMany( targetEntity=ESAJSubprocesso.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJSubprocesso> subprocessos;
 
     @OneToMany( targetEntity=ESAJAcao.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
+    @Fetch(FetchMode.JOIN)
     private List<ESAJAcao> acoes;
 
     @Column(nullable = false)
