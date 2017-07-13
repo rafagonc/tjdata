@@ -20,43 +20,42 @@ public class ESAJProcesso {
     @Column(nullable = false, unique = true)
     private String numero;
 
-    @OneToOne(cascade = {CascadeType.ALL})
-    @Fetch(FetchMode.JOIN)
+    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     private ESAJDadosProcesso dadosProcessos;
 
     @OneToMany( targetEntity=ESAJMovimentacao.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SELECT)
     private Set<ESAJMovimentacao> movimentacoes;
 
     @OneToMany( targetEntity=ESAJPartesProcesso.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SELECT)
     private Set<ESAJPartesProcesso> partesProcessos;
 
     @OneToMany( targetEntity=ESAJPeticaoDiversa.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SELECT)
     private Set<ESAJPeticaoDiversa> peticaoDiversas;
 
     @OneToMany( targetEntity=ESAJJulgamento.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SELECT)
     private Set<ESAJJulgamento> julgamentos;
 
     @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SELECT)
     private Set<ESAJComposicaoJulgamento> composicaoJulgamento;
 
     @OneToMany( targetEntity=ESAJSubprocesso.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SELECT)
     private Set<ESAJSubprocesso> subprocessos;
 
     @OneToMany( targetEntity=ESAJAcao.class, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SELECT)
     private Set<ESAJAcao> acoes;
 
     @Column(nullable = false)

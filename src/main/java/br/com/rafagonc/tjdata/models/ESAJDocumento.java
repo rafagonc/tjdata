@@ -19,7 +19,7 @@ public class ESAJDocumento {
     private String link;
 
     @ManyToOne
-    private ESAJMovimentacao processo;
+    private ESAJMovimentacao movimentacao;
 
     public ESAJDocumento(String nome, String link) {
         this.nome = nome;

@@ -22,6 +22,9 @@ public class ESAJPartesProcesso implements Serializable {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String advogados;
 
+    @ManyToOne
+    private ESAJProcesso processo;
+
     public ESAJPartesProcesso(Element tr) {
         this.advogados = ESAJUtils.getTextoWithIndex(tr,1);
         this.titulo = ESAJUtils.getTextoWithIndex(tr,0);

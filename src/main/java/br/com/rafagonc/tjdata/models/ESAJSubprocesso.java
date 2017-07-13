@@ -21,6 +21,9 @@ public class ESAJSubprocesso {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
 
+    @ManyToOne
+    private ESAJProcesso processo;
+
     public ESAJSubprocesso(Element tr) {
         this.recebido = ESAJUtils.normalize(tr.child(0).toString());
         this.classe = ESAJUtils.normalize(tr.child(1).toString());

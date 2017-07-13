@@ -24,6 +24,9 @@ public class ESAJJulgamento {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String decisao;
 
+    @ManyToOne
+    private ESAJProcesso processo;
+
     public ESAJJulgamento(Element tr) {
         this.data = ESAJUtils.normalize(tr.child(0).toString());
         this.situacao = ESAJUtils.normalize(tr.child(1).toString());

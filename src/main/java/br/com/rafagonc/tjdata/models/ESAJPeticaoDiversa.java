@@ -22,6 +22,9 @@ public class ESAJPeticaoDiversa implements Serializable {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String tipo;
 
+    @ManyToOne
+    private ESAJProcesso processo;
+
     public ESAJPeticaoDiversa(Element tr) {
         this.data = ESAJUtils.normalize(tr.child(0).toString());
         this.tipo = ESAJUtils.normalize(tr.child(1).toString());

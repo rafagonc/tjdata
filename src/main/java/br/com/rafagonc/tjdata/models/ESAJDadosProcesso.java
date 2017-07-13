@@ -13,11 +13,14 @@ import java.io.Serializable;
 public class ESAJDadosProcesso implements Serializable {
 
     @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @ManyToOne
+    private ESAJProcesso processo;
+
     @Column(nullable = true, columnDefinition = "TEXT")
-    private String processo;
+    private String numero;
 
     @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
@@ -59,20 +62,20 @@ public class ESAJDadosProcesso implements Serializable {
     private String processoPrincipal;
 
     public ESAJDadosProcesso(Element table) {
-        this.processo = ESAJUtils.getTextoFromDado("Processo:",table);
-        this.classe = ESAJUtils.getTextoFromDado("Classe:",table);
-        this.area = ESAJUtils.getTextoFromDado("Área",table);
-        this.assunto = ESAJUtils.getTextoFromDado("Assunto:",table);
-        this.origem = ESAJUtils.getTextoFromDado("Origem:",table);
-        this.numerosDeOrigem = ESAJUtils.getTextoFromDado("Números de origem:",table);
-        this.juiz = ESAJUtils.getTextoFromDado("Juiz:",table);
-        this.relator = ESAJUtils.getTextoFromDado("Relator:",table);
-        this.volumeApenso = ESAJUtils.getTextoFromDado("Volume / Apenso:",table);
-        this.distribuicao = ESAJUtils.getTextoFromDado("Distribuição:",table);
-        this.controle = ESAJUtils.getTextoFromDado("Controle:",table);
-        this.valor = ESAJUtils.getTextoFromDado("Valor da ação:",table);
-        this.incidente = ESAJUtils.getTextoFromDado("Incidente:",table);
-        this.processoPrincipal = ESAJUtils.getTextoFromDado("Processo principal:",table);
+        this.numero = ESAJUtils.getTextoFromDado("Processo:", table);
+        this.classe = ESAJUtils.getTextoFromDado("Classe:", table);
+        this.area = ESAJUtils.getTextoFromDado("Área", table);
+        this.assunto = ESAJUtils.getTextoFromDado("Assunto:", table);
+        this.origem = ESAJUtils.getTextoFromDado("Origem:", table);
+        this.numerosDeOrigem = ESAJUtils.getTextoFromDado("Números de origem:", table);
+        this.juiz = ESAJUtils.getTextoFromDado("Juiz:", table);
+        this.relator = ESAJUtils.getTextoFromDado("Relator:", table);
+        this.volumeApenso = ESAJUtils.getTextoFromDado("Volume / Apenso:", table);
+        this.distribuicao = ESAJUtils.getTextoFromDado("Distribuição:", table);
+        this.controle = ESAJUtils.getTextoFromDado("Controle:", table);
+        this.valor = ESAJUtils.getTextoFromDado("Valor da ação:", table);
+        this.incidente = ESAJUtils.getTextoFromDado("Incidente:", table);
+        this.processoPrincipal = ESAJUtils.getTextoFromDado("Processo principal:", table);
     }
 
     public ESAJDadosProcesso() {
@@ -82,8 +85,20 @@ public class ESAJDadosProcesso implements Serializable {
         return id;
     }
 
-    public String getProcesso() {
+    public ESAJProcesso getProcesso() {
         return processo;
+    }
+
+    public String getProcessoPrincipal() {
+        return processoPrincipal;
+    }
+
+    public String getIncidente() {
+        return incidente;
+    }
+
+    public String getNumero() {
+        return numero;
     }
 
     public String getClasse() {
@@ -111,7 +126,7 @@ public class ESAJDadosProcesso implements Serializable {
     }
 
     public ESAJGrau getGrau() {
-        String processoLimpo = ESAJUtils.normalize(this.processo.replaceAll("\\s","")).replace("Julgado","");
+        String processoLimpo = ESAJUtils.normalize(this.numero.replaceAll("\\s", "")).replace("Julgado", "");
         return processoLimpo.substring(processoLimpo.length() - 4).equals("0000") ? ESAJGrau.Segundo : ESAJGrau.Primeiro;
     }
 
@@ -136,43 +151,4 @@ public class ESAJDadosProcesso implements Serializable {
     }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ESAJDadosProcesso that = (ESAJDadosProcesso) o;
-
-        if (processo != null ? !processo.equals(that.processo) : that.processo != null) return false;
-        if (classe != null ? !classe.equals(that.classe) : that.classe != null) return false;
-        if (assunto != null ? !assunto.equals(that.assunto) : that.assunto != null) return false;
-        if (distribuicao != null ? !distribuicao.equals(that.distribuicao) : that.distribuicao != null) return false;
-        if (controle != null ? !controle.equals(that.controle) : that.controle != null) return false;
-        if (juiz != null ? !juiz.equals(that.juiz) : that.juiz != null) return false;
-        if (relator != null ? !relator.equals(that.relator) : that.relator != null) return false;
-        if (valor != null ? !valor.equals(that.valor) : that.valor != null) return false;
-        if (area != null ? !area.equals(that.area) : that.area != null) return false;
-        if (origem != null ? !origem.equals(that.origem) : that.origem != null) return false;
-        if (numerosDeOrigem != null ? !numerosDeOrigem.equals(that.numerosDeOrigem) : that.numerosDeOrigem != null)
-            return false;
-        return volumeApenso != null ? volumeApenso.equals(that.volumeApenso) : that.volumeApenso == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = processo != null ? processo.hashCode() : 0;
-        result = 31 * result + (classe != null ? classe.hashCode() : 0);
-        result = 31 * result + (assunto != null ? assunto.hashCode() : 0);
-        result = 31 * result + (distribuicao != null ? distribuicao.hashCode() : 0);
-        result = 31 * result + (controle != null ? controle.hashCode() : 0);
-        result = 31 * result + (juiz != null ? juiz.hashCode() : 0);
-        result = 31 * result + (relator != null ? relator.hashCode() : 0);
-        result = 31 * result + (valor != null ? valor.hashCode() : 0);
-        result = 31 * result + (area != null ? area.hashCode() : 0);
-        result = 31 * result + (origem != null ? origem.hashCode() : 0);
-        result = 31 * result + (numerosDeOrigem != null ? numerosDeOrigem.hashCode() : 0);
-        result = 31 * result + (volumeApenso != null ? volumeApenso.hashCode() : 0);
-        return result;
-    }
 }
