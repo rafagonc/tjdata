@@ -73,7 +73,7 @@ public class ESAJProcesso {
         this.partesProcessos = partesProcessos;
         this.peticaoDiversas = peticaoDiversas;
         this.acoes = acoes;
-        this.terminado = this.dadosProcessos.getProcesso().contains("Julgado") || this.dadosProcessos.getProcesso().contains("Extinto") || this.dadosProcessos.getAssunto().contains("Arquivado");
+        this.terminado = this.dadosProcessos.getNumero().contains("Julgado") || this.dadosProcessos.getNumero().contains("Extinto") || this.dadosProcessos.getAssunto().contains("Arquivado");
     }
 
     public ESAJProcesso() {
