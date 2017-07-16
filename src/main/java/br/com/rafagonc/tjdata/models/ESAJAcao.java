@@ -10,7 +10,6 @@ import javax.persistence.*;
  * Created by rafagonc on 01/07/17.
  */
 @Entity
-@Table(name = "acao")
 public class ESAJAcao {
 
     private Long id;

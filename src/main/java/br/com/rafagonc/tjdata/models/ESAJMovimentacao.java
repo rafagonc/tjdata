@@ -12,7 +12,6 @@ import java.util.List;
  * Created by rafagonc on 15/06/17.
  */
 @Entity
-@Table(name = "movimentacao")
 public class ESAJMovimentacao {
 
     private Long id;

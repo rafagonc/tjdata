@@ -9,7 +9,6 @@ import javax.persistence.*;
  * Created by rafagonc on 25/06/17.
  */
 @Entity
-@Table(name = "subprocesso")
 public class ESAJSubprocesso {
 
     private Long id;

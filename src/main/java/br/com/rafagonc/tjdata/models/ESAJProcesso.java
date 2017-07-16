@@ -7,7 +7,6 @@ import java.util.Set;
  * Created by rafagonc on 15/06/17.
  */
 @Entity
-@Table(name = "processo")
 public class ESAJProcesso {
 
     private Long id;
@@ -102,10 +101,16 @@ public class ESAJProcesso {
     }
 
     public void setComposicaoJulgamento(Set<ESAJComposicaoJulgamento> composicaoJulgamento) {
+        for (ESAJComposicaoJulgamento c: composicaoJulgamento) {
+            c.setProcesso(this);
+        }
         this.composicaoJulgamento = composicaoJulgamento;
     }
 
     public void setJulgamentos(Set<ESAJJulgamento> julgamentos) {
+        for (ESAJJulgamento c: julgamentos) {
+            c.setProcesso(this);
+        }
         this.julgamentos = julgamentos;
     }
 
@@ -118,22 +123,35 @@ public class ESAJProcesso {
     }
 
     public void setDadosProcessos(ESAJDadosProcesso dadosProcessos) {
+        this.dadosProcessos.setProcesso(this);
         this.dadosProcessos = dadosProcessos;
     }
 
     public void setMovimentacoes(Set<ESAJMovimentacao> movimentacoes) {
+        for (ESAJMovimentacao c: movimentacoes) {
+            c.setProcesso(this);
+        }
         this.movimentacoes = movimentacoes;
     }
 
     public void setPartesProcessos(Set<ESAJPartesProcesso> partesProcessos) {
+        for (ESAJPartesProcesso c: partesProcessos) {
+            c.setProcesso(this);
+        }
         this.partesProcessos = partesProcessos;
     }
 
     public void setPeticaoDiversas(Set<ESAJPeticaoDiversa> peticaoDiversas) {
+        for (ESAJPeticaoDiversa c: peticaoDiversas) {
+            c.setProcesso(this);
+        }
         this.peticaoDiversas = peticaoDiversas;
     }
 
     public void setAcoes(Set<ESAJAcao> acoes) {
+        for (ESAJAcao c: acoes) {
+            c.setProcesso(this);
+        }
         this.acoes = acoes;
     }
 
