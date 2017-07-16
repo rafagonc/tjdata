@@ -18,7 +18,8 @@ public class ESAJDocumento {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String link;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "movimentacao_id")
     private ESAJMovimentacao movimentacao;
 
     public ESAJDocumento(String nome, String link) {

@@ -18,43 +18,35 @@ public class ESAJProcesso {
     @Column(nullable = false, unique = true)
     private String numero;
 
-    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
-    @JoinColumn(name="dadosprocesso_id")
+    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER, mappedBy = "processo")
     private ESAJDadosProcesso dadosProcessos;
 
-    @OneToMany( targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 20)
-    @JoinColumn(name="movimentacao_id")
     private Set<ESAJMovimentacao> movimentacoes;
 
-    @OneToMany( targetEntity=ESAJPartesProcesso.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJPartesProcesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 20)
-    @JoinColumn(name="partesprocesso_id")
     private Set<ESAJPartesProcesso> partesProcessos;
 
-    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 20)
-    @JoinColumn(name="peticaodiversas_id")
     private Set<ESAJPeticaoDiversa> peticaoDiversas;
 
-    @OneToMany( targetEntity=ESAJJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 20)
-    @JoinColumn(name="julgamento_id")
     private Set<ESAJJulgamento> julgamentos;
 
-    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 20)
-    @JoinColumn(name="composicao_id")
     private Set<ESAJComposicaoJulgamento> composicaoJulgamento;
 
-    @OneToMany( targetEntity=ESAJSubprocesso.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJSubprocesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 20)
-    @JoinColumn(name="subprocesso_id")
     private Set<ESAJSubprocesso> subprocessos;
 
-    @OneToMany( targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 20)
-    @JoinColumn(name="acoes_id")
     private Set<ESAJAcao> acoes;
 
     @Column(nullable = false)

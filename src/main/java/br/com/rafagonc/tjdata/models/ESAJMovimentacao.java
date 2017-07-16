@@ -29,7 +29,8 @@ public class ESAJMovimentacao {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String data;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.REMOVE)

@@ -24,7 +24,8 @@ public class ESAJJulgamento {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String decisao;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJJulgamento(Element tr) {

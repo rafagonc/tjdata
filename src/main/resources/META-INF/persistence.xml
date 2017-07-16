@@ -20,9 +20,9 @@
 
   <properties>
    <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-   <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pellefant.db.elephantsql.com:5432/mitdwyah" />
-   <property name="javax.persistence.jdbc.user" value="mitdwyah" />
-   <property name="javax.persistence.jdbc.password" value="I6xsONO7cxJomR94Z99A0UlpcteZdF4x" />
+   <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/tj" />
+   <property name="javax.persistence.jdbc.user" value="rafagonc" />
+   <property name="javax.persistence.jdbc.password" value="cocacola" />
    <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
    <property name="hibernate.show_sql" value="true" />
    <property name="hibernate.format_sql" value="true" />

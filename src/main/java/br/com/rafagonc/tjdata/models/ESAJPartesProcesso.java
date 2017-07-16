@@ -22,7 +22,8 @@ public class ESAJPartesProcesso implements Serializable {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String advogados;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJPartesProcesso(Element tr) {

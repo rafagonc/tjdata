@@ -21,6 +21,10 @@ public class ESAJComposicaoJulgamento {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String magistrado;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
+    private ESAJProcesso processo;
+
     public ESAJComposicaoJulgamento(Element tr) {
         this.participacao = ESAJUtils.normalize(tr.child(0).toString().replace("&nbsp;"," "));
         this.magistrado = ESAJUtils.normalize(tr.child(1).toString().replace("&nbsp;"," "));

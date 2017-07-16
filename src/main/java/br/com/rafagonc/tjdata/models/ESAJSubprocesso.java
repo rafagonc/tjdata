@@ -21,7 +21,8 @@ public class ESAJSubprocesso {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJSubprocesso(Element tr) {

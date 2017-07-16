@@ -22,7 +22,8 @@ public class ESAJPeticaoDiversa implements Serializable {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String tipo;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJPeticaoDiversa(Element tr) {

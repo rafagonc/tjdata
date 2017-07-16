@@ -16,7 +16,7 @@ public class ESAJDadosProcesso implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     private ESAJProcesso processo;
 
     @Column(nullable = true, columnDefinition = "TEXT")

@@ -25,7 +25,8 @@ public class ESAJAcao {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String link;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJAcao(Element tr) {
