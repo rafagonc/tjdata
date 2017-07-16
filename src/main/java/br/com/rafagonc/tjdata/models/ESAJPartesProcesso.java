@@ -30,6 +30,11 @@ public class ESAJPartesProcesso implements Serializable {
         this.titulo = ESAJUtils.getTextoWithIndex(tr,0);
     }
 
+    public ESAJPartesProcesso(String advogados, String titulo) {
+        this.advogados = advogados;
+        this.titulo = titulo;
+    }
+
     public ESAJPartesProcesso() {
     }
 

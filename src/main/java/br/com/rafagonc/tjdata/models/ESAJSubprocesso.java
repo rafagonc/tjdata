@@ -29,6 +29,11 @@ public class ESAJSubprocesso {
         this.classe = ESAJUtils.normalize(tr.child(1).toString());
     }
 
+    public ESAJSubprocesso(String recebido, String classe) {
+        this.recebido = recebido;
+        this.classe = classe;
+    }
+
     public ESAJSubprocesso() {
     }
 

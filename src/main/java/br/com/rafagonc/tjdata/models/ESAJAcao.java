@@ -36,6 +36,17 @@ public class ESAJAcao {
         this.recebido = ESAJUtils.normalize(tr.child(0).toString());
     }
 
+    public ESAJAcao(String recebido, String classe) {
+        this.recebido = recebido;
+        this.classe = classe;
+    }
+
+    public ESAJAcao(String recebido, String classe, String link) {
+        this.recebido = recebido;
+        this.classe = classe;
+        this.link = link;
+    }
+
     public ESAJAcao() {
     }
 

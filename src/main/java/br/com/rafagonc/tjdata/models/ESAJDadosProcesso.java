@@ -150,5 +150,59 @@ public class ESAJDadosProcesso implements Serializable {
         return volumeApenso;
     }
 
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
 
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+
+    public void setAssunto(String assunto) {
+        this.assunto = assunto;
+    }
+
+    public void setDistribuicao(String distribuicao) {
+        this.distribuicao = distribuicao;
+    }
+
+    public void setControle(String controle) {
+        this.controle = controle;
+    }
+
+    public void setJuiz(String juiz) {
+        this.juiz = juiz;
+    }
+
+    public void setRelator(String relator) {
+        this.relator = relator;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public void setOrigem(String origem) {
+        this.origem = origem;
+    }
+
+    public void setNumerosDeOrigem(String numerosDeOrigem) {
+        this.numerosDeOrigem = numerosDeOrigem;
+    }
+
+    public void setVolumeApenso(String volumeApenso) {
+        this.volumeApenso = volumeApenso;
+    }
+
+    public void setIncidente(String incidente) {
+        this.incidente = incidente;
+    }
+
+    public void setProcessoPrincipal(String processoPrincipal) {
+        this.processoPrincipal = processoPrincipal;
+    }
 }

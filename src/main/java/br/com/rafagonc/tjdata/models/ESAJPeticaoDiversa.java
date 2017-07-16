@@ -30,6 +30,11 @@ public class ESAJPeticaoDiversa implements Serializable {
         this.tipo = ESAJUtils.normalize(tr.child(1).toString());
     }
 
+    public ESAJPeticaoDiversa(String data, String tipo) {
+        this.data = data;
+        this.tipo = tipo;
+    }
+
     public ESAJPeticaoDiversa() {
     }
 

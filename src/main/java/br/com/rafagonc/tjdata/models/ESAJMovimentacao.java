@@ -49,6 +49,30 @@ public class ESAJMovimentacao {
         this.acao = ESAJUtils.getTextoWithIndex(tr, 1);
     }
 
+    public ESAJMovimentacao(String texto, String data) {
+        this.texto = texto;
+        this.data = data;
+    }
+
+    public ESAJMovimentacao(String texto, String acao, String data) {
+        this.texto = texto;
+        this.acao = acao;
+        this.data = data;
+    }
+
+    public ESAJMovimentacao(String texto, String acao, String data, List<ESAJDocumento> documentos) {
+        this.texto = texto;
+        this.acao = acao;
+        this.data = data;
+        this.documentos = documentos;
+    }
+
+    public ESAJMovimentacao(String data, String texto, List<ESAJDocumento> documentos) {
+        this.data = data;
+        this.texto = texto;
+        this.documentos = documentos;
+    }
+
     public ESAJMovimentacao() {
     }
 

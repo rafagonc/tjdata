@@ -33,6 +33,12 @@ public class ESAJJulgamento {
         this.decisao = ESAJUtils.normalize(tr.child(2).toString());
     }
 
+    public ESAJJulgamento(String data, String situacao, String decisao) {
+        this.data = data;
+        this.situacao = situacao;
+        this.decisao = decisao;
+    }
+
     public ESAJJulgamento() {
     }
 

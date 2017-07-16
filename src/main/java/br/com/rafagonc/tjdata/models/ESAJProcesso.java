@@ -73,10 +73,11 @@ public class ESAJProcesso {
         this.partesProcessos = partesProcessos;
         this.peticaoDiversas = peticaoDiversas;
         this.acoes = acoes;
-        this.terminado = this.dadosProcessos.getNumero().contains("Julgado") || this.dadosProcessos.getNumero().contains("Extinto") || this.dadosProcessos.getAssunto().contains("Arquivado");
+        this.terminado = this.dadosProcessos.getNumero().contains("Julgado") || this.dadosProcessos.getNumero().contains("Extinto") || this.dadosProcessos.getNumero().contains("Arquivado");
     }
 
     public ESAJProcesso() {
+        this.terminado = true;
     }
 
     public Long getId() {
@@ -127,6 +128,9 @@ public class ESAJProcesso {
         this.julgamentos = julgamentos;
     }
 
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
 
     @Override
     public boolean equals(Object o) {

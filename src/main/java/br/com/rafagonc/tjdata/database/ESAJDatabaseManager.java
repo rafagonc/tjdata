@@ -15,6 +15,8 @@ import javax.persistence.Persistence;
  */
 public class ESAJDatabaseManager {
 
+    private static ESAJDatabaseManager shared;
+
     private final EntityManager entityManager;
 
     public ESAJDatabaseManager(EntityManager entityManager) {
@@ -38,6 +40,18 @@ public class ESAJDatabaseManager {
         return tjdata;
     }
 
+    public static ESAJDatabaseManager share() {
+        if (shared == null) {
+            shared = start();
+            return shared;
+        }
+        if (!shared.alive()) {
+            shared = start();
+            return shared;
+        }
+        return shared;
+    }
+
     public void work(ESAJDatabaseWorker worker) {
         synchronized (entityManager) {
             Session session = entityManager.unwrap(Session.class);
@@ -48,7 +62,26 @@ public class ESAJDatabaseManager {
         }
     }
 
-    private ESAJDatabase getDatabase() {
+    public Transaction begin() {
+        synchronized (entityManager) {
+            Session session = entityManager.unwrap(Session.class);
+            Transaction transaction = session.beginTransaction();
+            transaction.setTimeout(5);
+            return transaction;
+        }
+    }
+
+    public void end() {
+        synchronized (entityManager) {
+            entityManager.close();
+        }
+    }
+
+    public Boolean alive() {
+        return entityManager.isOpen();
+    }
+
+    public ESAJDatabase getDatabase() {
         RepositoryFactorySupport repositoryFactorySupport = new JpaRepositoryFactory(entityManager);
         ESAJProcessoRepository processoRepository = repositoryFactorySupport.getRepository(ESAJProcessoRepository.class);
         ESAJPartesProcessoRepository partesProcessoRepository = repositoryFactorySupport.getRepository(ESAJPartesProcessoRepository.class);
