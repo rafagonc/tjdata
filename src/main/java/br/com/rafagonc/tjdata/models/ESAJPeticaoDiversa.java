@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Created by rafagonc on 15/06/17.
  */
 @Entity
-@Table(name = "peticaoDiversa")
+@Table(name = "peticaodiversa")
 public class ESAJPeticaoDiversa implements Serializable {
 
     private Long id;
