@@ -122,6 +122,14 @@ public class ESAJProcesso {
         return composicaoJulgamento;
     }
 
+    public void setProcessando(Boolean processando) {
+        this.processando = processando;
+    }
+
+    public void setEncontrado(Boolean encontrado) {
+        this.encontrado = encontrado;
+    }
+
     public void setSubprocessos(Set<ESAJSubprocesso> subprocessos) {
         if (subprocessos != null) {
             for (ESAJSubprocesso c: subprocessos) {
