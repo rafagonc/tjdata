@@ -6,6 +6,7 @@ import javax.persistence.*;
  * Created by rafagonc on 01/07/17.
  */
 @Entity
+@Table(name = "documento")
 public class ESAJDocumento {
 
     private Long id;

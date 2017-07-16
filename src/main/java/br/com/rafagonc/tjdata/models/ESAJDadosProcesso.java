@@ -10,6 +10,7 @@ import java.io.Serializable;
  * Created by rafagonc on 15/06/17.
  */
 @Entity
+@Table(name = "dadosProcesso")
 public class ESAJDadosProcesso implements Serializable {
 
     private Long id;

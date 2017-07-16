@@ -7,6 +7,7 @@ import java.util.Set;
  * Created by rafagonc on 15/06/17.
  */
 @Entity
+@Table(name = "processo")
 public class ESAJProcesso {
 
     private Long id;
