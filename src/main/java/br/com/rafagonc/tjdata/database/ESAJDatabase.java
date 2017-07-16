@@ -1,9 +1,9 @@
 package br.com.rafagonc.tjdata.database;
 
-import br.com.rafagonc.tjdata.models.*;
+import br.com.rafagonc.tjdata.models.ESAJMovimentacao;
+import br.com.rafagonc.tjdata.models.ESAJProcesso;
 import br.com.rafagonc.tjdata.repositories.*;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by rafagonc on 30/06/17.
@@ -46,6 +46,7 @@ public class ESAJDatabase {
     @Transactional
     public boolean save(ESAJProcesso processo) {
         try {
+            processoRepository.save(processo);
             if (processo.getDadosProcessos() != null) this.dadosProcessoRepository.save(processo.getDadosProcessos());
             if (processo.getPartesProcessos() != null) this.partesProcessoRepository.save(processo.getPartesProcessos());
             if (processo.getMovimentacoes() != null) {
@@ -58,7 +59,6 @@ public class ESAJDatabase {
             if (processo.getComposicaoJulgamento() != null) this.composicaoJulgamentoRepository.save(processo.getComposicaoJulgamento());
             if (processo.getJulgamentos() != null) this.julgamentoRepository.save(processo.getJulgamentos());
             if (processo.getSubprocessos() != null) this.subprocessoRepository.save(processo.getSubprocessos());
-            processoRepository.save(processo);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
