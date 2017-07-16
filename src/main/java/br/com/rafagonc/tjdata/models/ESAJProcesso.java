@@ -1,8 +1,6 @@
 package br.com.rafagonc.tjdata.models;
 
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -21,41 +19,42 @@ public class ESAJProcesso {
     private String numero;
 
     @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    @JoinColumn(name="dadosprocesso_id")
     private ESAJDadosProcesso dadosProcessos;
 
-    @OneToMany( targetEntity=ESAJMovimentacao.class, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.SELECT)
+    @JoinColumn(name="movimentacao_id")
     private Set<ESAJMovimentacao> movimentacoes;
 
-    @OneToMany( targetEntity=ESAJPartesProcesso.class, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJPartesProcesso.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.SELECT)
+    @JoinColumn(name="partesprocesso_id")
     private Set<ESAJPartesProcesso> partesProcessos;
 
-    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.SELECT)
+    @JoinColumn(name="peticaodiversas_id")
     private Set<ESAJPeticaoDiversa> peticaoDiversas;
 
-    @OneToMany( targetEntity=ESAJJulgamento.class, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.SELECT)
+    @JoinColumn(name="julgamento_id")
     private Set<ESAJJulgamento> julgamentos;
 
-    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.SELECT)
+    @JoinColumn(name="composicao_id")
     private Set<ESAJComposicaoJulgamento> composicaoJulgamento;
 
-    @OneToMany( targetEntity=ESAJSubprocesso.class, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJSubprocesso.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.SELECT)
+    @JoinColumn(name="subprocesso_id")
     private Set<ESAJSubprocesso> subprocessos;
 
-    @OneToMany( targetEntity=ESAJAcao.class, cascade = {CascadeType.ALL} )
+    @OneToMany( targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL} )
     @BatchSize(size = 20)
-    @Fetch(FetchMode.SELECT)
+    @JoinColumn(name="acoes_id")
     private Set<ESAJAcao> acoes;
 
     @Column(nullable = false)

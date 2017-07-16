@@ -25,6 +25,9 @@ public class ESAJAcao {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String link;
 
+    @ManyToOne
+    private ESAJProcesso processo;
+
     public ESAJAcao(Element tr) {
         Elements linkElements = tr.getElementsByTag("a");
         for (Element el : linkElements) {

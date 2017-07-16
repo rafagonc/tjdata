@@ -32,8 +32,9 @@ public class ESAJMovimentacao {
     @ManyToOne
     private ESAJProcesso processo;
 
-    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.REMOVE)
     @Fetch(FetchMode.JOIN)
+    @JoinColumn(name="documento_id")
     private List<ESAJDocumento> documentos;
 
     public ESAJMovimentacao(Element tr) {
@@ -67,11 +68,7 @@ public class ESAJMovimentacao {
         this.documentos = documentos;
     }
 
-    public ESAJMovimentacao(String data, String texto, List<ESAJDocumento> documentos) {
-        this.data = data;
-        this.texto = texto;
-        this.documentos = documentos;
-    }
+
 
     public ESAJMovimentacao() {
     }

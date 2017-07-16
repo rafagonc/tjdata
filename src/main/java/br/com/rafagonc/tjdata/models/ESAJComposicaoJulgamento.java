@@ -26,11 +26,6 @@ public class ESAJComposicaoJulgamento {
         this.magistrado = ESAJUtils.normalize(tr.child(1).toString().replace("&nbsp;"," "));
     }
 
-    public ESAJComposicaoJulgamento(String participacao, String magistrado) {
-        this.participacao = participacao;
-        this.magistrado = magistrado;
-    }
-
     public ESAJComposicaoJulgamento() {
     }
 
