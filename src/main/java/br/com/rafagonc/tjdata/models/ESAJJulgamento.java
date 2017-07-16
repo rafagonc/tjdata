@@ -11,21 +11,10 @@ import javax.persistence.*;
 @Entity
 public class ESAJJulgamento {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String data;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String situacao;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String decisao;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJJulgamento(Element tr) {
@@ -43,20 +32,51 @@ public class ESAJJulgamento {
     public ESAJJulgamento() {
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getData() {
         return data;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getSituacao() {
         return situacao;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getDecisao() {
         return decisao;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
+    public ESAJProcesso getProcesso() {
+        return processo;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+
+    public void setDecisao(String decisao) {
+        this.decisao = decisao;
+    }
+
+    public void setProcesso(ESAJProcesso processo) {
+        this.processo = processo;
     }
 
     @Override

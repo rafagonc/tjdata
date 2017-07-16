@@ -1,7 +1,5 @@
 package br.com.rafagonc.tjdata.models;
 
-import org.hibernate.annotations.BatchSize;
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -11,45 +9,16 @@ import java.util.Set;
 @Entity
 public class ESAJProcesso {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = false, unique = true)
     private String numero;
-
-    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER, mappedBy = "processo")
     private ESAJDadosProcesso dadosProcessos;
-
-    @OneToMany( targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
-    @BatchSize(size = 20)
     private Set<ESAJMovimentacao> movimentacoes;
-
-    @OneToMany( targetEntity=ESAJPartesProcesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
-    @BatchSize(size = 20)
     private Set<ESAJPartesProcesso> partesProcessos;
-
-    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
-    @BatchSize(size = 20)
     private Set<ESAJPeticaoDiversa> peticaoDiversas;
-
-    @OneToMany( targetEntity=ESAJJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
-    @BatchSize(size = 20)
     private Set<ESAJJulgamento> julgamentos;
-
-    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
-    @BatchSize(size = 20)
     private Set<ESAJComposicaoJulgamento> composicaoJulgamento;
-
-    @OneToMany( targetEntity=ESAJSubprocesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
-    @BatchSize(size = 20)
     private Set<ESAJSubprocesso> subprocessos;
-
-    @OneToMany( targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
-    @BatchSize(size = 20)
     private Set<ESAJAcao> acoes;
-
-    @Column(nullable = false)
     private Boolean terminado;
 
     public ESAJProcesso(String numero,
@@ -71,48 +40,68 @@ public class ESAJProcesso {
         this.terminado = true;
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = false, unique = true)
+    public String getNumero() {
+        return numero;
+    }
+
+    @Column(nullable = false)
+    public Boolean getTerminado() {
+        return terminado;
+    }
+
+    @OneToMany( targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     public Set<ESAJAcao> getAcoes() {
         return acoes;
     }
 
+    @OneToMany( targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     public Set<ESAJMovimentacao> getMovimentacoes() {
         return movimentacoes;
     }
 
+    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER, mappedBy = "processo")
     public ESAJDadosProcesso getDadosProcessos() {
         return dadosProcessos;
     }
 
+    @OneToMany( targetEntity=ESAJPartesProcesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     public Set<ESAJPartesProcesso> getPartesProcessos() {
         return partesProcessos;
     }
 
+    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     public Set<ESAJPeticaoDiversa> getPeticaoDiversas() {
         return peticaoDiversas;
     }
 
+    @OneToMany( targetEntity=ESAJSubprocesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     public Set<ESAJSubprocesso> getSubprocessos() {
         return subprocessos;
+    }
+
+    @OneToMany( targetEntity=ESAJJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    public Set<ESAJJulgamento> getJulgamentos() {
+        return julgamentos;
+    }
+
+    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    public Set<ESAJComposicaoJulgamento> getComposicaoJulgamento() {
+        return composicaoJulgamento;
     }
 
     public void setSubprocessos(Set<ESAJSubprocesso> subprocessos) {
         this.subprocessos = subprocessos;
     }
 
-    public Set<ESAJComposicaoJulgamento> getComposicaoJulgamento() {
-        return composicaoJulgamento;
-    }
-
     public void setComposicaoJulgamento(Set<ESAJComposicaoJulgamento> composicaoJulgamento) {
         this.composicaoJulgamento = composicaoJulgamento;
-    }
-
-    public Set<ESAJJulgamento> getJulgamentos() {
-        return julgamentos;
     }
 
     public void setJulgamentos(Set<ESAJJulgamento> julgamentos) {
@@ -121,6 +110,34 @@ public class ESAJProcesso {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setDadosProcessos(ESAJDadosProcesso dadosProcessos) {
+        this.dadosProcessos = dadosProcessos;
+    }
+
+    public void setMovimentacoes(Set<ESAJMovimentacao> movimentacoes) {
+        this.movimentacoes = movimentacoes;
+    }
+
+    public void setPartesProcessos(Set<ESAJPartesProcesso> partesProcessos) {
+        this.partesProcessos = partesProcessos;
+    }
+
+    public void setPeticaoDiversas(Set<ESAJPeticaoDiversa> peticaoDiversas) {
+        this.peticaoDiversas = peticaoDiversas;
+    }
+
+    public void setAcoes(Set<ESAJAcao> acoes) {
+        this.acoes = acoes;
+    }
+
+    public void setTerminado(Boolean terminado) {
+        this.terminado = terminado;
     }
 
     @Override

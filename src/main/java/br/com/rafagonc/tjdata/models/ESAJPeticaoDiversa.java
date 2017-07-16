@@ -12,18 +12,9 @@ import java.io.Serializable;
 @Entity
 public class ESAJPeticaoDiversa implements Serializable {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String data;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String tipo;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJPeticaoDiversa(Element tr) {
@@ -39,16 +30,42 @@ public class ESAJPeticaoDiversa implements Serializable {
     public ESAJPeticaoDiversa() {
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getData() {
         return data;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getTipo() {
         return tipo;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
+    public ESAJProcesso getProcesso() {
+        return processo;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setProcesso(ESAJProcesso processo) {
+        this.processo = processo;
     }
 
     @Override

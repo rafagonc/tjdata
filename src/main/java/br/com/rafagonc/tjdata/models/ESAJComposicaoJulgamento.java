@@ -11,18 +11,9 @@ import javax.persistence.*;
 @Entity
 public class ESAJComposicaoJulgamento {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String participacao;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String magistrado;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJComposicaoJulgamento(Element tr) {
@@ -33,16 +24,42 @@ public class ESAJComposicaoJulgamento {
     public ESAJComposicaoJulgamento() {
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getParticipacao() {
         return participacao;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getMagistrado() {
         return magistrado;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
+    public ESAJProcesso getProcesso() {
+        return processo;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setParticipacao(String participacao) {
+        this.participacao = participacao;
+    }
+
+    public void setMagistrado(String magistrado) {
+        this.magistrado = magistrado;
+    }
+
+    public void setProcesso(ESAJProcesso processo) {
+        this.processo = processo;
     }
 
     @Override

@@ -12,21 +12,10 @@ import javax.persistence.*;
 @Entity
 public class ESAJAcao {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String recebido;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String link;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJAcao(Element tr) {
@@ -54,16 +43,51 @@ public class ESAJAcao {
     public ESAJAcao() {
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getRecebido() {
         return recebido;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getClasse() {
         return classe;
+    }
+
+    @Column(nullable = true, columnDefinition = "TEXT")
+    public String getLink() {
+        return link;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setRecebido(String recebido) {
+        this.recebido = recebido;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public void setProcesso(ESAJProcesso processo) {
+        this.processo = processo;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
+    public ESAJProcesso getProcesso() {
+        return processo;
     }
 
     @Override

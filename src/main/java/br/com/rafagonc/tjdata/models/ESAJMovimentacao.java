@@ -1,8 +1,6 @@
 package br.com.rafagonc.tjdata.models;
 
 import br.com.rafagonc.tjdata.utils.ESAJUtils;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -16,26 +14,11 @@ import java.util.List;
 @Entity
 public class ESAJMovimentacao {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String texto;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String acao;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String data;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
-
-    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.REMOVE)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name="documento_id")
     private List<ESAJDocumento> documentos;
 
     public ESAJMovimentacao(Element tr) {
@@ -74,29 +57,61 @@ public class ESAJMovimentacao {
     public ESAJMovimentacao() {
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getTexto() {
         return texto;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getAcao() {
         return acao;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getData() {
         return data;
     }
 
+    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.REMOVE)
+    @JoinColumn(name="documento_id")
     public List<ESAJDocumento> getDocumentos() {
         return documentos;
     }
 
-
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
     public ESAJProcesso getProcesso() {
         return processo;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public void setAcao(String acao) {
+        this.acao = acao;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public void setProcesso(ESAJProcesso processo) {
+        this.processo = processo;
+    }
+
+    public void setDocumentos(List<ESAJDocumento> documentos) {
+        this.documentos = documentos;
     }
 
     @Override

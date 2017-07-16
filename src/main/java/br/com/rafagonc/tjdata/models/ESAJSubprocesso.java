@@ -11,18 +11,9 @@ import javax.persistence.*;
 @Entity
 public class ESAJSubprocesso {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String recebido;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     private ESAJProcesso processo;
 
     public ESAJSubprocesso(Element tr) {
@@ -38,16 +29,42 @@ public class ESAJSubprocesso {
     public ESAJSubprocesso() {
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getRecebido() {
         return recebido;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getClasse() {
         return classe;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "processo_id")
+    public ESAJProcesso getProcesso() {
+        return processo;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setRecebido(String recebido) {
+        this.recebido = recebido;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+
+    public void setProcesso(ESAJProcesso processo) {
+        this.processo = processo;
     }
 
     @Override

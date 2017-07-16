@@ -8,18 +8,9 @@ import javax.persistence.*;
 @Entity
 public class ESAJDocumento {
 
-    @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String nome;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String link;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "movimentacao_id")
     private ESAJMovimentacao movimentacao;
 
     public ESAJDocumento(String nome, String link) {
@@ -30,16 +21,42 @@ public class ESAJDocumento {
     public ESAJDocumento() {
     }
 
+    @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getNome() {
         return nome;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getLink() {
         return link;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "movimentacao_id")
+    public ESAJMovimentacao getMovimentacao() {
+        return movimentacao;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public void setMovimentacao(ESAJMovimentacao movimentacao) {
+        this.movimentacao = movimentacao;
     }
 
     @Override

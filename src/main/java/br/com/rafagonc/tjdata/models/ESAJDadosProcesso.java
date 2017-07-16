@@ -12,53 +12,21 @@ import java.io.Serializable;
 @Entity
 public class ESAJDadosProcesso implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @OneToOne
     private ESAJProcesso processo;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String numero;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String classe;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String assunto;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String distribuicao;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String controle;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String juiz;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String relator;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String valor;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String area;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String origem;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String numerosDeOrigem;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String volumeApenso;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String incidente;
-
-    @Column(nullable = true, columnDefinition = "TEXT")
     private String processoPrincipal;
 
     public ESAJDadosProcesso(Element table) {
@@ -81,73 +49,98 @@ public class ESAJDadosProcesso implements Serializable {
     public ESAJDadosProcesso() {
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
 
+    @OneToOne
     public ESAJProcesso getProcesso() {
         return processo;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getProcessoPrincipal() {
         return processoPrincipal;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getIncidente() {
         return incidente;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getNumero() {
         return numero;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getClasse() {
         return classe;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getAssunto() {
         return assunto;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getDistribuicao() {
         return distribuicao;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getControle() {
         return controle;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getJuiz() {
         return juiz;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getValor() {
         return valor;
     }
 
-    public ESAJGrau getGrau() {
+    public ESAJGrau grau() {
         String processoLimpo = ESAJUtils.normalize(this.numero.replaceAll("\\s", "")).replace("Julgado", "");
         return processoLimpo.substring(processoLimpo.length() - 4).equals("0000") ? ESAJGrau.Segundo : ESAJGrau.Primeiro;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getRelator() {
         return relator;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getArea() {
         return area;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getOrigem() {
         return origem;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getNumerosDeOrigem() {
         return numerosDeOrigem;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
     public String getVolumeApenso() {
         return volumeApenso;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setProcesso(ESAJProcesso processo) {
+        this.processo = processo;
     }
 
     public void setNumero(String numero) {
@@ -205,4 +198,6 @@ public class ESAJDadosProcesso implements Serializable {
     public void setProcessoPrincipal(String processoPrincipal) {
         this.processoPrincipal = processoPrincipal;
     }
+
+
 }
