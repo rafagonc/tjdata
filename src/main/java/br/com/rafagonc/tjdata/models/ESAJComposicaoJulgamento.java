@@ -14,7 +14,7 @@ public class ESAJComposicaoJulgamento {
     private Long id;
     private String participacao;
     private String magistrado;
-    private ESAJProcesso processo;
+    private transient ESAJProcesso processo;
 
     public ESAJComposicaoJulgamento(Element tr) {
         this.participacao = ESAJUtils.normalize(tr.child(0).toString().replace("&nbsp;"," "));

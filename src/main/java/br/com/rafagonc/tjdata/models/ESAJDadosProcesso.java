@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class ESAJDadosProcesso implements Serializable {
 
     private Long id;
-    private ESAJProcesso processo;
+    private transient ESAJProcesso processo;
     private String numero;
     private String classe;
     private String assunto;

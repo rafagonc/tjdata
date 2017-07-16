@@ -29,12 +29,12 @@
       <file leaf-file-name="ESAJProcesso.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJProcesso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1378505">
-              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="153" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.3165888">
+              <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
               <folding>
                 <element signature="e#1444#1445#0" expanded="true" />
                 <element signature="e#1481#1482#0" expanded="true" />
-                <marker date="1500233558000" expanded="true" signature="220:265" placeholder="..." />
+                <marker date="1500234107000" expanded="true" signature="220:265" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1459,12 +1459,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJProcesso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1378505">
-          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="153" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.3165888">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
           <folding>
             <element signature="e#1444#1445#0" expanded="true" />
             <element signature="e#1481#1482#0" expanded="true" />
-            <marker date="1500233558000" expanded="true" signature="220:265" placeholder="..." />
+            <marker date="1500234107000" expanded="true" signature="220:265" placeholder="..." />
           </folding>
         </state>
       </provider>

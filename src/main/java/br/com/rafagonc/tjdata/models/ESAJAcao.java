@@ -16,7 +16,7 @@ public class ESAJAcao {
     private String recebido;
     private String classe;
     private String link;
-    private ESAJProcesso processo;
+    private transient ESAJProcesso processo;
 
     public ESAJAcao(Element tr) {
         Elements linkElements = tr.getElementsByTag("a");

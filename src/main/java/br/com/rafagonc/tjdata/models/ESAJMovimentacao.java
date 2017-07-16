@@ -18,7 +18,7 @@ public class ESAJMovimentacao {
     private String texto;
     private String acao;
     private String data;
-    private ESAJProcesso processo;
+    private transient ESAJProcesso processo;
     private List<ESAJDocumento> documentos;
 
     public ESAJMovimentacao(Element tr) {

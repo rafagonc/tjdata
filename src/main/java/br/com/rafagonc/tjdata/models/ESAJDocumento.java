@@ -11,7 +11,7 @@ public class ESAJDocumento {
     private Long id;
     private String nome;
     private String link;
-    private ESAJMovimentacao movimentacao;
+    private transient ESAJMovimentacao movimentacao;
 
     public ESAJDocumento(String nome, String link) {
         this.nome = nome;

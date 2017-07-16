@@ -15,7 +15,7 @@ public class ESAJJulgamento {
     private String data;
     private String situacao;
     private String decisao;
-    private ESAJProcesso processo;
+    private transient ESAJProcesso processo;
 
     public ESAJJulgamento(Element tr) {
         this.data = ESAJUtils.normalize(tr.child(0).toString());

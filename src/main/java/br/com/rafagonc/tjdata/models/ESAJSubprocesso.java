@@ -14,7 +14,7 @@ public class ESAJSubprocesso {
     private Long id;
     private String recebido;
     private String classe;
-    private ESAJProcesso processo;
+    private transient ESAJProcesso processo;
 
     public ESAJSubprocesso(Element tr) {
         this.recebido = ESAJUtils.normalize(tr.child(0).toString());

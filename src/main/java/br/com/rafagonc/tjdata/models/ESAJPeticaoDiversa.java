@@ -15,7 +15,7 @@ public class ESAJPeticaoDiversa implements Serializable {
     private Long id;
     private String data;
     private String tipo;
-    private ESAJProcesso processo;
+    private transient ESAJProcesso processo;
 
     public ESAJPeticaoDiversa(Element tr) {
         this.data = ESAJUtils.normalize(tr.child(0).toString());
