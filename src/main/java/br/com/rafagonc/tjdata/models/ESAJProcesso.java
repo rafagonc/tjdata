@@ -54,7 +54,7 @@ public class ESAJProcesso {
         return id;
     }
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = false)
     public String getNumero() {
         return numero;
     }
