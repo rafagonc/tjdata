@@ -17,6 +17,23 @@ public class ESAJPush {
         this.sound = sound;
     }
 
+    public ESAJPush(String message, Set<String> recipients) {
+        this.message = message;
+        this.recipients = recipients;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setRecipients(Set<String> recipients) {
+        this.recipients = recipients;
+    }
+
+    public void setSound(String sound) {
+        this.sound = sound;
+    }
+
     public String getMessage() {
         return message;
     }
