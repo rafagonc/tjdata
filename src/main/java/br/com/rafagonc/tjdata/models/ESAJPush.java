@@ -8,26 +8,19 @@ import java.util.Set;
 public class ESAJPush {
 
     private String message;
-    private Set<String> recipients;
+    private Set<ESAJRecipient> recipients;
     private String sound = "default";
 
-    public ESAJPush(String message, Set<String> recipients, String sound) {
-        this.message = message;
-        this.recipients = recipients;
-        this.sound = sound;
+    public ESAJPush() {
     }
 
-    public ESAJPush(String message, Set<String> recipients) {
+    public ESAJPush(String message, Set<ESAJRecipient> recipients) {
         this.message = message;
         this.recipients = recipients;
     }
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public void setRecipients(Set<String> recipients) {
-        this.recipients = recipients;
     }
 
     public void setSound(String sound) {
@@ -38,11 +31,17 @@ public class ESAJPush {
         return message;
     }
 
-    public Set<String> getRecipients() {
+    public Set<ESAJRecipient> getRecipients() {
         return recipients;
+    }
+
+    public void setRecipients(Set<ESAJRecipient> recipients) {
+        this.recipients = recipients;
     }
 
     public String getSound() {
         return sound;
     }
+
+
 }
