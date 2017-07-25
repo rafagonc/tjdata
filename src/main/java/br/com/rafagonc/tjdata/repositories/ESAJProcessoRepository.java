@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ESAJProcessoRepository extends JpaRepository<ESAJProcesso, Long> {
 
-    @Query("SELECT p FROM ESAJProcesso p WHERE p.numero LIKE :n")
+    @Query("SELECT a FROM ESAJProcesso a WHERE a.id = (SELECT max(p.id) FROM ESAJProcesso p WHERE p.numero LIKE :n)")
     ESAJProcesso getProcessoNumero(@Param("n") String numero);
 
 }
