@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Set;
+
 /**
  * Created by rafagonc on 29/06/17.
  */
@@ -14,5 +16,8 @@ public interface ESAJProcessoRepository extends JpaRepository<ESAJProcesso, Long
 
     @Query("SELECT a FROM ESAJProcesso a WHERE a.id = (SELECT max(p.id) FROM ESAJProcesso p WHERE p.numero LIKE :n)")
     ESAJProcesso getProcessoNumero(@Param("n") String numero);
+
+    @Query("SELECT a FROM ESAJProcesso a WHERE a.id != (SELECT max(p.id) FROM ESAJProcesso p WHERE p.numero LIKE :n)")
+    Set<ESAJProcesso> getProcessoBackUps(@Param("n") String numero);
 
 }
