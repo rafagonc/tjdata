@@ -14,11 +14,13 @@ public class ESAJSubprocesso {
     private Long id;
     private String recebido;
     private String classe;
+    private String link;
     private transient ESAJProcesso processo;
 
     public ESAJSubprocesso(Element tr) {
         this.recebido = ESAJUtils.normalize(tr.child(0).toString());
         this.classe = ESAJUtils.normalize(tr.child(1).toString());
+        this.link = tr.child(1).attr("href");
     }
 
     public ESAJSubprocesso(String recebido, String classe) {
@@ -45,6 +47,11 @@ public class ESAJSubprocesso {
         return classe;
     }
 
+    @Column(nullable = true, columnDefinition = "TEXT")
+    public String getLink() {
+        return link;
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "processo_id")
     public ESAJProcesso getProcesso() {
@@ -61,6 +68,10 @@ public class ESAJSubprocesso {
 
     public void setClasse(String classe) {
         this.classe = classe;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public void setProcesso(ESAJProcesso processo) {
