@@ -4,12 +4,13 @@ import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by rafagonc on 25/06/17.
  */
 @Entity
-public class ESAJJulgamento {
+public class ESAJJulgamento implements Comparable {
 
     private Long id;
     private String data;
@@ -77,6 +78,19 @@ public class ESAJJulgamento {
 
     public void setProcesso(ESAJProcesso processo) {
         this.processo = processo;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        ESAJJulgamento julgamento = (ESAJJulgamento)o;
+        try {
+            Date movDate = ESAJUtils.BR_parseDDMMYYYYDateString(julgamento.data);
+            Date thisDate = ESAJUtils.BR_parseDDMMYYYYDateString(this.data);
+            return thisDate.compareTo(movDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override

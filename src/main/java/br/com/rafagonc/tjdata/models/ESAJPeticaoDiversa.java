@@ -4,13 +4,13 @@ import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by rafagonc on 15/06/17.
  */
 @Entity
-public class ESAJPeticaoDiversa implements Serializable {
+public class ESAJPeticaoDiversa implements Comparable {
 
     private Long id;
     private String data;
@@ -66,6 +66,19 @@ public class ESAJPeticaoDiversa implements Serializable {
 
     public void setProcesso(ESAJProcesso processo) {
         this.processo = processo;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        ESAJPeticaoDiversa peticaoDiversa = (ESAJPeticaoDiversa)o;
+        try {
+            Date movDate = ESAJUtils.BR_parseDDMMYYYYDateString(peticaoDiversa.data);
+            Date thisDate = ESAJUtils.BR_parseDDMMYYYYDateString(this.data);
+            return thisDate.compareTo(movDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override

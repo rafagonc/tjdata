@@ -4,12 +4,13 @@ import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by rafagonc on 25/06/17.
  */
 @Entity
-public class ESAJSubprocesso {
+public class ESAJSubprocesso implements Comparable {
 
     private Long id;
     private String recebido;
@@ -76,6 +77,19 @@ public class ESAJSubprocesso {
 
     public void setProcesso(ESAJProcesso processo) {
         this.processo = processo;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        ESAJSubprocesso subprocesso = (ESAJSubprocesso)o;
+        try {
+            Date movDate = ESAJUtils.BR_parseDDMMYYYYDateString(subprocesso.recebido);
+            Date thisDate = ESAJUtils.BR_parseDDMMYYYYDateString(this.recebido);
+            return thisDate.compareTo(movDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override

@@ -5,6 +5,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * Created by rafagonc on 15/06/17.
  */
 @Entity
-public class ESAJMovimentacao {
+public class ESAJMovimentacao implements Comparable {
 
     private Long id;
     private String texto;
@@ -51,7 +52,6 @@ public class ESAJMovimentacao {
         this.data = data;
         this.documentos = documentos;
     }
-
 
 
     public ESAJMovimentacao() {
@@ -112,6 +112,19 @@ public class ESAJMovimentacao {
 
     public void setDocumentos(List<ESAJDocumento> documentos) {
         this.documentos = documentos;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        ESAJMovimentacao movimentacao = (ESAJMovimentacao)o;
+        try {
+            Date movDate = ESAJUtils.BR_parseDDMMYYYYDateString(movimentacao.data);
+            Date thisDate = ESAJUtils.BR_parseDDMMYYYYDateString(this.data);
+            return thisDate.compareTo(movDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override

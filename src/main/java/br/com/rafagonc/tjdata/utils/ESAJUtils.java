@@ -3,6 +3,10 @@ package br.com.rafagonc.tjdata.utils;
 import org.jsoup.nodes.Element;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -101,6 +105,18 @@ public class ESAJUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static Date parseDDMMYYYYDateString(final String str, final TimeZone tz)
+            throws ParseException {
+        final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        sdf.setTimeZone(tz);
+        return sdf.parse(str);
+    }
+
+    public static Date BR_parseDDMMYYYYDateString(final String str)
+            throws ParseException {
+        return parseDDMMYYYYDateString(str,TimeZone.getTimeZone("America/Sao_Paulo"));
     }
 
 

@@ -5,6 +5,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by rafagonc on 01/07/17.
@@ -88,6 +89,19 @@ public class ESAJAcao {
     @JoinColumn(name = "processo_id")
     public ESAJProcesso getProcesso() {
         return processo;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        ESAJAcao acao = (ESAJAcao)o;
+        try {
+            Date movDate = ESAJUtils.BR_parseDDMMYYYYDateString(acao.recebido);
+            Date thisDate = ESAJUtils.BR_parseDDMMYYYYDateString(this.recebido);
+            return thisDate.compareTo(movDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override
