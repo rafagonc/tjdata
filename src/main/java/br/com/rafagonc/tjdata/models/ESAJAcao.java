@@ -11,7 +11,7 @@ import java.util.Date;
  * Created by rafagonc on 01/07/17.
  */
 @Entity
-public class ESAJAcao {
+public class ESAJAcao implements Comparable {
 
     private Long id;
     private String recebido;

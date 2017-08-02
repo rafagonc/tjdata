@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa2642b1-de1a-435e-8a35-7790915629cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJJulgamento.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJJulgamento.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJMovimentacao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJMovimentacao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPeticaoDiversa.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPeticaoDiversa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/utils/ESAJUtils.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/utils/ESAJUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ESAJMovimentacaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/ESAJMovimentacaoTest.java" />
-    </list>
+    <list default="true" id="fa2642b1-de1a-435e-8a35-7790915629cd" name="Default" comment="" />
     <ignored path="tjdata.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,6 +26,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ESAJProcesso.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJProcesso.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+              <folding>
+                <marker date="1500948889000" expanded="true" signature="265:310" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ESAJMovimentacao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJMovimentacao.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,8 +62,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPeticaoDiversa.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="81" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ESAJAcao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7266355">
+              <caret line="99" column="47" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
+              <folding>
+                <element signature="e#1939#1940#0" expanded="true" />
+                <element signature="e#1979#1980#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,22 +88,6 @@
               <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#428#429#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ESAJUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/utils/ESAJUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-              <folding>
-                <element signature="method#deleteFolderContent#0;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#between#1;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#normalize#0;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#getTextoFromDado#0;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#getTextoWithIndex#0;class#ESAJUtils#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -125,24 +126,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ESAJSubprocesso.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ESAJSubprocesso.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJSubprocesso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89726025">
-              <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-              <folding>
-                <element signature="e#1697#1698#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleDateFormat.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/text/SimpleDateFormat.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1438" column="0" selection-start-line="1438" selection-start-column="0" selection-end-line="1438" selection-end-column="0" />
-              <folding />
+              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+              <folding>
+                <element signature="e#1710#1711#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/database/ESAJDatabase.java" />
         <option value="$PROJECT_DIR$/src/test/java/ESAJProcessoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJComposicaoJulgamento.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJDadosProcesso.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJDocumento.java" />
@@ -212,13 +203,14 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPush.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJProcessoSubscribe.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJProcessoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJSubprocesso.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/utils/ESAJUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJMovimentacao.java" />
         <option value="$PROJECT_DIR$/src/test/java/ESAJMovimentacaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJJulgamento.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPeticaoDiversa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJSubprocesso.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java" />
       </list>
     </option>
   </component>
@@ -1036,8 +1028,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23893805" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920355" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21769911" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21769911" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1313,14 +1305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJNumeroPrimeiraInstancia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1361,23 +1345,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJProcesso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <marker date="1500948889000" expanded="true" signature="265:310" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="139" column="57" selection-start-line="139" selection-start-column="57" selection-end-line="139" selection-end-column="57" />
           <folding>
-            <element signature="e#5644#5645#0" expanded="true" />
-            <element signature="e#5675#5676#0" expanded="true" />
+            <element signature="e#5644#5645#0" expanded="false" />
+            <element signature="e#5675#5676#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1449,26 +1423,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJComposicaoJulgamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPartesProcesso.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPeticaoDiversa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1483,12 +1441,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJProcesso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <marker date="1500948889000" expanded="true" signature="265:310" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPeticaoDiversa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="81" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJComposicaoJulgamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJSubprocesso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89726025">
-          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
-            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJAcao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7266355">
+          <caret line="99" column="47" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
+          <folding>
+            <element signature="e#1939#1940#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
           </folding>
         </state>
       </provider>
