@@ -16,6 +16,11 @@ public class ESAJPushFilter {
     private String q;
     private Strategy strategy;
 
+    public ESAJPushFilter(String q) {
+        this.q = q;
+        this.strategy = Strategy.CONTAINS;
+    }
+
     public ESAJPushFilter(String q, Strategy strategy) {
         this.q = q;
         this.strategy = strategy;
