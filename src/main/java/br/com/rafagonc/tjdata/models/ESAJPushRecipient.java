@@ -8,9 +8,9 @@ import java.util.Set;
 public class ESAJPushRecipient {
 
     private Set<ESAJPushFilter> filters;
-    private ESAJRecipient recipient;
+    private Set<ESAJRecipient> recipient;
 
-    public ESAJPushRecipient(Set<ESAJPushFilter> filters, ESAJRecipient recipient) {
+    public ESAJPushRecipient(Set<ESAJPushFilter> filters, Set<ESAJRecipient> recipient) {
         this.filters = filters;
         this.recipient = recipient;
     }
@@ -23,11 +23,11 @@ public class ESAJPushRecipient {
         this.filters = filters;
     }
 
-    public ESAJRecipient getRecipient() {
+    public Set<ESAJRecipient> getRecipient() {
         return recipient;
     }
 
-    public void setRecipient(ESAJRecipient recipient) {
+    public void setRecipient(Set<ESAJRecipient> recipient) {
         this.recipient = recipient;
     }
 
