@@ -8,11 +8,11 @@ import java.util.Set;
 public class ESAJPushRecipient {
 
     private Set<ESAJPushFilter> filters;
-    private Set<ESAJRecipient> recipient;
+    private Set<ESAJRecipient> recipients;
 
     public ESAJPushRecipient(Set<ESAJPushFilter> filters, Set<ESAJRecipient> recipient) {
         this.filters = filters;
-        this.recipient = recipient;
+        this.recipients = recipient;
     }
 
     public Set<ESAJPushFilter> getFilters() {
@@ -24,11 +24,11 @@ public class ESAJPushRecipient {
     }
 
     public Set<ESAJRecipient> getRecipient() {
-        return recipient;
+        return recipients;
     }
 
     public void setRecipient(Set<ESAJRecipient> recipient) {
-        this.recipient = recipient;
+        this.recipients = recipient;
     }
 
     public Boolean accept(String q) {
