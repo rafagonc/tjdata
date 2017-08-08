@@ -3,6 +3,7 @@ package br.com.rafagonc.tjdata.models;
 import org.hibernate.annotations.BatchSize;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -24,6 +25,7 @@ public class ESAJProcesso {
     private Boolean terminado;
     private Boolean processando;
     private Boolean encontrado;
+    private Date lastUpdated;
 
     public ESAJProcesso(String numero,
                         ESAJDadosProcesso dadosProcessos,
@@ -39,6 +41,7 @@ public class ESAJProcesso {
         this.partesProcessos = partesProcessos;
         this.peticaoDiversas = peticaoDiversas;
         this.acoes = acoes;
+        this.lastUpdated = new Date();
         this.terminado = this.dadosProcessos.getNumero().contains("Julgado") || this.dadosProcessos.getNumero().contains("Extinto") || this.dadosProcessos.getNumero().contains("Arquivado");
     }
 
@@ -46,6 +49,7 @@ public class ESAJProcesso {
         this.terminado = true;
         this.encontrado = false;
         this.processando = true;
+        this.lastUpdated = new Date();
     }
 
     @Id
@@ -72,6 +76,11 @@ public class ESAJProcesso {
     @Column(nullable = false)
     public Boolean getEncontrado() {
         return encontrado;
+    }
+
+    @Column(nullable = false)
+    public Date getLastUpdated() {
+        return lastUpdated;
     }
 
     @OneToMany( targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
@@ -162,6 +171,10 @@ public class ESAJProcesso {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setLastUpdated(Date lastUpdated) {
+        this.lastUpdated = lastUpdated;
     }
 
     public void setDadosProcessos(ESAJDadosProcesso dadosProcessos) {
