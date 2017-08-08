@@ -13,16 +13,16 @@ public class ESAJPushFilter {
         REGEX
     }
 
-    private String q;
-    private Strategy strategy;
+    private String text;
+    private Strategy strategy = Strategy.CONTAINS;
 
     public ESAJPushFilter(String q) {
-        this.q = q;
+        this.text = q;
         this.strategy = Strategy.CONTAINS;
     }
 
     public ESAJPushFilter(String q, Strategy strategy) {
-        this.q = q;
+        this.text= q;
         this.strategy = strategy;
     }
 
@@ -43,14 +43,14 @@ public class ESAJPushFilter {
     }
 
     private Boolean regexStrategy(String text) {
-        Pattern pattern = Pattern.compile(q);
+        Pattern pattern = Pattern.compile(text);
         Matcher matcher = pattern.matcher(text);
         return matcher.find();
 
     }
 
     private Boolean containsStrategy(String text) {
-        return text.contains(q);
+        return text.contains(text);
     }
 
 }
