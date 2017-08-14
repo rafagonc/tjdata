@@ -15,6 +15,9 @@ public class ESAJPesquisaFoneticaProcesso {
     private Date dataProcesso;
     private String numero;
     private Integer foro;
+    private String nomeParte;
+    private String atribuicao;
+    private String vara;
     private ESAJPesquisaFonetica pesquisaFonetica;
 
     public ESAJPesquisaFoneticaProcesso(Element td, Integer foro, ESAJPesquisaFonetica pesquisaFonetica) {
@@ -52,6 +55,21 @@ public class ESAJPesquisaFoneticaProcesso {
         return pesquisaFonetica;
     }
 
+    @Column(nullable = false)
+    public String getNomeParte() {
+        return nomeParte;
+    }
+
+    @Column(nullable = false)
+    public String getAtribuicao() {
+        return atribuicao;
+    }
+
+    @Column(nullable = false)
+    public String getVara() {
+        return vara;
+    }
+
     public void setForo(Integer foro) {
         this.foro = foro;
     }
@@ -70,5 +88,17 @@ public class ESAJPesquisaFoneticaProcesso {
 
     public void setPesquisaFonetica(ESAJPesquisaFonetica pesquisaFonetica) {
         this.pesquisaFonetica = pesquisaFonetica;
+    }
+
+    public void setNomeParte(String nomeParte) {
+        this.nomeParte = nomeParte;
+    }
+
+    public void setAtribuicao(String atribuicao) {
+        this.atribuicao = atribuicao;
+    }
+
+    public void setVara(String vara) {
+        this.vara = vara;
     }
 }
