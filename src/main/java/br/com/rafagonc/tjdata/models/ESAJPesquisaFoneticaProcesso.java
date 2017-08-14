@@ -17,7 +17,9 @@ public class ESAJPesquisaFoneticaProcesso {
     private Integer foro;
     private ESAJPesquisaFonetica pesquisaFonetica;
 
-    public ESAJPesquisaFoneticaProcesso(Element td) {
+    public ESAJPesquisaFoneticaProcesso(Element td, Integer foro, ESAJPesquisaFonetica pesquisaFonetica) {
+        this.foro = foro;
+        this.pesquisaFonetica = pesquisaFonetica;
     }
 
     public ESAJPesquisaFoneticaProcesso() {
