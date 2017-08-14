@@ -93,6 +93,8 @@ public class ESAJDatabaseManager {
         ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository = repositoryFactorySupport.getRepository(ESAJComposicaoJulgamentoRepository.class);
         ESAJDocumentoRepository documentoRepository = repositoryFactorySupport.getRepository(ESAJDocumentoRepository.class);
         ESAJAcaoRepository acaoRepository = repositoryFactorySupport.getRepository(ESAJAcaoRepository.class);
+        ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository = repositoryFactorySupport.getRepository(ESAJPesquisaFoneticaProcessoRepository.class);
+        ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository = repositoryFactorySupport.getRepository(ESAJPesquisaFoneticaRepository.class);
         ESAJDatabase database = new ESAJDatabase(processoRepository,
                 movimentacaoRepository,
                 partesProcessoRepository,
@@ -100,9 +102,11 @@ public class ESAJDatabaseManager {
                 dadosProcessoRepository,
                 composicaoJulgamentoRepository,
                 subprocessoRepository,
-                peticaoDiversaRepository,
+                documentoRepository,
                 acaoRepository,
-                documentoRepository);
+                peticaoDiversaRepository,
+                pesquisaFoneticaProcessoRepository,
+                pesquisaFoneticaRepository);
         return database;
     }
 

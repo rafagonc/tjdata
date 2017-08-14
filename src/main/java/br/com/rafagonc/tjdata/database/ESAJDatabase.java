@@ -19,17 +19,11 @@ public class ESAJDatabase {
     private ESAJDocumentoRepository documentoRepository;
     private ESAJAcaoRepository acaoRepository;
     private ESAJPeticaoDiversaRepository peticoesDiversasRepository;
+    private ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository;
+    private ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository;
 
-    public ESAJDatabase(ESAJProcessoRepository processoRepository,
-                        ESAJMovimentacaoRepository movimentacaoRepository,
-                        ESAJPartesProcessoRepository partesProcessoRepository,
-                        ESAJJulgamentoRepository julgamentoRepository,
-                        ESAJDadosProcessoRepository dadosProcessoRepository,
-                        ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository,
-                        ESAJSubprocessoRepository subprocessoRepository,
-                        ESAJPeticaoDiversaRepository peticoesDiversasRepository,
-                        ESAJAcaoRepository acaoRepository,
-                        ESAJDocumentoRepository documentoRepository) {
+
+    public ESAJDatabase(ESAJProcessoRepository processoRepository, ESAJMovimentacaoRepository movimentacaoRepository, ESAJPartesProcessoRepository partesProcessoRepository, ESAJJulgamentoRepository julgamentoRepository, ESAJDadosProcessoRepository dadosProcessoRepository, ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository, ESAJSubprocessoRepository subprocessoRepository, ESAJDocumentoRepository documentoRepository, ESAJAcaoRepository acaoRepository, ESAJPeticaoDiversaRepository peticoesDiversasRepository, ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository, ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository) {
         this.processoRepository = processoRepository;
         this.movimentacaoRepository = movimentacaoRepository;
         this.partesProcessoRepository = partesProcessoRepository;
@@ -37,27 +31,17 @@ public class ESAJDatabase {
         this.dadosProcessoRepository = dadosProcessoRepository;
         this.composicaoJulgamentoRepository = composicaoJulgamentoRepository;
         this.subprocessoRepository = subprocessoRepository;
-        this.peticoesDiversasRepository = peticoesDiversasRepository;
         this.documentoRepository = documentoRepository;
         this.acaoRepository = acaoRepository;
+        this.peticoesDiversasRepository = peticoesDiversasRepository;
+        this.pesquisaFoneticaProcessoRepository = pesquisaFoneticaProcessoRepository;
+        this.pesquisaFoneticaRepository = pesquisaFoneticaRepository;
     }
 
     @Transactional
     public boolean save(ESAJProcesso processo) {
         try {
             processoRepository.save(processo);
-//            if (processo.getDadosProcessos() != null) this.dadosProcessoRepository.save(processo.getDadosProcessos());
-//            if (processo.getPartesProcessos() != null) this.partesProcessoRepository.save(processo.getPartesProcessos());
-//            if (processo.getMovimentacoes() != null) {
-//                for (ESAJMovimentacao movimentacoes : processo.getMovimentacoes()) {
-//                    this.documentoRepository.save(movimentacoes.getDocumentos());
-//                }
-//                this.movimentacaoRepository.save(processo.getMovimentacoes());
-//            }
-//            if (processo.getPeticaoDiversas() != null) this.peticoesDiversasRepository.save(processo.getPeticaoDiversas());
-//            if (processo.getComposicaoJulgamento() != null) this.composicaoJulgamentoRepository.save(processo.getComposicaoJulgamento());
-//            if (processo.getJulgamentos() != null) this.julgamentoRepository.save(processo.getJulgamentos());
-//            if (processo.getSubprocessos() != null) this.subprocessoRepository.save(processo.getSubprocessos());
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -103,5 +87,13 @@ public class ESAJDatabase {
 
     public ESAJAcaoRepository getAcaoRepository() {
         return acaoRepository;
+    }
+
+    public ESAJPesquisaFoneticaProcessoRepository getPesquisaFoneticaProcessoRepository() {
+        return pesquisaFoneticaProcessoRepository;
+    }
+
+    public ESAJPesquisaFoneticaRepository getPesquisaFoneticaRepository() {
+        return pesquisaFoneticaRepository;
     }
 }
