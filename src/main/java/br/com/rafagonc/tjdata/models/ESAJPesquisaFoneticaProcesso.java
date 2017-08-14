@@ -20,12 +20,16 @@ public class ESAJPesquisaFoneticaProcesso {
     private String vara;
     private ESAJPesquisaFonetica pesquisaFonetica;
 
-    public ESAJPesquisaFoneticaProcesso(Element td, Integer foro, ESAJPesquisaFonetica pesquisaFonetica) {
+    public ESAJPesquisaFoneticaProcesso(String numero, String nomeParte, String atribuicao, String vara, Integer foro, ESAJPesquisaFonetica pesquisaFonetica) {
         this.foro = foro;
+        this.numero = numero;
+        this.nomeParte = nomeParte;
+        this.vara = vara;
         this.pesquisaFonetica = pesquisaFonetica;
     }
 
     public ESAJPesquisaFoneticaProcesso() {
+        this.foro = -1;
     }
 
     @Id
