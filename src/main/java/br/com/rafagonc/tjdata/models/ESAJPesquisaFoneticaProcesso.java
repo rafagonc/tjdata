@@ -1,7 +1,5 @@
 package br.com.rafagonc.tjdata.models;
 
-import org.jsoup.nodes.Element;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -25,6 +23,7 @@ public class ESAJPesquisaFoneticaProcesso {
         this.numero = numero;
         this.nomeParte = nomeParte;
         this.vara = vara;
+        this.atribuicao = atribuicao;
         this.dataProcesso = dataProcesso;
         this.pesquisaFonetica = pesquisaFonetica;
     }
