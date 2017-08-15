@@ -16,11 +16,7 @@ public class ESAJPesquisaFonetica {
     private Set<ESAJPesquisaFoneticaProcesso> processos;
 
     public ESAJPesquisaFonetica(String nome, ESAJGrau grau) {
-        if (grau.equals(ESAJGrau.Primeiro)) {
-            this.numeroGrau = 1;
-        } else if (grau.equals(ESAJGrau.Segundo)) {
-            this.numeroGrau = 2;
-        }
+        this.numeroGrau = grau.getValue();
         this.nome = nome;
         this.processos = new HashSet<ESAJPesquisaFoneticaProcesso>();
     }
@@ -53,11 +49,7 @@ public class ESAJPesquisaFonetica {
     }
 
     public ESAJGrau grau() {
-        if (numeroGrau == 1) {
-            return ESAJGrau.Primeiro;
-        } else {
-            return ESAJGrau.Segundo;
-        }
+        return ESAJGrau.grauForValue(this.numeroGrau);
     }
 
     public void setId(Long id) {
