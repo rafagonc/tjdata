@@ -1,6 +1,7 @@
 package br.com.rafagonc.tjdata.models;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -11,9 +12,22 @@ public class ESAJPesquisaFonetica {
 
     private Long id;
     private String nome;
+    private Integer numeroGrau;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
 
+    public ESAJPesquisaFonetica(String nome, ESAJGrau grau) {
+        if (grau.equals(ESAJGrau.Primeiro)) {
+            this.numeroGrau = 1;
+        } else if (grau.equals(ESAJGrau.Segundo)) {
+            this.numeroGrau = 2;
+        }
+        this.nome = nome;
+        this.processos = new HashSet<ESAJPesquisaFoneticaProcesso>();
+    }
+
     public ESAJPesquisaFonetica() {
+        this.numeroGrau = 1;
+        this.processos = new HashSet<ESAJPesquisaFoneticaProcesso>();
     }
 
     @Id
@@ -31,6 +45,19 @@ public class ESAJPesquisaFonetica {
     @JoinColumn(name="pesquisa_fonetica_processo_id")
     public Set<ESAJPesquisaFoneticaProcesso> getProcessos() {
         return processos;
+    }
+
+    @Column(nullable = false)
+    public Integer getNumeroGrau() {
+        return numeroGrau;
+    }
+
+    public ESAJGrau grau() {
+        if (numeroGrau == 1) {
+            return ESAJGrau.Primeiro;
+        } else {
+            return ESAJGrau.Segundo;
+        }
     }
 
     public void setId(Long id) {
