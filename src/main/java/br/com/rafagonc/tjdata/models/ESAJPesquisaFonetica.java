@@ -12,17 +12,26 @@ public class ESAJPesquisaFonetica {
 
     private Long id;
     private String nome;
+    private Integer numeroForo;
     private Integer numeroGrau;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
 
     public ESAJPesquisaFonetica(String nome, ESAJGrau grau) {
         this.numeroGrau = grau.getValue();
         this.nome = nome;
+        this.numeroForo = -1;
         this.processos = new HashSet<ESAJPesquisaFoneticaProcesso>();
+    }
+
+    public ESAJPesquisaFonetica(String nome, Integer numeroForo, ESAJGrau grau) {
+        this.nome = nome;
+        this.numeroGrau = grau.getValue();
+        this.numeroForo = numeroForo;
     }
 
     public ESAJPesquisaFonetica() {
         this.numeroGrau = 1;
+        this.numeroForo = -1;
         this.processos = new HashSet<ESAJPesquisaFoneticaProcesso>();
     }
 
@@ -46,6 +55,11 @@ public class ESAJPesquisaFonetica {
     @Column(nullable = false)
     public Integer getNumeroGrau() {
         return numeroGrau;
+    }
+
+    @Column(nullable = false)
+    public Integer getNumeroForo() {
+        return numeroForo;
     }
 
     public ESAJGrau grau() {
