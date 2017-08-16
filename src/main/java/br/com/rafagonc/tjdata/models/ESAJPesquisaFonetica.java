@@ -82,4 +82,12 @@ public class ESAJPesquisaFonetica {
         }
         this.processos = processos;
     }
+
+    public void setNumeroForo(Integer numeroForo) {
+        this.numeroForo = numeroForo;
+    }
+
+    public void setNumeroGrau(Integer numeroGrau) {
+        this.numeroGrau = numeroGrau;
+    }
 }

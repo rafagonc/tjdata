@@ -105,4 +105,5 @@ public class ESAJPesquisaFoneticaProcesso {
     public void setVara(String vara) {
         this.vara = vara;
     }
+
 }
