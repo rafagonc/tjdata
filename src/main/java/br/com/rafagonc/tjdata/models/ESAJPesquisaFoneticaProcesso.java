@@ -106,4 +106,30 @@ public class ESAJPesquisaFoneticaProcesso {
         this.vara = vara;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ESAJPesquisaFoneticaProcesso that = (ESAJPesquisaFoneticaProcesso) o;
+
+        if (dataProcesso != null ? !dataProcesso.equals(that.dataProcesso) : that.dataProcesso != null) return false;
+        if (numero != null ? !numero.equals(that.numero) : that.numero != null) return false;
+        if (foro != null ? !foro.equals(that.foro) : that.foro != null) return false;
+        if (nomeParte != null ? !nomeParte.equals(that.nomeParte) : that.nomeParte != null) return false;
+        if (atribuicao != null ? !atribuicao.equals(that.atribuicao) : that.atribuicao != null) return false;
+        return vara != null ? vara.equals(that.vara) : that.vara == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = dataProcesso != null ? dataProcesso.hashCode() : 0;
+        result = 31 * result + (numero != null ? numero.hashCode() : 0);
+        result = 31 * result + (foro != null ? foro.hashCode() : 0);
+        result = 31 * result + (nomeParte != null ? nomeParte.hashCode() : 0);
+        result = 31 * result + (atribuicao != null ? atribuicao.hashCode() : 0);
+        result = 31 * result + (vara != null ? vara.hashCode() : 0);
+        return result;
+    }
 }

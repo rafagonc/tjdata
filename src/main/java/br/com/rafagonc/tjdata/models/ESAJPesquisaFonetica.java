@@ -90,4 +90,27 @@ public class ESAJPesquisaFonetica {
     public void setNumeroGrau(Integer numeroGrau) {
         this.numeroGrau = numeroGrau;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ESAJPesquisaFonetica that = (ESAJPesquisaFonetica) o;
+
+        if (nome != null ? !nome.equals(that.nome) : that.nome != null) return false;
+        if (numeroForo != null ? !numeroForo.equals(that.numeroForo) : that.numeroForo != null) return false;
+        if (numeroGrau != null ? !numeroGrau.equals(that.numeroGrau) : that.numeroGrau != null) return false;
+        return processos != null ? processos.equals(that.processos) : that.processos == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = nome != null ? nome.hashCode() : 0;
+        result = 31 * result + (numeroForo != null ? numeroForo.hashCode() : 0);
+        result = 31 * result + (numeroGrau != null ? numeroGrau.hashCode() : 0);
+        result = 31 * result + (processos != null ? processos.hashCode() : 0);
+        return result;
+    }
 }
