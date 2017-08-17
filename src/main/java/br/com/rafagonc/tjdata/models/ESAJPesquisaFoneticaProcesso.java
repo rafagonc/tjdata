@@ -16,7 +16,7 @@ public class ESAJPesquisaFoneticaProcesso {
     private String nomeParte;
     private String atribuicao;
     private String vara;
-    private ESAJPesquisaFonetica pesquisaFonetica;
+    private transient ESAJPesquisaFonetica pesquisaFonetica;
 
     public ESAJPesquisaFoneticaProcesso(String numero, String nomeParte, String atribuicao, String vara, Date dataProcesso, Integer foro, ESAJPesquisaFonetica pesquisaFonetica) {
         this.foro = foro;
