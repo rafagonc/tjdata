@@ -64,12 +64,12 @@ public class ESAJPesquisaFoneticaProcesso {
         return nomeParte;
     }
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     public String getAtribuicao() {
         return atribuicao;
     }
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     public String getVara() {
         return vara;
     }

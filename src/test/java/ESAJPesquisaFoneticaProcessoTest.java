@@ -43,6 +43,7 @@ public class ESAJPesquisaFoneticaProcessoTest {
         Transaction t = manager.begin();
 
         ESAJPesquisaFoneticaProcesso pf = new ESAJPesquisaFoneticaProcesso();
+        pf.setNomeParte(UUID.randomUUID().toString());
         pf.setNumero(UUID.randomUUID().toString());
         pf.setDataProcesso(new Date());
         pf.setForo(503);

@@ -41,7 +41,7 @@ public class ESAJPesquisaFonetica {
         return id;
     }
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     public String getNome() {
         return nome;
     }
