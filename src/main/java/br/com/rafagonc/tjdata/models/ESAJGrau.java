@@ -11,6 +11,7 @@ public enum ESAJGrau {
         private Integer value;
 
         ESAJGrau(String parameter, Integer value) {
+            this.value =  value;
             this.parameter = parameter;
         }
 
