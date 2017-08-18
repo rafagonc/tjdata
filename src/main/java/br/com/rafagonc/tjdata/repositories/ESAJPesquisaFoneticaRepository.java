@@ -12,7 +12,10 @@ import java.util.Set;
  */
 public interface ESAJPesquisaFoneticaRepository extends JpaRepository<ESAJPesquisaFonetica, Long> {
 
-    @Query("SELECT p FROM ESAJPesquisaFonetica p WHERE p.nome LIKE :np AND p.numeroForo = :foro")
+    @Query("SELECT p FROM ESAJPesquisaFonetica p WHERE p.nome LIKE :np AND p.numeroForo = :f AND p.numeroGrau = :g")
+    Set<ESAJPesquisaFonetica> findPesquisaFoneticaByNomeParteAndForoAndGrau(@Param("np") String np, @Param("f") Integer foro, @Param("g") Integer grau);
+
+    @Query("SELECT p FROM ESAJPesquisaFonetica p WHERE p.nome LIKE :np AND p.numeroForo = :f")
     Set<ESAJPesquisaFonetica> findPesquisaFoneticaByNomeParteAndForo(@Param("np") String np, @Param("f") Integer foro);
 
     @Query("SELECT p FROM ESAJPesquisaFonetica p WHERE p.nome LIKE :np")

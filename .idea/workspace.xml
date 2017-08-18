@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa2642b1-de1a-435e-8a35-7790915629cd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_1_5_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Final.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPesquisaFonetica.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPesquisaFonetica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPesquisaFoneticaProcesso.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPesquisaFoneticaProcesso.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJPesquisaFoneticaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJPesquisaFoneticaRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ESAJPesquisaFoneticaProcessoTest.java" afterPath="$PROJECT_DIR$/src/test/java/ESAJPesquisaFoneticaProcessoTest.java" />
-    </list>
+    <list default="true" id="fa2642b1-de1a-435e-8a35-7790915629cd" name="Default" comment="" />
     <ignored path="tjdata.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.958334">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="86" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.5714286">
+              <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ESAJPesquisaFoneticaProcessoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ESAJPesquisaFoneticaProcessoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ESAJPesquisaFoneticaProcessoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63013697">
+            <state vertical-scroll-proportion="0.0">
               <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
               <folding />
             </state>
@@ -102,22 +102,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ESAJUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/utils/ESAJUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-              <folding>
-                <element signature="method#deleteFolderContent#0;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#between#1;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#normalize#0;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#getTextoFromDado#0;class#ESAJUtils#0" expanded="false" />
-                <element signature="method#getTextoWithIndex#0;class#ESAJUtils#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -212,10 +196,10 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/exceptions/ESAJGrauNotFound.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJGrau.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPesquisaFonetica.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/repositories/ESAJPesquisaFoneticaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPesquisaFoneticaProcesso.java" />
         <option value="$PROJECT_DIR$/src/test/java/ESAJPesquisaFoneticaProcessoTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -991,9 +975,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ESAJMovimentacaoTest_testSort - 2017.08.01 at 01h 42m 54s.xml">
-      <configuration name="ESAJMovimentacaoTest.testSort" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ESAJMovimentacaoTest_testSort - 2017.08.01 at 01h 45m 58s.xml">
       <configuration name="ESAJMovimentacaoTest.testSort" configurationId="JUnit" />
     </history-entry>
@@ -1021,6 +1002,9 @@
     <history-entry file="Test - 2017.08.17 at 02h 14m 34s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Test - 2017.08.17 at 02h 18m 45s.xml">
+      <configuration name="Test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -1033,8 +1017,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23893805" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920355" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17964602" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17964602" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1089,14 +1073,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/ESAJPesquisaFonecticaSubscribe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ESAJDocumentoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1383,7 +1359,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="175" column="50" selection-start-line="175" selection-start-column="50" selection-end-line="175" selection-end-column="50" />
           <folding>
-            <element signature="e#5666#5667#0" expanded="true" />
+            <element signature="e#5666#5667#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1393,8 +1369,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
           <folding>
-            <element signature="e#2243#2244#0" expanded="true" />
-            <element signature="e#2276#2277#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="false" />
+            <element signature="e#2276#2277#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1427,14 +1403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.958334">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="86" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1481,8 +1449,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ESAJPesquisaFoneticaProcessoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63013697">
+        <state vertical-scroll-proportion="0.0">
           <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5714286">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding />
         </state>
       </provider>
