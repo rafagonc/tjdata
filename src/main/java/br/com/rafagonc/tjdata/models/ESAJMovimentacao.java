@@ -7,7 +7,7 @@ import org.jsoup.select.Elements;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created by rafagonc on 15/06/17.
@@ -20,7 +20,7 @@ public class ESAJMovimentacao implements Comparable {
     private String acao;
     private String data;
     private transient ESAJProcesso processo;
-    private List<ESAJDocumento> documentos;
+    private Set<ESAJDocumento> documentos;
 
     public ESAJMovimentacao(Element tr) {
         Elements linkElements = tr.getElementsByTag("a");
@@ -46,7 +46,7 @@ public class ESAJMovimentacao implements Comparable {
         this.data = data;
     }
 
-    public ESAJMovimentacao(String texto, String acao, String data, List<ESAJDocumento> documentos) {
+    public ESAJMovimentacao(String texto, String acao, String data, Set<ESAJDocumento> documentos) {
         this.texto = texto;
         this.acao = acao;
         this.data = data;
@@ -78,9 +78,9 @@ public class ESAJMovimentacao implements Comparable {
         return data;
     }
 
-    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.REMOVE)
+    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.ALL)
     @JoinColumn(name="documento_id")
-    public List<ESAJDocumento> getDocumentos() {
+    public Set<ESAJDocumento> getDocumentos() {
         return documentos;
     }
 
@@ -110,7 +110,7 @@ public class ESAJMovimentacao implements Comparable {
         this.processo = processo;
     }
 
-    public void setDocumentos(List<ESAJDocumento> documentos) {
+    public void setDocumentos(Set<ESAJDocumento> documentos) {
         this.documentos = documentos;
     }
 
