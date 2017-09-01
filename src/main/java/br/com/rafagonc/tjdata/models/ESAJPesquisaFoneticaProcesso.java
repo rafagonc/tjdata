@@ -38,7 +38,7 @@ public class ESAJPesquisaFoneticaProcesso {
         return id;
     }
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     public Date getDataProcesso() {
         return dataProcesso;
     }
