@@ -3,9 +3,10 @@ package br.com.rafagonc.tjdata.models;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.FileCopyUtils;
 
 import java.lang.reflect.Type;
-import java.util.Scanner;
+import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
 /**
@@ -31,9 +32,11 @@ public class ESAJForo {
 
     public static Set<ESAJForo> foros() throws Exception {
         Gson gson = new Gson();
-        String content = new Scanner(new ClassPathResource("foro.json").getFile()).useDelimiter("\\Z").next();
+        ClassPathResource classPathResource = new ClassPathResource("foro.json");
+        byte[] bdata = FileCopyUtils.copyToByteArray(classPathResource.getInputStream());
+        String data = new String(bdata, StandardCharsets.UTF_8);
         Type listType = new TypeToken<Set<ESAJForo>>(){}.getType();
-        Set<ESAJForo> foros = gson.fromJson(content, (Type) listType);
+        Set<ESAJForo> foros = gson.fromJson(data, (Type) listType);
         return foros;
     }
 

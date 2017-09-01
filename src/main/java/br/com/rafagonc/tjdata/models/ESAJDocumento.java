@@ -65,7 +65,6 @@ public class ESAJDocumento {
         if (o == null || getClass() != o.getClass()) return false;
 
         ESAJDocumento that = (ESAJDocumento) o;
-
         return link != null ? link.equals(that.link) : that.link == null;
 
     }
