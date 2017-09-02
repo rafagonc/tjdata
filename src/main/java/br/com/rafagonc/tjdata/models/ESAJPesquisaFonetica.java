@@ -14,6 +14,7 @@ public class ESAJPesquisaFonetica {
     private String nome;
     private Integer numeroForo;
     private Integer numeroGrau;
+    private Boolean processando;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
 
     public ESAJPesquisaFonetica(String nome, ESAJGrau grau) {
@@ -46,6 +47,11 @@ public class ESAJPesquisaFonetica {
         return nome;
     }
 
+    @Column(nullable = false)
+    public Boolean getProcessando() {
+        return processando;
+    }
+
     @OneToMany(targetEntity = ESAJPesquisaFoneticaProcesso.class, cascade = CascadeType.REMOVE)
     @JoinColumn(name="pesquisa_fonetica_processo_id")
     public Set<ESAJPesquisaFoneticaProcesso> getProcessos() {
@@ -72,6 +78,10 @@ public class ESAJPesquisaFonetica {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void setProcessando(Boolean processando) {
+        this.processando = processando;
     }
 
     public void setProcessos(Set<ESAJPesquisaFoneticaProcesso> processos) {
