@@ -27,12 +27,14 @@ public class ESAJPesquisaFonetica {
     public ESAJPesquisaFonetica(String nome, Integer numeroForo, ESAJGrau grau) {
         this.nome = nome;
         this.numeroGrau = grau.getValue();
+        this.processando = true;
         this.numeroForo = numeroForo;
     }
 
     public ESAJPesquisaFonetica() {
         this.numeroGrau = 1;
         this.numeroForo = -1;
+        this.processando = true;
         this.processos = new HashSet<ESAJPesquisaFoneticaProcesso>();
     }
 
