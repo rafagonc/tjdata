@@ -54,7 +54,6 @@ public class ESAJSubprocesso implements Comparable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     public ESAJProcesso getProcesso() {
         return processo;
     }

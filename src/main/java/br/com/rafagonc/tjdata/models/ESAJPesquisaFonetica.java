@@ -54,8 +54,7 @@ public class ESAJPesquisaFonetica {
         return processando;
     }
 
-    @OneToMany(targetEntity = ESAJPesquisaFoneticaProcesso.class, cascade = CascadeType.REMOVE)
-    @JoinColumn(name="pesquisa_fonetica_processo_id")
+    @OneToMany(mappedBy = "pesquisaFonetica", cascade = CascadeType.REMOVE)
     public Set<ESAJPesquisaFoneticaProcesso> getProcessos() {
         return processos;
     }

@@ -78,14 +78,12 @@ public class ESAJMovimentacao implements Comparable {
         return data;
     }
 
-    @OneToMany(targetEntity = ESAJDocumento.class, cascade = CascadeType.ALL)
-    @JoinColumn(name="documento_id")
+    @OneToMany(mappedBy = "movimentacao", cascade = CascadeType.ALL)
     public Set<ESAJDocumento> getDocumentos() {
         return documentos;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     public ESAJProcesso getProcesso() {
         return processo;
     }

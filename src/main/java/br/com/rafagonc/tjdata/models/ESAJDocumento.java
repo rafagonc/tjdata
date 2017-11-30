@@ -38,7 +38,6 @@ public class ESAJDocumento {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "movimentacao_id")
     public ESAJMovimentacao getMovimentacao() {
         return movimentacao;
     }

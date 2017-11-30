@@ -47,7 +47,6 @@ public class ESAJPeticaoDiversa implements Comparable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     public ESAJProcesso getProcesso() {
         return processo;
     }

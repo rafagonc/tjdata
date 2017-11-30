@@ -83,13 +83,13 @@ public class ESAJProcesso {
         return lastUpdated;
     }
 
-    @OneToMany( targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    @OneToMany(targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 5)
     public Set<ESAJAcao> getAcoes() {
         return acoes;
     }
 
-    @OneToMany( targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    @OneToMany(targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 5)
     public Set<ESAJMovimentacao> getMovimentacoes() {
         return movimentacoes;
@@ -101,31 +101,31 @@ public class ESAJProcesso {
         return dadosProcessos;
     }
 
-    @OneToMany( targetEntity=ESAJPartesProcesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    @OneToMany(targetEntity=ESAJPartesProcesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 5)
     public Set<ESAJPartesProcesso> getPartesProcessos() {
         return partesProcessos;
     }
 
-    @OneToMany( targetEntity=ESAJPeticaoDiversa.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    @OneToMany(targetEntity=ESAJPeticaoDiversa.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 5)
     public Set<ESAJPeticaoDiversa> getPeticaoDiversas() {
         return peticaoDiversas;
     }
 
-    @OneToMany( targetEntity=ESAJSubprocesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    @OneToMany(targetEntity=ESAJSubprocesso.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 5)
     public Set<ESAJSubprocesso> getSubprocessos() {
         return subprocessos;
     }
 
-    @OneToMany( targetEntity=ESAJJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    @OneToMany(targetEntity=ESAJJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 5)
     public Set<ESAJJulgamento> getJulgamentos() {
         return julgamentos;
     }
 
-    @OneToMany( targetEntity=ESAJComposicaoJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
+    @OneToMany(targetEntity=ESAJComposicaoJulgamento.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
     @BatchSize(size = 5)
     public Set<ESAJComposicaoJulgamento> getComposicaoJulgamento() {
         return composicaoJulgamento;

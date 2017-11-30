@@ -47,7 +47,6 @@ public class ESAJPartesProcesso implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "processo_id")
     public ESAJProcesso getProcesso() {
         return processo;
     }

@@ -54,7 +54,6 @@ public class ESAJPesquisaFoneticaProcesso {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "pesquisa_fonetica_id")
     public ESAJPesquisaFonetica getPesquisaFonetica() {
         return pesquisaFonetica;
     }
