@@ -32,8 +32,8 @@ public class ESAJMovimentacao implements Comparable {
         }
         String texto = ESAJUtils.getTextoWithIndexAndNotNormalize(tr, 2);
         String[] components = texto.split("<br>");
-        if (components.length == 0) {
-            this.texto = texto;
+        if (components.length == 1) {
+            this.texto = components[0];
         } else {
             this.texto = components[0];
             this.acao = components[1];
