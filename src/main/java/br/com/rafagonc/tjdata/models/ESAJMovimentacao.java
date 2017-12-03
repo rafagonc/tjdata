@@ -30,7 +30,14 @@ public class ESAJMovimentacao implements Comparable {
                 docs.add(new ESAJDocumento(el.ownText(),el.attr("href")));
             }
         }
-        this.texto = ESAJUtils.getTextoWithIndex(tr, 2);
+        String texto = ESAJUtils.getTextoWithIndexAndNotNormalize(tr, 2);
+        String[] components = texto.split("<br>");
+        if (components.length == 0) {
+            this.texto = texto;
+        } else {
+            this.texto = components[0];
+            this.acao = components[1];
+        }
         this.data = ESAJUtils.getTextoWithIndex(tr, 0);
         this.acao = ESAJUtils.getTextoWithIndex(tr, 1);
     }

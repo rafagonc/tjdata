@@ -107,6 +107,20 @@ public class ESAJUtils {
         return null;
     }
 
+    public static String getTextoWithIndexAndNotNormalize(Element table, int... args) {
+        try {
+            Element child = table;
+            for (int i: args) {
+                child = child.child(i);
+            }
+            return child.text();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
     public static Date parseDDMMYYYYDateString(final String str, final TimeZone tz)
             throws ParseException {
         final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");

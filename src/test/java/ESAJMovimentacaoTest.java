@@ -53,6 +53,18 @@ public class ESAJMovimentacaoTest {
         return movimentacao;
     }
 
+    private ESAJMovimentacao createWithText() {
+        Transaction t = manager.begin();
+
+        ESAJMovimentacao movimentacao = new ESAJMovimentacao();
+
+        db.getMovimentacaoRepository().save(movimentacao);
+
+        t.commit();
+
+        return movimentacao;
+    }
+
     @Test
     public void testSort() throws Exception {
         ESAJMovimentacao movimentacao = new ESAJMovimentacao();
