@@ -113,7 +113,7 @@ public class ESAJUtils {
             for (int i: args) {
                 child = child.child(i);
             }
-            return child.text();
+            return child.html();
         } catch (Exception e) {
             e.printStackTrace();
         }
