@@ -14,6 +14,7 @@ public class ESAJProcesso {
 
     private Long id;
     private String numero;
+    private String processoId;
     private ESAJDadosProcesso dadosProcessos;
     private Set<ESAJMovimentacao> movimentacoes;
     private Set<ESAJPartesProcesso> partesProcessos;
@@ -61,6 +62,11 @@ public class ESAJProcesso {
     @Column(nullable = false, unique = false)
     public String getNumero() {
         return numero;
+    }
+
+    @Column(nullable = true, unique = true)
+    public String getProcessoId() {
+        return processoId;
     }
 
     @Column(nullable = false)
@@ -129,6 +135,10 @@ public class ESAJProcesso {
     @BatchSize(size = 5)
     public Set<ESAJComposicaoJulgamento> getComposicaoJulgamento() {
         return composicaoJulgamento;
+    }
+
+    public void setProcessoId(String processoId) {
+        this.processoId = processoId;
     }
 
     public void setProcessando(Boolean processando) {

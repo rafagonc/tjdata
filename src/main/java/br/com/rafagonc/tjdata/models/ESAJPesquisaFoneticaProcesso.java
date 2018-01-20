@@ -12,6 +12,7 @@ public class ESAJPesquisaFoneticaProcesso {
     private Long id;
     private Date dataProcesso;
     private String numero;
+    private String processoId;
     private Integer foro;
     private String nomeParte;
     private String atribuicao;
@@ -36,6 +37,11 @@ public class ESAJPesquisaFoneticaProcesso {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
+    }
+
+    @Column(nullable = true)
+    public String getProcessoId() {
+        return processoId;
     }
 
     @Column(nullable = true)
@@ -87,6 +93,10 @@ public class ESAJPesquisaFoneticaProcesso {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public void setProcessoId(String processoId) {
+        this.processoId = processoId;
     }
 
     public void setPesquisaFonetica(ESAJPesquisaFonetica pesquisaFonetica) {
