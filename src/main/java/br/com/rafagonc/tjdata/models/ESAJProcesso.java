@@ -15,6 +15,7 @@ public class ESAJProcesso {
     private Long id;
     private String numero;
     private String processoId;
+    private String data;
     private ESAJDadosProcesso dadosProcessos;
     private Set<ESAJMovimentacao> movimentacoes;
     private Set<ESAJPartesProcesso> partesProcessos;
@@ -69,6 +70,11 @@ public class ESAJProcesso {
         return processoId;
     }
 
+    @Column(nullable = true)
+    public String data() {
+        return data;
+    }
+
     @Column(nullable = false)
     public Boolean getTerminado() {
         return terminado;
@@ -93,6 +99,10 @@ public class ESAJProcesso {
     @BatchSize(size = 5)
     public Set<ESAJAcao> getAcoes() {
         return acoes;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     @OneToMany(targetEntity=ESAJMovimentacao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
