@@ -40,4 +40,14 @@ public class ESAJForo {
         return foros;
     }
 
+    public static Set<ESAJForo> foros2() throws Exception {
+        Gson gson = new Gson();
+        ClassPathResource classPathResource = new ClassPathResource("foro2.json");
+        byte[] bdata = FileCopyUtils.copyToByteArray(classPathResource.getInputStream());
+        String data = new String(bdata, StandardCharsets.UTF_8);
+        Type listType = new TypeToken<Set<ESAJForo>>(){}.getType();
+        Set<ESAJForo> foros = gson.fromJson(data, (Type) listType);
+        return foros;
+    }
+
 }
