@@ -15,6 +15,7 @@ public class ESAJPesquisaFonetica {
     private Integer numeroForo;
     private Integer numeroGrau;
     private Boolean processando;
+    private Boolean encontrado;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
     private String erro;
 
@@ -63,6 +64,15 @@ public class ESAJPesquisaFonetica {
     @Column(nullable = false)
     public Integer getNumeroGrau() {
         return numeroGrau;
+    }
+
+    @Column(nullable = true)
+    public Boolean getEncontrado() {
+        return encontrado;
+    }
+
+    public void setEncontrado(Boolean encontrado) {
+        this.encontrado = encontrado;
     }
 
     @Column(nullable = true)
