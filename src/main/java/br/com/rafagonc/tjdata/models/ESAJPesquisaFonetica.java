@@ -16,6 +16,7 @@ public class ESAJPesquisaFonetica {
     private Integer numeroGrau;
     private Boolean processando;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
+    private String erro;
 
     public ESAJPesquisaFonetica(String nome, ESAJGrau grau) {
         this.numeroGrau = grau.getValue();
@@ -62,6 +63,15 @@ public class ESAJPesquisaFonetica {
     @Column(nullable = false)
     public Integer getNumeroGrau() {
         return numeroGrau;
+    }
+
+    @Column(nullable = true)
+    public String getErro() {
+        return erro;
+    }
+
+    public void setErro(String erro) {
+        this.erro = erro;
     }
 
     @Column(nullable = false)
