@@ -16,6 +16,7 @@ public class ESAJProcesso {
     private String numero;
     private String processoId;
     private String data;
+    private String erro;
     private ESAJDadosProcesso dadosProcessos;
     private Set<ESAJMovimentacao> movimentacoes;
     private Set<ESAJPartesProcesso> partesProcessos;
@@ -93,6 +94,20 @@ public class ESAJProcesso {
     @Column(nullable = false)
     public Date getLastUpdated() {
         return lastUpdated;
+    }
+
+    @Column(nullable = true)
+    public String getData() {
+        return data;
+    }
+
+    @Column(nullable = true)
+    public String getErro() {
+        return erro;
+    }
+
+    public void setErro(String erro) {
+        this.erro = erro;
     }
 
     @OneToMany(targetEntity=ESAJAcao.class, orphanRemoval = true, cascade = {CascadeType.ALL}, mappedBy = "processo")
