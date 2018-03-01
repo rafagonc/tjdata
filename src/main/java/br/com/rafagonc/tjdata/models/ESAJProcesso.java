@@ -1,10 +1,14 @@
 package br.com.rafagonc.tjdata.models;
 
+import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.hibernate.annotations.BatchSize;
+import org.jsoup.nodes.Element;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by rafagonc on 15/06/17.
@@ -279,6 +283,15 @@ public class ESAJProcesso {
             return false;
         return acoes != null ? acoes.equals(processo.acoes) : processo.acoes == null;
 
+    }
+
+    public void getData(Element formBody) {
+        String distribuicao = ESAJUtils.getTextoFromDado("Distribuição:", formBody);
+        Pattern pattern = Pattern.compile("\\d{2}/\\d{2}/\\d{2,4}");
+        Matcher matcher = pattern.matcher(distribuicao);
+        if (matcher.find()) {
+            this.data = matcher.group();
+        }
     }
 
     @Override
