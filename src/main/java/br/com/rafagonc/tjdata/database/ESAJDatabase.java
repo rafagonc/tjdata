@@ -21,10 +21,12 @@ public class ESAJDatabase {
     private ESAJPeticaoDiversaRepository peticoesDiversasRepository;
     private ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository;
     private ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository;
+    private ESAJCaptchaRepository captchaRepository;
 
 
-    public ESAJDatabase(ESAJProcessoRepository processoRepository, ESAJMovimentacaoRepository movimentacaoRepository, ESAJPartesProcessoRepository partesProcessoRepository, ESAJJulgamentoRepository julgamentoRepository, ESAJDadosProcessoRepository dadosProcessoRepository, ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository, ESAJSubprocessoRepository subprocessoRepository, ESAJDocumentoRepository documentoRepository, ESAJAcaoRepository acaoRepository, ESAJPeticaoDiversaRepository peticoesDiversasRepository, ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository, ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository) {
+    public ESAJDatabase(ESAJProcessoRepository processoRepository, ESAJMovimentacaoRepository movimentacaoRepository, ESAJPartesProcessoRepository partesProcessoRepository, ESAJJulgamentoRepository julgamentoRepository, ESAJDadosProcessoRepository dadosProcessoRepository, ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository, ESAJSubprocessoRepository subprocessoRepository, ESAJDocumentoRepository documentoRepository, ESAJAcaoRepository acaoRepository, ESAJPeticaoDiversaRepository peticoesDiversasRepository, ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository, ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository, ESAJCaptchaRepository captchaRepository) {
         this.processoRepository = processoRepository;
+        this.captchaRepository = captchaRepository;
         this.movimentacaoRepository = movimentacaoRepository;
         this.partesProcessoRepository = partesProcessoRepository;
         this.julgamentoRepository = julgamentoRepository;
@@ -87,6 +89,10 @@ public class ESAJDatabase {
 
     public ESAJAcaoRepository getAcaoRepository() {
         return acaoRepository;
+    }
+
+    public ESAJCaptchaRepository getCaptchaRepository() {
+        return captchaRepository;
     }
 
     public ESAJPesquisaFoneticaProcessoRepository getPesquisaFoneticaProcessoRepository() {

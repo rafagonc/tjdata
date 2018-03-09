@@ -39,6 +39,7 @@ public class ESAJMovimentacao implements Comparable {
             this.acao = ESAJUtils.normalize(components[1]);
         }
         this.data = ESAJUtils.getTextoWithIndex(tr, 0);
+        this.documentos = docs;
     }
 
     public ESAJMovimentacao(String texto, String data) {
