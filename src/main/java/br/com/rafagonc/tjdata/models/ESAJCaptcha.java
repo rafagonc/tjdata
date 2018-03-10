@@ -20,6 +20,9 @@ public class ESAJCaptcha {
     private String uuidCaptcha;
 
     @Column(nullable = false)
+    private String jSessionID;
+
+    @Column(nullable = false)
     private String gResponse;
 
     public ESAJCaptcha(String state, Set<Cookie> cookies, String uuidCaptcha, String gResponse) {
