@@ -56,6 +56,14 @@ public class ESAJCaptcha {
         this.gResponse = gResponse;
     }
 
+    public String getjSessionID() {
+        return jSessionID;
+    }
+
+    public void setjSessionID(String jSessionID) {
+        this.jSessionID = jSessionID;
+    }
+
     public Long getId() {
         return id;
     }
