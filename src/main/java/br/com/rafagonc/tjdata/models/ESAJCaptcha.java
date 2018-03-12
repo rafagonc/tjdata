@@ -25,6 +25,9 @@ public class ESAJCaptcha {
     @Column(nullable = false, length = 2000)
     private String gResponse;
 
+    public ESAJCaptcha() {
+    }
+
     public ESAJCaptcha(String state, Set<Cookie> cookies, String uuidCaptcha, String gResponse) {
         this.cookies = cookies;
         this.uuidCaptcha = uuidCaptcha;
