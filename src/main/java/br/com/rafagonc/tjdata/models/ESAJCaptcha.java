@@ -16,13 +16,13 @@ public class ESAJCaptcha {
     @Column(nullable = false)
     private String state;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 2000)
     private String uuidCaptcha;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 2000)
     private String jSessionID;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 2000)
     private String gResponse;
 
     public ESAJCaptcha(String state, Set<Cookie> cookies, String uuidCaptcha, String gResponse) {
