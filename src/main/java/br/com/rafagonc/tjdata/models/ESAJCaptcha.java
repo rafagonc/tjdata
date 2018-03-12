@@ -10,7 +10,7 @@ public class ESAJCaptcha {
     @GeneratedValue( strategy= GenerationType.AUTO )
     private Long id;
 
-    @OneToMany(mappedBy = "captcha", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "captcha", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Cookie> cookies;
 
     @Column(nullable = false)
