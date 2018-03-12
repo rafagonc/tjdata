@@ -19,6 +19,9 @@ public class Cookie {
     @Column(nullable = false)
     private String domain;
 
+    @Column(nullable = false)
+    private String path;
+
     @ManyToOne(fetch = FetchType.EAGER)
     private ESAJCaptcha captcha;
 

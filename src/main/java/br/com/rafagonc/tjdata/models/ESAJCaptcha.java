@@ -19,7 +19,7 @@ public class ESAJCaptcha {
     @Column(nullable = false, length = 2000)
     private String uuidCaptcha;
 
-    @Column(nullable = false, length = 2000)
+    @Column(nullable = true, length = 2000)
     private String jSessionID;
 
     @Column(nullable = false, length = 2000)
