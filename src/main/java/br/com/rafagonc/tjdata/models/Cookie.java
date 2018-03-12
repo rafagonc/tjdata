@@ -43,6 +43,14 @@ public class Cookie {
         return domain;
     }
 
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
     public Long getId() {
         return id;
     }

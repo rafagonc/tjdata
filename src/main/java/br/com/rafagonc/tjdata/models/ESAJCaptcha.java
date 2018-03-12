@@ -25,9 +25,6 @@ public class ESAJCaptcha {
     @Column(nullable = false, length = 2000)
     private String gResponse;
 
-    @Column(nullable = false)
-    private String path;
-
     public ESAJCaptcha() {
     }
 
@@ -48,14 +45,6 @@ public class ESAJCaptcha {
 
     public String getgResponse() {
         return gResponse;
-    }
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
     }
 
     public void setCookies(Set<Cookie> cookies) {
