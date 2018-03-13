@@ -25,6 +25,9 @@ public class Cookie {
     @ManyToOne(fetch = FetchType.EAGER)
     private ESAJCaptcha captcha;
 
+    public Cookie() {
+    }
+
     public Cookie(String key, String value, String domain) {
         this.key = key;
         this.value = value;
