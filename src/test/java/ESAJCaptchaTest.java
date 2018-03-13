@@ -30,6 +30,16 @@ public class ESAJCaptchaTest {
 
         ESAJCaptcha captcha = new ESAJCaptcha("sp", new HashSet<Cookie>(), uuid, "");
 
+        HashSet hashSet = new HashSet<Cookie>();
+
+        Cookie cookie = new Cookie("a","","");
+        cookie.setPath("");
+        db.getCookieRepository().save(cookie);
+
+        hashSet.add(cookie);
+
+        captcha.setCookies(hashSet);
+
         db.getCaptchaRepository().save(captcha);
 
         t.commit();

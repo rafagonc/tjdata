@@ -96,6 +96,7 @@ public class ESAJDatabaseManager {
         ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository = repositoryFactorySupport.getRepository(ESAJPesquisaFoneticaProcessoRepository.class);
         ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository = repositoryFactorySupport.getRepository(ESAJPesquisaFoneticaRepository.class);
         ESAJCaptchaRepository captchaRepository = repositoryFactorySupport.getRepository(ESAJCaptchaRepository.class);
+        CookieRepository cookieRepository = repositoryFactorySupport.getRepository(CookieRepository.class);
         ESAJDatabase database = new ESAJDatabase(processoRepository,
                 movimentacaoRepository,
                 partesProcessoRepository,
@@ -108,7 +109,8 @@ public class ESAJDatabaseManager {
                 peticaoDiversaRepository,
                 pesquisaFoneticaProcessoRepository,
                 pesquisaFoneticaRepository,
-                captchaRepository);
+                captchaRepository,
+                cookieRepository);
         return database;
     }
 

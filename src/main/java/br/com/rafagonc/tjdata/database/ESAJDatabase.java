@@ -22,10 +22,12 @@ public class ESAJDatabase {
     private ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository;
     private ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository;
     private ESAJCaptchaRepository captchaRepository;
+    private CookieRepository cookieRepository;
 
 
-    public ESAJDatabase(ESAJProcessoRepository processoRepository, ESAJMovimentacaoRepository movimentacaoRepository, ESAJPartesProcessoRepository partesProcessoRepository, ESAJJulgamentoRepository julgamentoRepository, ESAJDadosProcessoRepository dadosProcessoRepository, ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository, ESAJSubprocessoRepository subprocessoRepository, ESAJDocumentoRepository documentoRepository, ESAJAcaoRepository acaoRepository, ESAJPeticaoDiversaRepository peticoesDiversasRepository, ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository, ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository, ESAJCaptchaRepository captchaRepository) {
+    public ESAJDatabase(ESAJProcessoRepository processoRepository, ESAJMovimentacaoRepository movimentacaoRepository, ESAJPartesProcessoRepository partesProcessoRepository, ESAJJulgamentoRepository julgamentoRepository, ESAJDadosProcessoRepository dadosProcessoRepository, ESAJComposicaoJulgamentoRepository composicaoJulgamentoRepository, ESAJSubprocessoRepository subprocessoRepository, ESAJDocumentoRepository documentoRepository, ESAJAcaoRepository acaoRepository, ESAJPeticaoDiversaRepository peticoesDiversasRepository, ESAJPesquisaFoneticaProcessoRepository pesquisaFoneticaProcessoRepository, ESAJPesquisaFoneticaRepository pesquisaFoneticaRepository, ESAJCaptchaRepository captchaRepository, CookieRepository cookieRepository) {
         this.processoRepository = processoRepository;
+        this.cookieRepository =cookieRepository;
         this.captchaRepository = captchaRepository;
         this.movimentacaoRepository = movimentacaoRepository;
         this.partesProcessoRepository = partesProcessoRepository;
@@ -73,6 +75,10 @@ public class ESAJDatabase {
 
     public ESAJComposicaoJulgamentoRepository getComposicaoJulgamentoRepository() {
         return composicaoJulgamentoRepository;
+    }
+
+    public CookieRepository getCookieRepository() {
+        return cookieRepository;
     }
 
     public ESAJSubprocessoRepository getSubprocessoRepository() {
