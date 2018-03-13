@@ -28,6 +28,8 @@ public class Cookie {
     public Cookie() {
     }
 
+    //
+
     public Cookie(String key, String value, String domain) {
         this.key = key;
         this.value = value;
