@@ -2,6 +2,7 @@ package br.com.rafagonc.tjdata.models;
 
 import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
 import javax.persistence.*;
@@ -23,11 +24,12 @@ public class ESAJPartesProcesso implements Serializable {
 
     public ESAJPartesProcesso(Element tr) {
         Element values = tr.child(1);
-        this.nome = values.child(0).text();
+        this.nome = values.textNodes().get(0).text();
         Elements exibindos = values.getElementsByClass("mensagemExibindo");
         StringBuilder advs = new StringBuilder();
         for (Element e : exibindos) {
-            advs.append(e.nextElementSibling().text());
+            Node node = e.nextSibling();
+            advs.append(ESAJUtils.removeHTMLTags(node.toString()));
         }
         this.advogados = ESAJUtils.normalize(advs.toString());
         this.tituloAdvogados = "Advogados:";
