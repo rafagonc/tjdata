@@ -6,7 +6,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.FileCopyUtils;
 
 import java.lang.reflect.Type;
-import java.nio.charset.StandardCharsets;
+import java.nio.charset.Charset;
 import java.util.Set;
 
 /**
@@ -34,7 +34,7 @@ public class ESAJForo {
         Gson gson = new Gson();
         ClassPathResource classPathResource = new ClassPathResource("foro.json");
         byte[] bdata = FileCopyUtils.copyToByteArray(classPathResource.getInputStream());
-        String data = new String(bdata, StandardCharsets.UTF_8);
+        String data = new String(bdata, Charset.defaultCharset());
         Type listType = new TypeToken<Set<ESAJForo>>(){}.getType();
         Set<ESAJForo> foros = gson.fromJson(data, (Type) listType);
         return foros;
@@ -44,7 +44,7 @@ public class ESAJForo {
         Gson gson = new Gson();
         ClassPathResource classPathResource = new ClassPathResource("foro2.json");
         byte[] bdata = FileCopyUtils.copyToByteArray(classPathResource.getInputStream());
-        String data = new String(bdata, StandardCharsets.UTF_8);
+        String data = new String(bdata, Charset.defaultCharset());
         Type listType = new TypeToken<Set<ESAJForo>>(){}.getType();
         Set<ESAJForo> foros = gson.fromJson(data, (Type) listType);
         return foros;
