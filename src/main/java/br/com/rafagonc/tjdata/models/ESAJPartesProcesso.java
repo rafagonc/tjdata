@@ -22,13 +22,13 @@ public class ESAJPartesProcesso implements Serializable {
 
     public ESAJPartesProcesso(Element tr) {
         Element values = tr.child(1);
-        this.nome = tr.child(0).text();
+        this.nome = values.child(0).text();
         Elements exibindos = values.getElementsByClass("mensagemExibindo");
-        StringBuilder advogados = new StringBuilder();
+        StringBuilder advs = new StringBuilder();
         for (Element e : exibindos) {
-            advogados.append(e.nextElementSibling().text());
+            advs.append(e.nextElementSibling().text());
         }
-        this.advogados = ESAJUtils.normalize(advogados.toString());
+        this.advogados = ESAJUtils.normalize(advs.toString());
         this.tituloAdvogados = "Advogados:";
         this.titulo = ESAJUtils.getTextoWithIndex(tr,0);
     }
