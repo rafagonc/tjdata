@@ -29,7 +29,7 @@ public class ESAJPartesProcesso implements Serializable {
         StringBuilder advs = new StringBuilder();
         for (Element e : exibindos) {
             Node node = e.nextSibling();
-            advs.append(ESAJUtils.normalize(node.toString().replace("nbsp;", "")));
+            advs.append(ESAJUtils.normalize(node.toString().replace("&nbsp;", "")));
         }
         this.advogados = ESAJUtils.normalize(advs.toString());
         this.tituloAdvogados = "Advogados:";
