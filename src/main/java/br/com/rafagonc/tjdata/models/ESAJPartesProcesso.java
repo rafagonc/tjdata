@@ -24,7 +24,7 @@ public class ESAJPartesProcesso implements Serializable {
 
     public ESAJPartesProcesso(Element tr) {
         Element values = tr.child(1);
-        this.nome = values.textNodes().get(0).text();
+        this.nome = ESAJUtils.normalize(values.textNodes().get(0).text());
         Elements exibindos = values.getElementsByClass("mensagemExibindo");
         StringBuilder advs = new StringBuilder();
         for (Element e : exibindos) {
@@ -98,6 +98,8 @@ public class ESAJPartesProcesso implements Serializable {
     public void setProcesso(ESAJProcesso processo) {
         this.processo = processo;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
