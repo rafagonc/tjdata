@@ -19,6 +19,7 @@ public class ESAJPartesProcesso implements Serializable {
     private String tituloAdvogados;
     private String advogados;
     private transient ESAJProcesso processo;
+    //
 
     public ESAJPartesProcesso(Element tr) {
         Element values = tr.child(1);
