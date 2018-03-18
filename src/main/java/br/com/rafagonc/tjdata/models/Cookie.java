@@ -16,10 +16,10 @@ public class Cookie {
     @Column(nullable = false)
     private String value;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String domain;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String path;
 
     @ManyToOne(fetch = FetchType.EAGER)
