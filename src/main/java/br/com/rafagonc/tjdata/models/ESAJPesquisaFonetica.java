@@ -14,6 +14,7 @@ public class ESAJPesquisaFonetica {
     private String nome;
     private Integer numeroForo;
     private Integer numeroGrau;
+    private String estado;
     private Boolean processando;
     private Boolean encontrado;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
@@ -49,6 +50,11 @@ public class ESAJPesquisaFonetica {
     @Column(nullable = false)
     public String getNome() {
         return nome;
+    }
+
+    @Column(nullable = false)
+    public String getEstado() {
+        return estado;
     }
 
     @Column(nullable = false)
@@ -95,6 +101,10 @@ public class ESAJPesquisaFonetica {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public void setNome(String nome) {
