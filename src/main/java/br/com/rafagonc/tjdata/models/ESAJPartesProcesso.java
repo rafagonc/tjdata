@@ -2,6 +2,8 @@ package br.com.rafagonc.tjdata.models;
 
 import br.com.rafagonc.tjdata.utils.ESAJUtils;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
+import org.jsoup.select.Elements;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,11 +16,23 @@ public class ESAJPartesProcesso implements Serializable {
 
     private Long id;
     private String titulo;
+    private String nome;
+    private String tituloAdvogados;
     private String advogados;
     private transient ESAJProcesso processo;
+    //
 
     public ESAJPartesProcesso(Element tr) {
-        this.advogados = ESAJUtils.getTextoWithIndex(tr,1);
+        Element values = tr.child(1);
+        this.nome = ESAJUtils.normalize(values.textNodes().get(0).text());
+        Elements exibindos = values.getElementsByClass("mensagemExibindo");
+        StringBuilder advs = new StringBuilder();
+        for (Element e : exibindos) {
+            Node node = e.nextSibling();
+            advs.append(ESAJUtils.normalize(node.toString().replace("&nbsp;", "")));
+        }
+        this.advogados = ESAJUtils.normalize(advs.toString());
+        this.tituloAdvogados = "Advogados:";
         this.titulo = ESAJUtils.getTextoWithIndex(tr,0);
     }
 
@@ -34,6 +48,24 @@ public class ESAJPartesProcesso implements Serializable {
     @GeneratedValue( strategy= GenerationType.AUTO )
     public Long getId() {
         return id;
+    }
+
+    @Column(nullable = true, columnDefinition = "TEXT")
+    public String getTituloAdvogados() {
+        return tituloAdvogados;
+    }
+
+    public void setTituloAdvogados(String tituloAdvogados) {
+        this.tituloAdvogados = tituloAdvogados;
+    }
+
+    @Column(nullable = true, columnDefinition = "TEXT")
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Column(nullable = true, columnDefinition = "TEXT")
@@ -66,6 +98,8 @@ public class ESAJPartesProcesso implements Serializable {
     public void setProcesso(ESAJProcesso processo) {
         this.processo = processo;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

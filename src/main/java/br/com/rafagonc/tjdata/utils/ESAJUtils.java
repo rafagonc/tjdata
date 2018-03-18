@@ -77,7 +77,7 @@ public class ESAJUtils {
     }
 
     public static String normalize(String str) {
-        return removeNewLine(removeHTMLTags(str.replaceAll("^\\s*", "")).replaceAll("\\s*$", "")).replaceAll("\\s+"," ");
+        return removeNewLine(removeHTMLTags(str.replaceAll("^\\s*", "").replaceAll("\\s*$", "").replaceAll("\\s+"," ")));
     }
 
     public static String getTextoFromDado(String dado, Element table, int... args) {
