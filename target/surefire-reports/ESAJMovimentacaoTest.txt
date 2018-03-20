@@ -1,4 +1,31 @@
 -------------------------------------------------------------------------------
 Test set: ESAJMovimentacaoTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec - in ESAJMovimentacaoTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in ESAJMovimentacaoTest
+testSort(ESAJMovimentacaoTest)  Time elapsed: 0.001 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJMovimentacaoTest.setUp(ESAJMovimentacaoTest.java:23)
+
+testCreate(ESAJMovimentacaoTest)  Time elapsed: 0 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJMovimentacaoTest.setUp(ESAJMovimentacaoTest.java:23)
+
+testDelete(ESAJMovimentacaoTest)  Time elapsed: 0 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJMovimentacaoTest.setUp(ESAJMovimentacaoTest.java:23)
+

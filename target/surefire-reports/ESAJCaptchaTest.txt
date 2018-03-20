@@ -1,22 +1,22 @@
 -------------------------------------------------------------------------------
-Test set: ESAJJulgamentoTest
+Test set: ESAJCaptchaTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.003 sec <<< FAILURE! - in ESAJJulgamentoTest
-testCreate(ESAJJulgamentoTest)  Time elapsed: 0 sec  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE! - in ESAJCaptchaTest
+testCreate(ESAJCaptchaTest)  Time elapsed: 0.001 sec  <<< ERROR!
 javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
-	at ESAJJulgamentoTest.setUp(ESAJJulgamentoTest.java:17)
+	at ESAJCaptchaTest.setUp(ESAJCaptchaTest.java:19)
 
-testDelete(ESAJJulgamentoTest)  Time elapsed: 0.003 sec  <<< ERROR!
+testSelectLast(ESAJCaptchaTest)  Time elapsed: 0.001 sec  <<< ERROR!
 javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
-	at ESAJJulgamentoTest.setUp(ESAJJulgamentoTest.java:17)
+	at ESAJCaptchaTest.setUp(ESAJCaptchaTest.java:19)
 

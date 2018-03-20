@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ESAJDocumentoTest" time="0.027" tests="2" errors="0" skipped="0" failures="0">
+<testsuite name="ESAJDocumentoTest" time="0" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib"/>
-    <property name="java.vm.version" value="25.101-b13"/>
-    <property name="user.country.format" value="US"/>
+    <property name="java.vm.version" value="9.0.4+11"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib"/>
     <property name="gopherProxySet" value="false"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="maven.multiModuleProjectDirectory" value="/Users/rafagonc/Developing/tj/tjdata"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.country" value="BR"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/Users/rafagonc/Developing/tj/tjdata"/>
-    <property name="java.runtime.version" value="1.8.0_101-b13"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="9.0.4+11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.io.tmpdir" value="/var/folders/v2/9zrng5yd20z2yncp3gl30y2c0000gn/T/"/>
     <property name="line.separator" value="&#10;"/>
@@ -29,39 +28,66 @@
     <property name="classworlds.conf" value="/Applications/apache-maven-3.3.9/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/rafagonc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="53.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.12.5"/>
+    <property name="os.version" value="10.12.6"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/rafagonc"/>
     <property name="user.timezone" value="America/Sao_Paulo"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
-    <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="9"/>
     <property name="user.name" value="rafagonc"/>
     <property name="java.class.path" value="/Applications/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar"/>
-    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="java.vm.specification.version" value="9"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home"/>
+    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.language" value="pt"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_101"/>
-    <property name="java.ext.dirs" value="/Users/rafagonc/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/classes"/>
+    <property name="java.version" value="9.0.4"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="/Applications/apache-maven-3.3.9"/>
     <property name="file.separator" value="/"/>
-    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
-    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testCreate" classname="ESAJDocumentoTest" time="0.014"/>
-  <testcase name="testDelete" classname="ESAJDocumentoTest" time="0.013"/>
+  <testcase name="testCreate" classname="ESAJDocumentoTest" time="0">
+    <error message="No Persistence provider for EntityManager named tj" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJDocumentoTest.setUp(ESAJDocumentoTest.java:17)
+</error>
+    <system-out><![CDATA[00:11:43.446 [main] DEBUG org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl - Incoming config yielded no classloaders; adding standard SE ones
+00:11:43.446 [main] INFO org.hibernate.jpa.boot.internal.PersistenceXmlParser - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+00:11:43.446 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 0 persistence units; checking each
+00:11:43.446 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Found no matching persistence units
+]]></system-out>
+  </testcase>
+  <testcase name="testDelete" classname="ESAJDocumentoTest" time="0">
+    <error message="No Persistence provider for EntityManager named tj" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJDocumentoTest.setUp(ESAJDocumentoTest.java:17)
+</error>
+    <system-out><![CDATA[00:11:43.447 [main] DEBUG org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl - Incoming config yielded no classloaders; adding standard SE ones
+00:11:43.447 [main] INFO org.hibernate.jpa.boot.internal.PersistenceXmlParser - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+00:11:43.448 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 0 persistence units; checking each
+00:11:43.448 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Found no matching persistence units
+]]></system-out>
+  </testcase>
 </testsuite>

@@ -1,4 +1,31 @@
 -------------------------------------------------------------------------------
 Test set: ESAJProcessoTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 sec - in ESAJProcessoTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.014 sec <<< FAILURE! - in ESAJProcessoTest
+testQuery(ESAJProcessoTest)  Time elapsed: 0.013 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJProcessoTest.setUp(ESAJProcessoTest.java:22)
+
+testCreate(ESAJProcessoTest)  Time elapsed: 0 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJProcessoTest.setUp(ESAJProcessoTest.java:22)
+
+testDelete(ESAJProcessoTest)  Time elapsed: 0 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJProcessoTest.setUp(ESAJProcessoTest.java:22)
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ESAJPeticaoDiversaTest" time="0" tests="2" errors="2" skipped="0" failures="0">
+<testsuite name="ESAJCaptchaTest" time="0.002" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="9.0.4+11"/>
@@ -60,34 +60,34 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testCreate" classname="ESAJPeticaoDiversaTest" time="0">
+  <testcase name="testCreate" classname="ESAJCaptchaTest" time="0.001">
     <error message="No Persistence provider for EntityManager named tj" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
-	at ESAJPeticaoDiversaTest.setUp(ESAJPeticaoDiversaTest.java:17)
+	at ESAJCaptchaTest.setUp(ESAJCaptchaTest.java:19)
 </error>
-    <system-out><![CDATA[00:11:43.559 [main] DEBUG org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl - Incoming config yielded no classloaders; adding standard SE ones
-00:11:43.559 [main] INFO org.hibernate.jpa.boot.internal.PersistenceXmlParser - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
-00:11:43.560 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 0 persistence units; checking each
-00:11:43.560 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Found no matching persistence units
+    <system-out><![CDATA[00:11:43.433 [main] DEBUG org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl - Incoming config yielded no classloaders; adding standard SE ones
+00:11:43.433 [main] INFO org.hibernate.jpa.boot.internal.PersistenceXmlParser - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+00:11:43.433 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 0 persistence units; checking each
+00:11:43.433 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Found no matching persistence units
 ]]></system-out>
   </testcase>
-  <testcase name="testDelete" classname="ESAJPeticaoDiversaTest" time="0">
+  <testcase name="testSelectLast" classname="ESAJCaptchaTest" time="0.001">
     <error message="No Persistence provider for EntityManager named tj" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
 	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
-	at ESAJPeticaoDiversaTest.setUp(ESAJPeticaoDiversaTest.java:17)
+	at ESAJCaptchaTest.setUp(ESAJCaptchaTest.java:19)
 </error>
-    <system-out><![CDATA[00:11:43.560 [main] DEBUG org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl - Incoming config yielded no classloaders; adding standard SE ones
-00:11:43.561 [main] INFO org.hibernate.jpa.boot.internal.PersistenceXmlParser - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
-00:11:43.561 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 0 persistence units; checking each
-00:11:43.561 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Found no matching persistence units
+    <system-out><![CDATA[00:11:43.434 [main] DEBUG org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl - Incoming config yielded no classloaders; adding standard SE ones
+00:11:43.435 [main] INFO org.hibernate.jpa.boot.internal.PersistenceXmlParser - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+00:11:43.436 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 0 persistence units; checking each
+00:11:43.436 [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Found no matching persistence units
 ]]></system-out>
   </testcase>
 </testsuite>

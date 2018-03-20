@@ -1,4 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: ESAJAcaoTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.4 sec - in ESAJAcaoTest
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.24 sec <<< FAILURE! - in ESAJAcaoTest
+testCreate(ESAJAcaoTest)  Time elapsed: 0.238 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJAcaoTest.setUp(ESAJAcaoTest.java:17)
+
+testDelete(ESAJAcaoTest)  Time elapsed: 0 sec  <<< ERROR!
+javax.persistence.PersistenceException: No Persistence provider for EntityManager named tj
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:61)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:31)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.start(ESAJDatabaseManager.java:27)
+	at br.com.rafagonc.tjdata.database.ESAJDatabaseManager.share(ESAJDatabaseManager.java:45)
+	at ESAJAcaoTest.setUp(ESAJAcaoTest.java:17)
+
