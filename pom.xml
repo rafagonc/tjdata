@@ -67,18 +67,18 @@
 
     </dependencies>
 
-    <!--<build>-->
-        <!--<resources>-->
-            <!--<resource>-->
-                <!--<directory>src/main/resources</directory>-->
-                <!--<excludes>-->
-                    <!--<exclude>*.xml</exclude>-->
-                    <!--<exclude>META-INF/*</exclude>-->
-                    <!--<exclude>*.properties</exclude>-->
-                <!--</excludes>-->
-                <!--<filtering>false</filtering>-->
-            <!--</resource>-->
-        <!--</resources>-->
-    <!--</build>-->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>*.xml</exclude>
+                    <exclude>META-INF/*</exclude>
+                    <exclude>*.properties</exclude>
+                </excludes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
 
 </project>
