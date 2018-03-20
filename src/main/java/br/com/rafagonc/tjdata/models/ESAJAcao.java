@@ -102,23 +102,4 @@ public class ESAJAcao implements Comparable {
         }
         return 0;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ESAJAcao esajAcao = (ESAJAcao) o;
-
-        if (recebido != null ? !recebido.equals(esajAcao.recebido) : esajAcao.recebido != null) return false;
-        return classe != null ? classe.equals(esajAcao.classe) : esajAcao.classe == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = recebido != null ? recebido.hashCode() : 0;
-        result = 31 * result + (classe != null ? classe.hashCode() : 0);
-        return result;
-    }
 }

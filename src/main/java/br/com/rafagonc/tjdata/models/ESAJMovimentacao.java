@@ -132,24 +132,4 @@ public class ESAJMovimentacao implements Comparable {
         return 0;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ESAJMovimentacao that = (ESAJMovimentacao) o;
-
-        if (texto != null ? !texto.equals(that.texto) : that.texto != null) return false;
-        if (acao != null ? !acao.equals(that.acao) : that.acao != null) return false;
-        return data != null ? data.equals(that.data) : that.data == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = texto != null ? texto.hashCode() : 0;
-        result = 31 * result + (acao != null ? acao.hashCode() : 0);
-        result = 31 * result + (data != null ? data.hashCode() : 0);
-        return result;
-    }
 }

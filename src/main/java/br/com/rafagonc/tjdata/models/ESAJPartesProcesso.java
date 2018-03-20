@@ -20,7 +20,7 @@ public class ESAJPartesProcesso implements Serializable {
     private String tituloAdvogados;
     private String advogados;
     private transient ESAJProcesso processo;
-    //
+
 
     public ESAJPartesProcesso(Element tr) {
         Element values = tr.child(1);
@@ -100,24 +100,4 @@ public class ESAJPartesProcesso implements Serializable {
     }
 
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ESAJPartesProcesso that = (ESAJPartesProcesso) o;
-
-        if (titulo != null ? !titulo.equals(that.titulo) : that.titulo != null) return false;
-        if (advogados != null ? !advogados.equals(that.advogados) : that.advogados != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = titulo != null ? titulo.hashCode() : 0;
-        result = 31 * result + (advogados != null ? advogados.hashCode() : 0);
-        return result;
-    }
 }

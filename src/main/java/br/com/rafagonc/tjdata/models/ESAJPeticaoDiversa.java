@@ -80,22 +80,4 @@ public class ESAJPeticaoDiversa implements Comparable {
         return 0;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ESAJPeticaoDiversa that = (ESAJPeticaoDiversa) o;
-
-        if (data != null ? !data.equals(that.data) : that.data != null) return false;
-        return tipo != null ? tipo.equals(that.tipo) : that.tipo == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = data != null ? data.hashCode() : 0;
-        result = 31 * result + (tipo != null ? tipo.hashCode() : 0);
-        return result;
-    }
 }
