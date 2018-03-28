@@ -21,7 +21,7 @@ public class ESAJMovimentacao implements Comparable {
     private String data;
     private transient ESAJProcesso processo;
     private Set<ESAJDocumento> documentos;
-    private Integer order;
+    private Integer ord;
 
 
     public ESAJMovimentacao(Element tr) {
@@ -78,12 +78,12 @@ public class ESAJMovimentacao implements Comparable {
     }
 
     @Column(nullable = true)
-    public Integer getOrder() {
-        return order;
+    public Integer getord() {
+        return ord;
     }
 
-    public void setOrder(Integer order) {
-        this.order = order;
+    public void setord(Integer ord) {
+        this.ord = ord;
     }
 
     @Column(nullable = true, columnDefinition = "TEXT")

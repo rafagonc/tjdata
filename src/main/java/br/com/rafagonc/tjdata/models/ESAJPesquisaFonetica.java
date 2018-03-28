@@ -17,7 +17,6 @@ public class ESAJPesquisaFonetica {
     private String estado;
     private Boolean processando;
     private Boolean encontrado;
-    private Integer order;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
     private String erro;
 
@@ -51,11 +50,6 @@ public class ESAJPesquisaFonetica {
     @Column(nullable = false)
     public String getNome() {
         return nome;
-    }
-
-    @Column(nullable = false)
-    public Integer getOrder() {
-        return order;
     }
 
     @Column(nullable = false)
@@ -119,10 +113,6 @@ public class ESAJPesquisaFonetica {
 
     public void setProcessando(Boolean processando) {
         this.processando = processando;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
     }
 
     public void setProcessos(Set<ESAJPesquisaFoneticaProcesso> processos) {
