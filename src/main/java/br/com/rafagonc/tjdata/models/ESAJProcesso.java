@@ -33,6 +33,7 @@ public class ESAJProcesso {
     private Boolean processando;
     private Boolean encontrado;
     private Date lastUpdated;
+    ///////
 
     public ESAJProcesso(String numero,
                         ESAJDadosProcesso dadosProcessos,
@@ -40,6 +41,7 @@ public class ESAJProcesso {
                         Set<ESAJPartesProcesso> partesProcessos,
                         Set<ESAJPeticaoDiversa> peticaoDiversas,
                         Set<ESAJAcao> acoes) {
+        this.numero = numero;
         this.numero = numero;
         this.processando = false;
         this.encontrado = true;
