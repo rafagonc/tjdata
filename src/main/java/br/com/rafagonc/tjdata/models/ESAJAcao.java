@@ -16,6 +16,7 @@ public class ESAJAcao implements Comparable {
     private Long id;
     private String recebido;
     private String classe;
+    private Integer order;
     private String link;
     private transient ESAJProcesso processo;
 
@@ -53,6 +54,15 @@ public class ESAJAcao implements Comparable {
     @Column(nullable = true, columnDefinition = "TEXT")
     public String getRecebido() {
         return recebido;
+    }
+
+    @Column(nullable = true)
+    public Integer getOrder() {
+        return order;
+    }
+
+    public void setOrder(Integer order) {
+        this.order = order;
     }
 
     @Column(nullable = true, columnDefinition = "TEXT")

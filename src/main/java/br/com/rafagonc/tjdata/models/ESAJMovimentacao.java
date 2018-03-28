@@ -21,6 +21,8 @@ public class ESAJMovimentacao implements Comparable {
     private String data;
     private transient ESAJProcesso processo;
     private Set<ESAJDocumento> documentos;
+    private Integer order;
+
 
     public ESAJMovimentacao(Element tr) {
         Elements linkElements = tr.getElementsByTag("a");
@@ -73,6 +75,15 @@ public class ESAJMovimentacao implements Comparable {
     @Column(nullable = true, columnDefinition = "TEXT")
     public String getTexto() {
         return texto;
+    }
+
+    @Column(nullable = true)
+    public Integer getOrder() {
+        return order;
+    }
+
+    public void setOrder(Integer order) {
+        this.order = order;
     }
 
     @Column(nullable = true, columnDefinition = "TEXT")

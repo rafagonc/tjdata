@@ -15,6 +15,8 @@ public class ESAJPeticaoDiversa implements Comparable {
     private Long id;
     private String data;
     private String tipo;
+    private Integer order;
+
     private transient ESAJProcesso processo;
 
     public ESAJPeticaoDiversa(Element tr) {
@@ -36,6 +38,11 @@ public class ESAJPeticaoDiversa implements Comparable {
         return id;
     }
 
+    @Column(nullable = true)
+    public Integer getOrder() {
+        return order;
+    }
+
     @Column(nullable = true, columnDefinition = "TEXT")
     public String getData() {
         return data;
@@ -53,6 +60,10 @@ public class ESAJPeticaoDiversa implements Comparable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setOrder(Integer order) {
+        this.order = order;
     }
 
     public void setData(String data) {

@@ -21,7 +21,6 @@ public class ESAJProcesso {
     private String processoId;
     private String data;
     private String erro;
-    private Integer order;
     private ESAJDadosProcesso dadosProcessos;
     private Set<ESAJMovimentacao> movimentacoes;
     private Set<ESAJPartesProcesso> partesProcessos;
@@ -84,11 +83,6 @@ public class ESAJProcesso {
     @Column(nullable = false)
     public Boolean getTerminado() {
         return terminado;
-    }
-
-    @Column(nullable = false)
-    public Integer getOrder() {
-        return order;
     }
 
     @Column(nullable = false)
@@ -170,10 +164,6 @@ public class ESAJProcesso {
     @BatchSize(size = 5)
     public Set<ESAJComposicaoJulgamento> getComposicaoJulgamento() {
         return composicaoJulgamento;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
     }
 
     public void setProcessoId(String processoId) {
