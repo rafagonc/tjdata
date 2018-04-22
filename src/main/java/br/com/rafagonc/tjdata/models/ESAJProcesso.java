@@ -21,6 +21,7 @@ public class ESAJProcesso {
     private String processoId;
     private String data;
     private String erro;
+    private String url;
     private ESAJDadosProcesso dadosProcessos;
     private Set<ESAJMovimentacao> movimentacoes;
     private Set<ESAJPartesProcesso> partesProcessos;
@@ -83,6 +84,11 @@ public class ESAJProcesso {
         return data;
     }
 
+    @Column(nullable = true)
+    public String url() {
+        return url;
+    }
+
     @Column(nullable = false)
     public Boolean getTerminado() {
         return terminado;
@@ -111,6 +117,10 @@ public class ESAJProcesso {
     @Column(nullable = true)
     public String getErro() {
         return erro;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public void setErro(String erro) {
