@@ -31,6 +31,9 @@ public class ESAJDadosProcesso implements Serializable {
 
     public ESAJDadosProcesso(Element table) {
         this.numero = ESAJUtils.getTextoFromDado("Processo:", table);
+        if (this.numero == null) {
+            this.numero = ESAJUtils.getTextoFromDado("Incidente:", table).replaceAll("\\w","").replaceAll("(|)", "").replace(" ", "");
+        }
         this.classe = ESAJUtils.getTextoFromDado("Classe:", table);
         this.area = ESAJUtils.getTextoFromDado("Área", table);
         this.assunto = ESAJUtils.getTextoFromDado("Assunto:", table);
