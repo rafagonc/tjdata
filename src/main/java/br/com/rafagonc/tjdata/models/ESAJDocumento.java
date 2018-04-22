@@ -11,10 +11,12 @@ public class ESAJDocumento {
     private Long id;
     private String nome;
     private String link;
+    private Boolean senha;
     private transient ESAJMovimentacao movimentacao;
 
-    public ESAJDocumento(String nome, String link) {
+    public ESAJDocumento(String nome, String link, Boolean senha) {
         this.nome = nome;
+        this.senha = senha;
         this.link = link;
     }
 
