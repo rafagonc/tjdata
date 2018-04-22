@@ -24,12 +24,12 @@ public class ESAJMovimentacao implements Comparable {
     private Integer ord;
 
 
-    public ESAJMovimentacao(Element tr) {
+    public ESAJMovimentacao(Element tr, String endpoint) {
         Elements linkElements = tr.getElementsByTag("a");
         HashSet<ESAJDocumento> docs = new HashSet<ESAJDocumento>();
         for (Element el : linkElements) {
             if (el.ownText().length() > 0) {
-                docs.add(new ESAJDocumento(el.ownText(),el.attr("href")));
+                docs.add(new ESAJDocumento(endpoint + el.ownText(),el.attr("href")));
             }
         }
         String texto = ESAJUtils.getTextoWithIndexAndNotNormalize(tr, 2);
