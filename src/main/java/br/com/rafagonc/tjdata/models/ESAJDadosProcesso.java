@@ -5,6 +5,8 @@ import org.jsoup.nodes.Element;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by rafagonc on 15/06/17.
@@ -32,7 +34,7 @@ public class ESAJDadosProcesso implements Serializable {
     public ESAJDadosProcesso(Element table) {
         this.numero = ESAJUtils.getTextoFromDado("Processo:", table);
         if (this.numero == null) {
-            this.numero = ESAJUtils.getTextoFromDado("Incidente:", table).replaceAll("\\w","").replaceAll("(|)", "").replace(" ", "");
+            this.numero = this.getNumeroFromIncidente(ESAJUtils.getTextoFromDado("Incidente:", table));
         }
         this.classe = ESAJUtils.getTextoFromDado("Classe:", table);
         this.area = ESAJUtils.getTextoFromDado("Área", table);
@@ -50,6 +52,15 @@ public class ESAJDadosProcesso implements Serializable {
     }
 
     public ESAJDadosProcesso() {
+    }
+
+    public String getNumeroFromIncidente(String incidente) {
+        Pattern pattern = Pattern.compile("\\d{7,9}-\\d{2}\\.\\d{4}\\.\\d\\.\\d{2}\\.\\d{4}");
+        Matcher matcher = pattern.matcher(incidente);
+        if (matcher.find()) {
+            return matcher.group();
+        }
+        return null;
     }
 
     @Id
