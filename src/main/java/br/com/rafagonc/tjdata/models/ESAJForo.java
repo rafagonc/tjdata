@@ -30,9 +30,9 @@ public class ESAJForo {
         return local;
     }
 
-    public static Set<ESAJForo> foros() throws Exception {
+    public static Set<ESAJForo> foros(String name) throws Exception {
         Gson gson = new Gson();
-        ClassPathResource classPathResource = new ClassPathResource("foro.json");
+        ClassPathResource classPathResource = new ClassPathResource(name);
         byte[] bdata = FileCopyUtils.copyToByteArray(classPathResource.getInputStream());
         String data = new String(bdata, Charset.defaultCharset());
         Type listType = new TypeToken<Set<ESAJForo>>(){}.getType();
@@ -40,9 +40,9 @@ public class ESAJForo {
         return foros;
     }
 
-    public static Set<ESAJForo> foros2() throws Exception {
+    public static Set<ESAJForo> foros2(String name) throws Exception {
         Gson gson = new Gson();
-        ClassPathResource classPathResource = new ClassPathResource("foro2.json");
+        ClassPathResource classPathResource = new ClassPathResource(name);
         byte[] bdata = FileCopyUtils.copyToByteArray(classPathResource.getInputStream());
         String data = new String(bdata, Charset.defaultCharset());
         Type listType = new TypeToken<Set<ESAJForo>>(){}.getType();
