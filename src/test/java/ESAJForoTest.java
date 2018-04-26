@@ -11,7 +11,7 @@ public class ESAJForoTest {
 
     @Test
     public void testForos() throws Exception {
-        Set<ESAJForo> foros = ESAJForo.foros();
+        Set<ESAJForo> foros = ESAJForo.foros("foro.json");
         System.out.print(foros);
         Assert.assertTrue(foros.size() > 0);
 
