@@ -16,6 +16,7 @@ public class ESAJPesquisaFoneticaProcesso {
     private Integer foro;
     private String nomeParte;
     private String atribuicao;
+    private String tipo;
     private String vara;
     private transient ESAJPesquisaFonetica pesquisaFonetica;
 
@@ -37,6 +38,11 @@ public class ESAJPesquisaFoneticaProcesso {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
+    }
+
+    @Column(nullable = true)
+    public String getTipo() {
+        return tipo;
     }
 
     @Column(nullable = true)
@@ -113,6 +119,10 @@ public class ESAJPesquisaFoneticaProcesso {
 
     public void setVara(String vara) {
         this.vara = vara;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     @Override
