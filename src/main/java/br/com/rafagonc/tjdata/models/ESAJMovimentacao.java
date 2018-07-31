@@ -30,6 +30,7 @@ public class ESAJMovimentacao implements Comparable {
         for (Element el : linkElements) {
             if (el.ownText().length() > 0) {
                 ESAJDocumento doc = new ESAJDocumento(el.ownText(),endpoint + el.attr("href"), el.attr("href").contains("Senha"));
+                doc.setButtonId(el.id());
                 docs.add(doc);
             }
         }
