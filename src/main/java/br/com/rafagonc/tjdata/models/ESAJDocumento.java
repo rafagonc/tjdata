@@ -11,6 +11,7 @@ public class ESAJDocumento {
     private Long id;
     private String nome;
     private String link;
+    private String buttonId;
     private Boolean senha;
     private transient ESAJMovimentacao movimentacao;
 
@@ -34,6 +35,14 @@ public class ESAJDocumento {
         return nome;
     }
 
+    public String getButtonId() {
+        return buttonId;
+    }
+
+    public Boolean getSenha() {
+        return senha;
+    }
+
     @Column(nullable = true, columnDefinition = "TEXT")
     public String getLink() {
         return link;
@@ -46,6 +55,14 @@ public class ESAJDocumento {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setButtonId(String buttonId) {
+        this.buttonId = buttonId;
+    }
+
+    public void setSenha(Boolean senha) {
+        this.senha = senha;
     }
 
     public void setNome(String nome) {
