@@ -17,7 +17,7 @@ public class ESAJMovimentacao implements Comparable {
 
     public interface DocumentCallback {
 
-        void handleDocument(ESAJDocumento documento);
+        void handleDocument(ESAJDocumento documento, String url);
 
     }
 
@@ -40,7 +40,7 @@ public class ESAJMovimentacao implements Comparable {
                 doc.setButtonId(el.id());
                 docs.add(doc);
                 if (callback != null) {
-                    callback.handleDocument(doc);
+                    callback.handleDocument(doc, completeURL);
                 }
 
             }
