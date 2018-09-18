@@ -15,6 +15,12 @@ import java.util.Set;
 @Entity
 public class ESAJMovimentacao implements Comparable {
 
+    public interface DocumentCallback {
+
+        void handleDocument(ESAJDocumento documento);
+
+    }
+
     private Long id;
     private String texto;
     private String acao;
@@ -24,14 +30,19 @@ public class ESAJMovimentacao implements Comparable {
     private Integer ord;
 
 
-    public ESAJMovimentacao(Element tr, String endpoint, String completeURL) {
+    public ESAJMovimentacao(Element tr, String endpoint, String completeURL, DocumentCallback callback) {
         Elements linkElements = tr.getElementsByTag("a");
         HashSet<ESAJDocumento> docs = new HashSet<ESAJDocumento>();
         for (Element el : linkElements) {
             if (el.ownText().length() > 0) {
-                ESAJDocumento doc = new ESAJDocumento(el.ownText(),endpoint + el.attr("href"), el.attr("href").contains("Senha"));
+                Boolean senha = el.attr("href").contains("Senha");
+                ESAJDocumento doc = new ESAJDocumento(el.ownText(),endpoint + el.attr("href"), senha);
                 doc.setButtonId(el.id());
                 docs.add(doc);
+                if (callback != null) {
+                    callback.handleDocument(doc);
+                }
+
             }
         }
         String texto = ESAJUtils.getTextoWithIndexAndNotNormalize(tr, 2);
@@ -67,6 +78,8 @@ public class ESAJMovimentacao implements Comparable {
 
     public ESAJMovimentacao() {
     }
+
+
 
     @Id
     @GeneratedValue( strategy= GenerationType.AUTO )
