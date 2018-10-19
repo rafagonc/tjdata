@@ -12,6 +12,7 @@ public class ESAJDocumento {
     private String nome;
     private String link;
     private String buttonId;
+    private String cdDocumento;
     private Boolean senha;
     private transient ESAJMovimentacao movimentacao;
 
@@ -41,6 +42,14 @@ public class ESAJDocumento {
 
     public Boolean getSenha() {
         return senha;
+    }
+
+    public String getCdDocumento() {
+        return cdDocumento;
+    }
+
+    public void setCdDocumento(String cdDocumento) {
+        this.cdDocumento = cdDocumento;
     }
 
     @Column(nullable = true, columnDefinition = "TEXT")
