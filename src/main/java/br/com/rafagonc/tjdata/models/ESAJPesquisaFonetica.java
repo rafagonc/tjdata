@@ -19,6 +19,7 @@ public class ESAJPesquisaFonetica {
     private Boolean encontrado;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
     private String erro;
+    private Task task;
 
     public ESAJPesquisaFonetica(String nome, ESAJGrau grau) {
         this.numeroGrau = grau.getValue();
@@ -60,6 +61,14 @@ public class ESAJPesquisaFonetica {
     @Column(nullable = false)
     public Boolean getProcessando() {
         return processando;
+    }
+
+    public Task getTask() {
+        return task;
+    }
+
+    public void setTask(Task task) {
+        this.task = task;
     }
 
     @OneToMany(mappedBy = "pesquisaFonetica", cascade = CascadeType.REMOVE)

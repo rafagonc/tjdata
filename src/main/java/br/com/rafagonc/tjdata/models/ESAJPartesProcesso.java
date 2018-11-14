@@ -17,6 +17,7 @@ public class ESAJPartesProcesso implements Serializable {
     private Long id;
     private String titulo;
     private String nome;
+    private Integer ord;
     private String tituloAdvogados;
     private String advogados;
     private transient ESAJProcesso processo;
@@ -42,6 +43,14 @@ public class ESAJPartesProcesso implements Serializable {
     }
 
     public ESAJPartesProcesso() {
+    }
+
+    public Integer getOrd() {
+        return ord;
+    }
+
+    public void setOrd(Integer ord) {
+        this.ord = ord;
     }
 
     @Id

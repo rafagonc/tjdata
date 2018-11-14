@@ -95,6 +95,14 @@ public class ESAJAcao implements Comparable {
         this.processo = processo;
     }
 
+    public Integer getOrd() {
+        return ord;
+    }
+
+    public void setOrd(Integer ord) {
+        this.ord = ord;
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     public ESAJProcesso getProcesso() {
         return processo;

@@ -79,6 +79,14 @@ public class ESAJMovimentacao implements Comparable {
     public ESAJMovimentacao() {
     }
 
+    public Integer getOrd() {
+        return ord;
+    }
+
+    public void setOrd(Integer ord) {
+        this.ord = ord;
+    }
+
 
 
     @Id

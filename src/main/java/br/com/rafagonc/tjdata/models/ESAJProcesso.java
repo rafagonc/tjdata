@@ -34,7 +34,7 @@ public class ESAJProcesso {
     private Boolean processando;
     private Boolean encontrado;
     private Date lastUpdated;
-    ///////
+    private Task task;
 
     public ESAJProcesso(String numero,
                         ESAJDadosProcesso dadosProcessos,
@@ -87,6 +87,18 @@ public class ESAJProcesso {
     @Column(nullable = true)
     public String url() {
         return url;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public Task getTask() {
+        return task;
+    }
+
+    public void setTask(Task task) {
+        this.task = task;
     }
 
     @Column(nullable = false)
