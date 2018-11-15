@@ -16,6 +16,7 @@ public class ESAJAcao implements Comparable {
     private Long id;
     private String recebido;
     private String classe;
+    @Transient
     private Integer ord;
     private String link;
     private transient ESAJProcesso processo;
