@@ -43,8 +43,6 @@ public class ESAJProcesso {
                         Set<ESAJPeticaoDiversa> peticaoDiversas,
                         Set<ESAJAcao> acoes) {
         this.numero = numero;
-        this.numero = numero;
-        this.numero = numero;
         this.processando = false;
         this.encontrado = true;
         this.movimentacoes = movimentacoes;
