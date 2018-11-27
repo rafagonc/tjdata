@@ -119,6 +119,23 @@ public class ESAJPesquisaFonetica {
         return cda;
     }
 
+
+    public void setOab(String oab) {
+        this.oab = oab;
+    }
+
+    public void setDocParte(String docParte) {
+        this.docParte = docParte;
+    }
+
+    public void setNomeAdvogado(String nomeAdvogado) {
+        this.nomeAdvogado = nomeAdvogado;
+    }
+
+    public void setCda(String cda) {
+        this.cda = cda;
+    }
+
     public void setErro(String erro) {
         this.erro = erro;
     }
