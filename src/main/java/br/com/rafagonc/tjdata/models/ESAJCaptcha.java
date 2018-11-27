@@ -33,6 +33,7 @@ public class ESAJCaptcha {
         this.uuidCaptcha = uuidCaptcha;
         this.gResponse = gResponse;
         this.state = state;
+        this.state = state;
     }
 
     public Set<Cookie> getCookies() {
