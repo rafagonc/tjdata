@@ -93,7 +93,7 @@ public class ESAJProcesso {
         return url;
     }
 
-    @Column(nullable = true)
+    @OneToOne
     public Task getTask() {
         return task;
     }

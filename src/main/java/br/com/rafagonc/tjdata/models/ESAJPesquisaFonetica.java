@@ -67,7 +67,7 @@ public class ESAJPesquisaFonetica {
         return processando;
     }
 
-    @Column(nullable = true)
+    @OneToOne
     public Task getTask() {
         return task;
     }
