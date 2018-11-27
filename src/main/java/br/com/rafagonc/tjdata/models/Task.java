@@ -7,12 +7,9 @@ import javax.persistence.*;
 public class Task {
 
     private Long id;
-    @Transient
-    private Integer result_id;
-    @Transient
-    private Integer feed_id;
-    @Transient
-    private Integer lawsuit_id;
+    private Integer result;
+    private Integer feed;
+    private Integer lawsuit;
     private String cpf;
     private String password;
     private Boolean force;
@@ -80,25 +77,32 @@ public class Task {
     public void setPassword(String password) {
         this.password = password;
     }
-    public Integer getResult_id() {
-        return result_id;
-    }
-    public Integer getFeed_id() {
-        return feed_id;
-    }
-    public Integer getLawsuit_id() {
-        return lawsuit_id;
-    }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setResult_id(Integer result_id) {
-        this.result_id = result_id;
+    public Integer getResult() {
+        return result;
     }
 
-    public void setFeed_id(Integer feed_id) {
-        this.feed_id = feed_id;
+    public void setResult(Integer result) {
+        this.result = result;
+    }
+
+    public Integer getFeed() {
+        return feed;
+    }
+
+    public void setFeed(Integer feed) {
+        this.feed = feed;
+    }
+
+    public Integer getLawsuit() {
+        return lawsuit;
+    }
+
+    public void setLawsuit(Integer lawsuit) {
+        this.lawsuit = lawsuit;
     }
 }
