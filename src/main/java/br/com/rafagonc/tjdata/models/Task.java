@@ -77,4 +77,28 @@ public class Task {
     public void setPassword(String password) {
         this.password = password;
     }
+    @Column(nullable = false, unique = false)
+    public Integer getResult_id() {
+        return result_id;
+    }
+    @Column(nullable = false, unique = false)
+    public Integer getFeed_id() {
+        return feed_id;
+    }
+    @Column(nullable = false, unique = false)
+    public Integer getLawsuit_id() {
+        return lawsuit_id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setResult_id(Integer result_id) {
+        this.result_id = result_id;
+    }
+
+    public void setFeed_id(Integer feed_id) {
+        this.feed_id = feed_id;
+    }
 }
