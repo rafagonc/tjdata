@@ -57,11 +57,6 @@ public class ESAJAcao implements Comparable {
         return recebido;
     }
 
-    @Column(nullable = true)
-    public Integer getord() {
-        return ord;
-    }
-
     public void setord(Integer ord) {
         this.ord = ord;
     }
