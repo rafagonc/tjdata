@@ -136,22 +136,23 @@
       <file leaf-file-name="Task.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+            <state relative-caret-position="402">
+              <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
               <folding>
-                <element signature="e#1650#1651#0" expanded="true" />
-                <element signature="e#1684#1685#0" expanded="true" />
-                <element signature="e#1713#1714#0" expanded="true" />
-                <element signature="e#1758#1759#0" expanded="true" />
-                <element signature="e#1794#1795#0" expanded="true" />
-                <element signature="e#1826#1827#0" expanded="true" />
-                <element signature="e#1853#1854#0" expanded="true" />
-                <element signature="e#1894#1895#0" expanded="true" />
-                <element signature="e#1926#1927#0" expanded="true" />
-                <element signature="e#1961#1962#0" expanded="true" />
-                <element signature="e#1991#1992#0" expanded="true" />
-                <element signature="e#2038#2039#0" expanded="true" />
-                <element signature="e#2076#2077#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
+                <element signature="e#1147#1148#0" expanded="true" />
+                <element signature="e#1192#1193#0" expanded="true" />
+                <element signature="e#1228#1229#0" expanded="true" />
+                <element signature="e#1306#1307#0" expanded="true" />
+                <element signature="e#1333#1334#0" expanded="true" />
+                <element signature="e#1374#1375#0" expanded="true" />
+                <element signature="e#1406#1407#0" expanded="true" />
+                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
+                <element signature="e#1564#1565#0" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -825,22 +826,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rafagonc/tjdata/models/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+        <state relative-caret-position="402">
+          <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
           <folding>
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1794#1795#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#1926#1927#0" expanded="true" />
-            <element signature="e#1961#1962#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
-            <element signature="e#2038#2039#0" expanded="true" />
-            <element signature="e#2076#2077#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1192#1193#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1564#1565#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
           </folding>
         </state>
       </provider>

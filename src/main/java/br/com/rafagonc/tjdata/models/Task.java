@@ -34,33 +34,6 @@ public class Task {
     }
     @Column(nullable = false, unique = false)
 
-    public Integer getResultId() {
-        return result_id;
-    }
-
-    public void setResultId(Integer result_id) {
-        this.result_id = result_id;
-    }
-    @Column(nullable = false, unique = false)
-
-    public Integer getFeedId() {
-        return feed_id;
-    }
-
-    public void setFeedId(Integer feed_id) {
-        this.feed_id = feed_id;
-    }
-    @Column(nullable = false, unique = false)
-
-    public Integer getLawsuiId() {
-        return lawsuit_id;
-    }
-
-    public void setLawsuit_id(Integer lawsuit_id) {
-        this.lawsuit_id = lawsuit_id;
-    }
-    @Column(nullable = false, unique = false)
-
     public String getCpf() {
         return cpf;
     }
@@ -81,6 +54,7 @@ public class Task {
     public void setId(Long id) {
         this.id = id;
     }
+    @Column(nullable = false, unique = false)
 
     public Integer getResult() {
         return result;
@@ -89,6 +63,7 @@ public class Task {
     public void setResult(Integer result) {
         this.result = result;
     }
+    @Column(nullable = false, unique = false)
 
     public Integer getFeed() {
         return feed;
@@ -97,6 +72,7 @@ public class Task {
     public void setFeed(Integer feed) {
         this.feed = feed;
     }
+    @Column(nullable = false, unique = false)
 
     public Integer getLawsuit() {
         return lawsuit;
