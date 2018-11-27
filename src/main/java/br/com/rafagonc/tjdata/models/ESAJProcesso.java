@@ -35,7 +35,7 @@ public class ESAJProcesso {
     private Boolean encontrado;
     private Date lastUpdated;
 
-    @Transient
+
     private Task task;
 
     public ESAJProcesso(String numero,
@@ -93,6 +93,7 @@ public class ESAJProcesso {
         return url;
     }
 
+    @Column(nullable = true)
     public Task getTask() {
         return task;
     }
