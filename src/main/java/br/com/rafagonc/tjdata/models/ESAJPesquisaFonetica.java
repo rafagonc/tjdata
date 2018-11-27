@@ -12,6 +12,10 @@ public class ESAJPesquisaFonetica {
 
     private Long id;
     private String nome;
+    private String oab;
+    private String docParte;
+    private String nomeAdvogado;
+    private String cda;
     private Integer numeroForo;
     private Integer numeroGrau;
     private String estado;
@@ -93,6 +97,26 @@ public class ESAJPesquisaFonetica {
     @Column(nullable = true)
     public String getErro() {
         return erro;
+    }
+
+    @Column(nullable = false)
+    public String getOab() {
+        return oab;
+    }
+
+    @Column(nullable = false)
+    public String getDocParte() {
+        return docParte;
+    }
+
+    @Column(nullable = false)
+    public String getNomeAdvogado() {
+        return nomeAdvogado;
+    }
+
+    @Column(nullable = false)
+    public String getCda() {
+        return cda;
     }
 
     public void setErro(String erro) {
