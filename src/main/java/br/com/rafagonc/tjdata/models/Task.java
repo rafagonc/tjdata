@@ -7,8 +7,11 @@ import javax.persistence.*;
 public class Task {
 
     private Long id;
+    @Transient
     private Integer result_id;
+    @Transient
     private Integer feed_id;
+    @Transient
     private Integer lawsuit_id;
     private String cpf;
     private String password;
@@ -77,15 +80,12 @@ public class Task {
     public void setPassword(String password) {
         this.password = password;
     }
-    @Column(nullable = false, unique = false)
     public Integer getResult_id() {
         return result_id;
     }
-    @Column(nullable = false, unique = false)
     public Integer getFeed_id() {
         return feed_id;
     }
-    @Column(nullable = false, unique = false)
     public Integer getLawsuit_id() {
         return lawsuit_id;
     }
