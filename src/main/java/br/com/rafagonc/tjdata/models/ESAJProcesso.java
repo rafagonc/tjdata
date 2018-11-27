@@ -34,6 +34,8 @@ public class ESAJProcesso {
     private Boolean processando;
     private Boolean encontrado;
     private Date lastUpdated;
+
+    @Transient
     private Task task;
 
     public ESAJProcesso(String numero,

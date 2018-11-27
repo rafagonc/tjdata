@@ -23,6 +23,8 @@ public class ESAJPesquisaFonetica {
     private Boolean encontrado;
     private Set<ESAJPesquisaFoneticaProcesso> processos;
     private String erro;
+
+    @Transient
     private Task task;
 
     public ESAJPesquisaFonetica(String nome, ESAJGrau grau) {
